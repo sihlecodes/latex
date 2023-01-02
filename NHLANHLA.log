@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.22)  27 DEC 2022 07:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.12.22)  2 JAN 2023 14:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,15 +23,37 @@ File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/nomencl\nomencl.sty
+) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+ (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/nomencl\nomencl.sty
 Package: nomencl 2021/11/10 v5.6 Nomenclature package
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks16
-\XKV@tempa@toks=\toks17
- (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
-\XKV@depth=\count194
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+)
+\XKV@depth=\count197
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
@@ -56,15 +78,15 @@ Package tocbasic Info: omitting babel extension for `nlo'
 (tocbasic)             because of missing \bbl@set@language on input line 187.
 Package tocbasic Info: omitting babel extension for `nls'
 (tocbasic)             because of missing \bbl@set@language on input line 188.
-\nomlabelwidth=\dimen139
-\nom@tempdim=\dimen140
+\nomlabelwidth=\dimen147
+\nom@tempdim=\dimen148
 \nomitemsep=\skip50
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen141
+\col@sep=\dimen149
 \ar@mcellbox=\box52
-\extrarowheight=\dimen142
-\NC@list=\toks18
+\extrarowheight=\dimen150
+\NC@list=\toks20
 \extratabsurround=\skip51
 \backup@length=\skip52
 \ar@cellbox=\box53
@@ -72,15 +94,15 @@ Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count195
-\calc@Bcount=\count196
-\calc@Adimen=\dimen143
-\calc@Bdimen=\dimen144
+\calc@Acount=\count198
+\calc@Bcount=\count199
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count197
+\calc@Ccount=\count266
 \calc@Cskip=\skip55
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
@@ -93,22 +115,22 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
-\ex@=\dimen145
+\@emptytoks=\toks21
+\ex@=\dimen153
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen146
+\pmbraise@=\dimen154
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count198
+\inf@bad=\count267
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count199
-\leftroot@=\count266
+\uproot@=\count268
+\leftroot@=\count269
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count267
-\DOTSCASE@=\count268
+\classnum@=\count270
+\DOTSCASE@=\count271
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -118,48 +140,48 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen147
+\big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count269
+\macc@depth=\count272
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count270
+\c@MaxMatrixCols=\count273
 \dotsspace@=\muskip16
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
-\tag@help=\toks20
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
-\andhelp@=\toks21
-\eqnshift@=\dimen148
-\alignsep@=\dimen149
-\tagshift@=\dimen150
-\tagwidth@=\dimen151
-\totwidth@=\dimen152
-\lineht@=\dimen153
-\@envbody=\toks22
+\c@parentequation=\count274
+\dspbrk@lvl=\count275
+\tag@help=\toks22
+\row@=\count276
+\column@=\count277
+\maxfields@=\count278
+\andhelp@=\toks23
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks24
 \multlinegap=\skip57
 \multlinetaggap=\skip58
-\mathdisplay@stack=\toks23
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-\g_MT_multlinerow_int=\count276
-\l_MT_multwidth_dim=\dimen154
+\g_MT_multlinerow_int=\count279
+\l_MT_multwidth_dim=\dimen162
 \origjot=\skip59
-\l_MT_shortvdotswithinadjustabove_dim=\dimen155
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen156
-\l_MT_above_intertext_sep=\dimen157
-\l_MT_below_intertext_sep=\dimen158
-\l_MT_above_shortintertext_sep=\dimen159
-\l_MT_below_shortintertext_sep=\dimen160
+\l_MT_shortvdotswithinadjustabove_dim=\dimen163
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen164
+\l_MT_above_intertext_sep=\dimen165
+\l_MT_below_intertext_sep=\dimen166
+\l_MT_above_shortintertext_sep=\dimen167
+\l_MT_below_shortintertext_sep=\dimen168
 \xmathstrut@box=\box56
-\xmathstrut@dim=\dimen161
+\xmathstrut@dim=\dimen169
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip60
@@ -167,10 +189,10 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseScriptstyle=\skip62
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count277
-\float@exts=\toks24
+\c@float@type=\count280
+\float@exts=\toks26
 \float@box=\box57
-\@float@everytoks=\toks25
+\@float@everytoks=\toks27
 \@floatcapt=\box58
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
@@ -178,22 +200,22 @@ Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen162
-\captionmargin=\dimen163
-\caption@leftmargin=\dimen164
-\caption@rightmargin=\dimen165
-\caption@width=\dimen166
-\caption@indent=\dimen167
-\caption@parindent=\dimen168
-\caption@hangindent=\dimen169
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count278
-\c@continuedfloat=\count279
+\c@caption@flags=\count281
+\c@continuedfloat=\count282
 Package caption Info: float package is loaded.
 )
-\c@subfigure=\count280
-\c@subtable=\count281
+\c@subfigure=\count283
+\c@subtable=\count284
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
@@ -212,44 +234,44 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 107.
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-\stockwidth=\dimen170
-\stockheight=\dimen171
+\stockwidth=\dimen178
+\stockheight=\dimen179
 ))
-\Gin@req@height=\dimen172
-\Gin@req@width=\dimen173
+\Gin@req@height=\dimen180
+\Gin@req@width=\dimen181
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box59
 )
-\tc@llx=\dimen174
-\tc@lly=\dimen175
-\tc@urx=\dimen176
-\tc@ury=\dimen177
+\tc@llx=\dimen182
+\tc@lly=\dimen183
+\tc@urx=\dimen184
+\tc@ury=\dimen185
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen178
-\adjbox@Height=\dimen179
-\adjbox@Depth=\dimen180
-\adjbox@Totalheight=\dimen181
-\adjbox@pwidth=\dimen182
-\adjbox@pheight=\dimen183
-\adjbox@pdepth=\dimen184
-\adjbox@ptotalheight=\dimen185
+\adjbox@Width=\dimen186
+\adjbox@Height=\dimen187
+\adjbox@Depth=\dimen188
+\adjbox@Totalheight=\dimen189
+\adjbox@pwidth=\dimen190
+\adjbox@pheight=\dimen191
+\adjbox@pdepth=\dimen192
+\adjbox@ptotalheight=\dimen193
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count282
+\c@checkoddpage=\count285
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box60
-\sift@deathcycles=\count283
-\@vwid@loff=\dimen186
-\@vwid@roff=\dimen187
+\sift@deathcycles=\count286
+\@vwid@loff=\dimen194
+\@vwid@roff=\dimen195
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen188
-\pgfutil@tempdimb=\dimen189
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen196
+\pgfutil@tempdimb=\dimen197
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box61
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -259,31 +281,31 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks29
+\pgfkeys@tmptoks=\toks31
 ))
-\pgf@x=\dimen190
-\pgf@y=\dimen191
-\pgf@xa=\dimen192
-\pgf@ya=\dimen193
-\pgf@xb=\dimen194
-\pgf@yb=\dimen195
-\pgf@xc=\dimen196
-\pgf@yc=\dimen197
-\pgf@xd=\dimen198
-\pgf@yd=\dimen199
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count284
-\c@pgf@countb=\count285
-\c@pgf@countc=\count286
-\c@pgf@countd=\count287
-\t@pgf@toka=\toks30
-\t@pgf@tokb=\toks31
-\t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count288
+\c@pgf@counta=\count287
+\c@pgf@countb=\count288
+\c@pgf@countc=\count289
+\c@pgf@countd=\count290
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count291
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -294,8 +316,8 @@ File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count289
-\pgfsyssoftpath@bigbuffer@items=\count290
+\pgfsyssoftpath@smallbuffer@items=\count292
+\pgfsyssoftpath@bigbuffer@items=\count293
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
@@ -317,52 +339,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen256
-\pgfmath@count=\count291
+\pgfmath@dimen=\dimen264
+\pgfmath@count=\count294
 \pgfmath@box=\box62
-\pgfmath@toks=\toks33
-\pgfmath@stack@operand=\toks34
-\pgfmath@stack@operation=\toks35
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count292
+\c@pgfmathroundto@lastzeros=\count295
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen257
-\pgf@picmaxx=\dimen258
-\pgf@picminy=\dimen259
-\pgf@picmaxy=\dimen260
-\pgf@pathminx=\dimen261
-\pgf@pathmaxx=\dimen262
-\pgf@pathminy=\dimen263
-\pgf@pathmaxy=\dimen264
-\pgf@xx=\dimen265
-\pgf@xy=\dimen266
-\pgf@yx=\dimen267
-\pgf@yy=\dimen268
-\pgf@zx=\dimen269
-\pgf@zy=\dimen270
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen271
-\pgf@path@lasty=\dimen272
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen273
-\pgf@shorten@start@additional=\dimen274
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box63
 \pgf@hbox=\box64
 \pgf@layerbox@main=\box65
-\pgf@picture@serial@count=\count293
+\pgf@picture@serial@count=\count296
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen275
+\pgflinewidth=\dimen283
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen276
-\pgf@pt@y=\dimen277
-\pgf@pt@temp=\dimen278
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -371,12 +393,12 @@ File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen279
+\pgfarrowsep=\dimen287
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen280
-\pgf@sys@shading@range@num=\count294
-\pgf@shadingcount=\count295
+\pgf@max=\dimen288
+\pgf@sys@shading@range@num=\count297
+\pgf@shadingcount=\count298
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -397,47 +419,47 @@ File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen281
-\pgf@nodesepend=\dimen282
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
-\pgffor@iter=\dimen283
-\pgffor@skip=\dimen284
-\pgffor@stack=\toks36
-\pgffor@toks=\toks37
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
 )) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count296
-\pgfplotmarksize=\dimen285
+\pgf@plot@mark@count=\count299
+\pgfplotmarksize=\dimen293
 )
-\tikz@lastx=\dimen286
-\tikz@lasty=\dimen287
-\tikz@lastxsaved=\dimen288
-\tikz@lastysaved=\dimen289
-\tikz@lastmovetox=\dimen290
-\tikz@lastmovetoy=\dimen291
-\tikzleveldistance=\dimen292
-\tikzsiblingdistance=\dimen293
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
 \tikz@figbox=\box68
 \tikz@figbox@bg=\box69
 \tikz@tempbox=\box70
 \tikz@tempbox@bg=\box71
-\tikztreelevel=\count297
-\tikznumberofchildren=\count298
-\tikznumberofcurrentchild=\count299
-\tikz@fig@count=\count300
+\tikztreelevel=\count300
+\tikznumberofchildren=\count301
+\tikznumberofcurrentchild=\count302
+\tikz@fig@count=\count303
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count301
-\pgfmatrixcurrentcolumn=\count302
-\pgf@matrix@numberofcolumns=\count303
+\pgfmatrixcurrentrow=\count304
+\pgfmatrixcurrentcolumn=\count305
+\pgf@matrix@numberofcolumns=\count306
 )
-\tikz@expandcount=\count304
+\tikz@expandcount=\count307
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
@@ -448,43 +470,80 @@ File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen294
-)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+\arrowsize=\dimen302
+)) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
+\l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box72
 ) (NHLANHLA.aux)
 \openout1 = `NHLANHLA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen295
+\scratchcounter=\count309
+\scratchdimen=\dimen303
 \scratchbox=\box73
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen296
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks39
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen304
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks41
 ) (C:\Users\sphem\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -494,7 +553,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <./images//logo.png, id=4, 184.617pt x 50.9175pt>
 File: ./images//logo.png Graphic file (type png)
 <use ./images//logo.png>
-Package pdftex.def Info: ./images//logo.png  used on input line 33.
+Package pdftex.def Info: ./images//logo.png  used on input line 39.
 (pdftex.def)             Requested size: 276.92479pt x 76.37604pt.
  [1
 
@@ -504,13 +563,13 @@ Package pdftex.def Info: ./images//logo.png  used on input line 33.
 \tf@toc=\write4
 \openout4 = `NHLANHLA.toc'.
 
- [3] (NHLANHLA.lof)
+ [3] (NHLANHLA.lof [4
+
+] [5])
 \tf@lof=\write5
 \openout5 = `NHLANHLA.lof'.
 
- [4
-
-] [5] (NHLANHLA.lot)
+ [6] (NHLANHLA.lot)
 \tf@lot=\write6
 \openout6 = `NHLANHLA.lot'.
 
@@ -519,302 +578,746 @@ No file NHLANHLA.nls.
 \@nomenclaturefile=\write7
 \openout7 = `NHLANHLA.nlo'.
 
-Package nomencl Info: Writing nomenclature file NHLANHLA.nlo on input line 42.
-[6
+Package nomencl Info: Writing nomenclature file NHLANHLA.nlo on input line 48.
+[7
 
 ]
 Chapter 1.
-[7
+[8
 
-] [8] [9] [10]
+] [9] [10]
 Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]|\OT1/cmr/m/n/12 Flammable liq-uids such as fuel,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+\OT1/cmr/m/n/12 petroleum greases, and flammable
+ []
+
 [11
 
 ]
-Underfull \hbox (badness 3148) in paragraph at lines 91--91
-[]|\OT1/cmr/m/n/12 Common com-bustibles such as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-[]|\OT1/cmr/m/n/12 Airports and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-\OT1/cmr/m/n/12 petroleum in-dus-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
-[]|\OT1/cmr/m/n/12 Energized elec-tri-cal equip-ment
- []
-
-
-Underfull \hbox (badness 1210) in paragraph at lines 93--94
-[]|\OT1/cmr/m/n/12 Electrical dis-tri-bu-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-[]|\OT1/cmr/m/n/12 Production and
- []
-
-<./images//extinguishing_mechanism_scheme.png, id=46, 581.17125pt x 250.68657pt>
+<./images//extinguishing_mechanism_scheme.png, id=47, 581.17125pt x 250.68657pt>
 File: ./images//extinguishing_mechanism_scheme.png Graphic file (type png)
 <use ./images//extinguishing_mechanism_scheme.png>
-Package pdftex.def Info: ./images//extinguishing_mechanism_scheme.png  used on input line 105.
-(pdftex.def)             Requested size: 312.00119pt x 134.58073pt.
-[12]
-Overfull \hbox (11.3856pt too wide) in paragraph at lines 110--110
-[]\OT1/cmr/bx/n/17.28 Evolution of AFFF for ef-fec-tive ex-tin-guish-
- []
-
-[13 <./images//extinguishing_mechanism_scheme.png>] [14] [15]
-<./images//bubble_characteristics.png, id=63, 627.09282pt x 213.04594pt>
+Package pdftex.def Info: ./images//extinguishing_mechanism_scheme.png  used on input line 114.
+(pdftex.def)             Requested size: 362.37569pt x 156.3115pt.
+ [12 <./images//extinguishing_mechanism_scheme.png>] [13] [14]
+<./images//bubble_characteristics.png, id=61, 627.09282pt x 213.04594pt>
 File: ./images//bubble_characteristics.png Graphic file (type png)
 <use ./images//bubble_characteristics.png>
-Package pdftex.def Info: ./images//bubble_characteristics.png  used on input line 139.
-(pdftex.def)             Requested size: 370.49881pt x 125.8748pt.
- [16 <./images//bubble_characteristics.png>]
-<./images//foam_generating_nozzle.png, id=68, 459.96844pt x 151.3153pt>
+Package pdftex.def Info: ./images//bubble_characteristics.png  used on input line 148.
+(pdftex.def)             Requested size: 430.31812pt x 146.1989pt.
+<./images//foam_generating_nozzle.png, id=62, 459.96844pt x 151.3153pt>
 File: ./images//foam_generating_nozzle.png Graphic file (type png)
 <use ./images//foam_generating_nozzle.png>
-Package pdftex.def Info: ./images//foam_generating_nozzle.png  used on input line 149.
-(pdftex.def)             Requested size: 390.0pt x 128.3046pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--175
-
- []
-
-[17 <./images//foam_generating_nozzle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 190--194
+Package pdftex.def Info: ./images//foam_generating_nozzle.png  used on input line 158.
+(pdftex.def)             Requested size: 452.9679pt x 149.01988pt.
+ [15 <./images//bubble_characteristics.png> <./images//foam_generating_nozzle.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 175--184
 
  []
 
-[18] [19]
-<./images//important_parameters.png, id=82, 406.51875pt x 305.64188pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
+
+ []
+
+[16]
+<./images//important_parameters.png, id=72, 406.51875pt x 305.64188pt>
 File: ./images//important_parameters.png Graphic file (type png)
 <use ./images//important_parameters.png>
-Package pdftex.def Info: ./images//important_parameters.png  used on input line 212.
-(pdftex.def)             Requested size: 390.0pt x 293.23096pt.
- [20 <./images//important_parameters.png>]
-<./images//low_expansion_test.png, id=86, 237.13594pt x 243.91125pt>
+Package pdftex.def Info: ./images//important_parameters.png  used on input line 221.
+(pdftex.def)             Requested size: 452.9679pt x 340.57698pt.
+ [17] [18 <./images//important_parameters.png>]
+<./images//low_expansion_test.png, id=80, 237.13594pt x 243.91125pt>
 File: ./images//low_expansion_test.png Graphic file (type png)
 <use ./images//low_expansion_test.png>
-Package pdftex.def Info: ./images//low_expansion_test.png  used on input line 226.
-(pdftex.def)             Requested size: 195.0pt x 200.57794pt.
-<./images//drainage_test.png, id=87, 245.41687pt x 233.37187pt>
+Package pdftex.def Info: ./images//low_expansion_test.png  used on input line 238.
+(pdftex.def)             Requested size: 203.83417pt x 209.66653pt.
+<./images//drainage_test.png, id=81, 245.41687pt x 233.37187pt>
 File: ./images//drainage_test.png Graphic file (type png)
 <use ./images//drainage_test.png>
-Package pdftex.def Info: ./images//drainage_test.png  used on input line 231.
-(pdftex.def)             Requested size: 195.0pt x 185.4336pt.
+Package pdftex.def Info: ./images//drainage_test.png  used on input line 243.
+(pdftex.def)             Requested size: 203.83417pt x 193.83746pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 225--234
-[][] [] 
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 []|\OT1/cmr/m/n/12 25%
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 \OT1/cmr/m/n/12 Drainage
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 247--247
+Underfull \hbox (badness 1721) in paragraph at lines 261--261
 []|\OT1/cmr/m/n/12 Foam con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--247
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
 []|\OT1/cmr/m/n/12 Generation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 []|\OT1/cmr/m/n/12 Standard
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 262--262
 []|\OT1/cmr/m/n/12 Tolomet
  []
 
-[22 <./images//low_expansion_test.png> <./images//drainage_test.png>]
-<./images//bubble_size_distributions.png, id=97, 521.69907pt x 289.08pt>
+[19 <./images//low_expansion_test.png> <./images//drainage_test.png>]
+<./images//bubble_size_distributions.png, id=88, 521.69907pt x 289.08pt>
 File: ./images//bubble_size_distributions.png Graphic file (type png)
 <use ./images//bubble_size_distributions.png>
-Package pdftex.def Info: ./images//bubble_size_distributions.png  used on input line 262.
-(pdftex.def)             Requested size: 390.0pt x 216.10811pt.
- [23 <./images//bubble_size_distributions.png>]
-<./images//fire_control_time_pool_fires.png, id=102, 536.75531pt x 419.31656pt>
+Package pdftex.def Info: ./images//bubble_size_distributions.png  used on input line 278.
+(pdftex.def)             Requested size: 452.9679pt x 250.99911pt.
+ [20 <./images//bubble_size_distributions.png>]
+<./images//fire_control_time_pool_fires.png, id=93, 536.75531pt x 419.31656pt>
 File: ./images//fire_control_time_pool_fires.png Graphic file (type png)
 <use ./images//fire_control_time_pool_fires.png>
-Package pdftex.def Info: ./images//fire_control_time_pool_fires.png  used on input line 275.
-(pdftex.def)             Requested size: 390.0pt x 304.67172pt.
- [24]
-<./images//fire_control_time_fuel_fires.png, id=107, 429.10312pt x 370.38374pt>
+Package pdftex.def Info: ./images//fire_control_time_pool_fires.png  used on input line 291.
+(pdftex.def)             Requested size: 452.9679pt x 353.86145pt.
+ [21]
+<./images//fire_control_time_fuel_fires.png, id=97, 429.10312pt x 370.38374pt>
 File: ./images//fire_control_time_fuel_fires.png Graphic file (type png)
 <use ./images//fire_control_time_fuel_fires.png>
-Package pdftex.def Info: ./images//fire_control_time_fuel_fires.png  used on input line 284.
-(pdftex.def)             Requested size: 390.0pt x 336.63716pt.
- [25 <./images//fire_control_time_pool_fires.png>] [26 <./images//fire_control_time_fuel_fires.png>]
-<./images//foam_degradation.png, id=114, 317.68687pt x 156.585pt>
+Package pdftex.def Info: ./images//fire_control_time_fuel_fires.png  used on input line 300.
+(pdftex.def)             Requested size: 452.9679pt x 390.98853pt.
+ [22 <./images//fire_control_time_pool_fires.png>] [23 <./images//fire_control_time_fuel_fires.png>]
+<./images//foam_degradation.png, id=104, 317.68687pt x 156.585pt>
 File: ./images//foam_degradation.png Graphic file (type png)
 <use ./images//foam_degradation.png>
-Package pdftex.def Info: ./images//foam_degradation.png  used on input line 297.
-(pdftex.def)             Requested size: 390.0pt x 192.24478pt.
- [27] [28 <./images//foam_degradation.png>]
-<./images//use_during_aviation_training.jpg, id=122, 767.86874pt x 861.9703pt>
+Package pdftex.def Info: ./images//foam_degradation.png  used on input line 313.
+(pdftex.def)             Requested size: 452.9679pt x 223.28406pt.
+ [24 <./images//foam_degradation.png>]
+<./images//use_during_aviation_training.jpg, id=110, 767.86874pt x 861.9703pt>
 File: ./images//use_during_aviation_training.jpg Graphic file (type jpg)
 <use ./images//use_during_aviation_training.jpg>
-Package pdftex.def Info: ./images//use_during_aviation_training.jpg  used on input line 337.
-(pdftex.def)             Requested size: 390.00269pt x 256.08093pt.
- [29] [30 <./images//use_during_aviation_training.jpg>] [31] [32]
+Package pdftex.def Info: ./images//use_during_aviation_training.jpg  used on input line 355.
+(pdftex.def)             Requested size: 452.98004pt x 256.08093pt.
+ [25] [26 <./images//use_during_aviation_training.jpg>] [27]
 Chapter 3.
-[33
-
-]
-<./images//materials_classification.png, id=139, 505.452pt x 238.053pt>
+<./images//materials_classification.png, id=120, 505.452pt x 238.053pt>
 File: ./images//materials_classification.png Graphic file (type png)
 <use ./images//materials_classification.png>
-Package pdftex.def Info: ./images//materials_classification.png  used on input line 366.
-(pdftex.def)             Requested size: 390.0pt x 183.68277pt.
- [34 <./images//materials_classification.png>] [35] [36] [37]
-<./images//metalic_bonding.jpg, id=154, 303.38344pt x 233.37187pt>
+Package pdftex.def Info: ./images//materials_classification.png  used on input line 383.
+(pdftex.def)             Requested size: 452.9679pt x 213.33762pt.
+[28
+
+] [29 <./images//materials_classification.png>] [30]
+<./images//metalic_bonding.jpg, id=132, 303.38344pt x 233.37187pt>
 File: ./images//metalic_bonding.jpg Graphic file (type jpg)
 <use ./images//metalic_bonding.jpg>
-Package pdftex.def Info: ./images//metalic_bonding.jpg  used on input line 397.
-(pdftex.def)             Requested size: 195.0pt x 150.00201pt.
- [38 <./images//metalic_bonding.jpg>]
-<./images//aluminium_crystal_structure.jpg, id=158, 518.6878pt x 220.57407pt>
+Package pdftex.def Info: ./images//metalic_bonding.jpg  used on input line 414.
+(pdftex.def)             Requested size: 226.48395pt x 174.22012pt.
+ [31 <./images//metalic_bonding.jpg>]
+<./images//aluminium_crystal_structure.jpg, id=136, 518.6878pt x 220.57407pt>
 File: ./images//aluminium_crystal_structure.jpg Graphic file (type jpg)
 <use ./images//aluminium_crystal_structure.jpg>
-Package pdftex.def Info: ./images//aluminium_crystal_structure.jpg  used on input line 409.
-(pdftex.def)             Requested size: 390.0pt x 165.85757pt.
- [39 <./images//aluminium_crystal_structure.jpg>] [40] [41]
-<./images//effect_of_carbon_content.jpg, id=168, 310.91156pt x 236.38312pt>
+Package pdftex.def Info: ./images//aluminium_crystal_structure.jpg  used on input line 426.
+(pdftex.def)             Requested size: 452.9679pt x 192.63496pt.
+ [32 <./images//aluminium_crystal_structure.jpg>] [33]
+<./images//effect_of_carbon_content.jpg, id=143, 310.91156pt x 236.38312pt>
 File: ./images//effect_of_carbon_content.jpg Graphic file (type jpg)
 <use ./images//effect_of_carbon_content.jpg>
-Package pdftex.def Info: ./images//effect_of_carbon_content.jpg  used on input line 450.
-(pdftex.def)             Requested size: 253.49762pt x 192.73169pt.
- [42 <./images//effect_of_carbon_content.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 464--469
+Package pdftex.def Info: ./images//effect_of_carbon_content.jpg  used on input line 470.
+(pdftex.def)             Requested size: 294.42636pt x 223.85213pt.
+ [34]
+Underfull \hbox (badness 10000) in paragraph at lines 484--489
 
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 476--482
+[35 <./images//effect_of_carbon_content.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 496--502
 
  []
 
-[44]
-<./images//stainless_steel_phase.jpg, id=183, 296.60812pt x 180.675pt>
+
+Overfull \hbox (5.669pt too wide) in paragraph at lines 507--509
+\OT1/cmr/m/n/12 Stainless steels are fer-rous metal-lic ma-te-ri-als that con-tain a min-i-mum of 10.5% of chromium
+ []
+
+[36]
+<./images//stainless_steel_phase.jpg, id=158, 296.60812pt x 180.675pt>
 File: ./images//stainless_steel_phase.jpg Graphic file (type jpg)
 <use ./images//stainless_steel_phase.jpg>
-Package pdftex.def Info: ./images//stainless_steel_phase.jpg  used on input line 492.
-(pdftex.def)             Requested size: 253.49762pt x 154.42082pt.
- [45 <./images//stainless_steel_phase.jpg>]
-<./images//weight_percentages.jpg, id=187, 322.95656pt x 207.77625pt>
+Package pdftex.def Info: ./images//stainless_steel_phase.jpg  used on input line 512.
+(pdftex.def)             Requested size: 294.42636pt x 179.35399pt.
+<./images//weight_percentages.jpg, id=159, 322.95656pt x 207.77625pt>
 File: ./images//weight_percentages.jpg Graphic file (type jpg)
 <use ./images//weight_percentages.jpg>
-Package pdftex.def Info: ./images//weight_percentages.jpg  used on input line 501.
-(pdftex.def)             Requested size: 253.49762pt x 163.08885pt.
- [46 <./images//weight_percentages.jpg>]
-<./images//aqueous_solution_ph_scale.jpg, id=191, 365.11406pt x 62.48344pt>
+Package pdftex.def Info: ./images//weight_percentages.jpg  used on input line 521.
+(pdftex.def)             Requested size: 294.42636pt x 189.43175pt.
+ [37 <./images//stainless_steel_phase.jpg>]
+<./images//aqueous_solution_ph_scale.jpg, id=163, 365.11406pt x 62.48344pt>
 File: ./images//aqueous_solution_ph_scale.jpg Graphic file (type jpg)
 <use ./images//aqueous_solution_ph_scale.jpg>
-Package pdftex.def Info: ./images//aqueous_solution_ph_scale.jpg  used on input line 514.
-(pdftex.def)             Requested size: 312.00119pt x 53.39622pt.
- [47 <./images//aqueous_solution_ph_scale.jpg>] [48]
-Overfull \hbox (24.0pt too wide) in paragraph at lines 561--577
- [] 
+Package pdftex.def Info: ./images//aqueous_solution_ph_scale.jpg  used on input line 534.
+(pdftex.def)             Requested size: 362.37569pt x 62.018pt.
+ [38 <./images//weight_percentages.jpg>]
+<./images//process_of_mechanical_properties.jpg, id=167, 440.39531pt x 247.67531pt>
+File: ./images//process_of_mechanical_properties.jpg Graphic file (type jpg)
+<use ./images//process_of_mechanical_properties.jpg>
+Package pdftex.def Info: ./images//process_of_mechanical_properties.jpg  used on input line 543.
+(pdftex.def)             Requested size: 452.9679pt x 254.75694pt.
+ [39 <./images//aqueous_solution_ph_scale.jpg> <./images//process_of_mechanical_properties.jpg>]
+<./images//storage_tank.jpg, id=171, 307.1475pt x 228.855pt>
+File: ./images//storage_tank.jpg Graphic file (type jpg)
+<use ./images//storage_tank.jpg>
+Package pdftex.def Info: ./images//storage_tank.jpg  used on input line 582.
+(pdftex.def)             Requested size: 249.13371pt x 185.62993pt.
+ [40]
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 594--610
+ [][] 
  []
 
-[49] [50] [51] [52] [53] [54] [55] [56] [57]
-Overfull \hbox (5.70978pt too wide) in paragraph at lines 662--664
-\OT1/cmr/m/n/12 crit-i-cal tem-per-a-ture, a ferrite-cementite mi-crostruc-ture that has a spheroidized
+[41 <./images//storage_tank.jpg>]
+<./images//corrosion_of_storage_facilities.jpg, id=179, 246.1697pt x 240.9pt>
+File: ./images//corrosion_of_storage_facilities.jpg Graphic file (type jpg)
+<use ./images//corrosion_of_storage_facilities.jpg>
+Package pdftex.def Info: ./images//corrosion_of_storage_facilities.jpg  used on input line 621.
+(pdftex.def)             Requested size: 181.18439pt x 177.31483pt.
+ [42]
+<./images//corroded_storage.jpg, id=184, 470.50781pt x 286.82156pt>
+File: ./images//corroded_storage.jpg Graphic file (type jpg)
+<use ./images//corroded_storage.jpg>
+Package pdftex.def Info: ./images//corroded_storage.jpg  used on input line 628.
+(pdftex.def)             Requested size: 452.9679pt x 276.12895pt.
+ [43 <./images//corrosion_of_storage_facilities.jpg> <./images//corroded_storage.jpg>] [44] [45]
+<./images//small_gaps_between_atoms.jpg, id=194, 247.67531pt x 362.10281pt>
+File: ./images//small_gaps_between_atoms.jpg Graphic file (type jpg)
+<use ./images//small_gaps_between_atoms.jpg>
+Package pdftex.def Info: ./images//small_gaps_between_atoms.jpg  used on input line 661.
+(pdftex.def)             Requested size: 226.48395pt x 331.1219pt.
+<./images//microstructure_of_carbon_steel.jpg, id=195, 236.38312pt x 216.05719pt>
+File: ./images//microstructure_of_carbon_steel.jpg Graphic file (type jpg)
+<use ./images//microstructure_of_carbon_steel.jpg>
+Package pdftex.def Info: ./images//microstructure_of_carbon_steel.jpg  used on input line 670.
+(pdftex.def)             Requested size: 226.48395pt x 207.01361pt.
+ [46 <./images//small_gaps_between_atoms.jpg>]
+<./images//austenite_fcc_crystal_structure.jpg, id=199, 218.31563pt x 222.8325pt>
+File: ./images//austenite_fcc_crystal_structure.jpg Graphic file (type jpg)
+<use ./images//austenite_fcc_crystal_structure.jpg>
+Package pdftex.def Info: ./images//austenite_fcc_crystal_structure.jpg  used on input line 681.
+(pdftex.def)             Requested size: 203.83417pt x 208.05151pt.
+ [47 <./images//microstructure_of_carbon_steel.jpg>]
+<./images//iron-iron_carbide_equilibrium_diagram.jpg, id=203, 466.74374pt x 438.8897pt>
+File: ./images//iron-iron_carbide_equilibrium_diagram.jpg Graphic file (type jpg)
+<use ./images//iron-iron_carbide_equilibrium_diagram.jpg>
+Package pdftex.def Info: ./images//iron-iron_carbide_equilibrium_diagram.jpg  used on input line 692.
+(pdftex.def)             Requested size: 452.9679pt x 425.9569pt.
+ [48 <./images//austenite_fcc_crystal_structure.jpg>]
+<./images//ferrite_and_cementite_lamellae_micrograph.jpg, id=208, 206.27063pt x 158.84344pt>
+File: ./images//ferrite_and_cementite_lamellae_micrograph.jpg Graphic file (type jpg)
+<use ./images//ferrite_and_cementite_lamellae_micrograph.jpg>
+Package pdftex.def Info: ./images//ferrite_and_cementite_lamellae_micrograph.jpg  used on input line 704.
+(pdftex.def)             Requested size: 203.83714pt x 142.27669pt.
+<./images//fully_pearlitic_steel.jpg, id=209, 216.05719pt x 158.84344pt>
+File: ./images//fully_pearlitic_steel.jpg Graphic file (type jpg)
+<use ./images//fully_pearlitic_steel.jpg>
+Package pdftex.def Info: ./images//fully_pearlitic_steel.jpg  used on input line 709.
+(pdftex.def)             Requested size: 203.84213pt x 142.27669pt.
+ [49 <./images//iron-iron_carbide_equilibrium_diagram.jpg>]
+<./images//ferrite-pearlite_carbon_content_1.jpg, id=213, 238.64156pt x 202.50656pt>
+File: ./images//ferrite-pearlite_carbon_content_1.jpg Graphic file (type jpg)
+<use ./images//ferrite-pearlite_carbon_content_1.jpg>
+Package pdftex.def Info: ./images//ferrite-pearlite_carbon_content_1.jpg  used on input line 726.
+(pdftex.def)             Requested size: 203.83308pt x 193.64702pt.
+<./images//ferrite-pearlite_carbon_content_2.jpg, id=214, 217.5628pt x 204.765pt>
+File: ./images//ferrite-pearlite_carbon_content_2.jpg Graphic file (type jpg)
+<use ./images//ferrite-pearlite_carbon_content_2.jpg>
+Package pdftex.def Info: ./images//ferrite-pearlite_carbon_content_2.jpg  used on input line 731.
+(pdftex.def)             Requested size: 203.84843pt x 193.6539pt.
+ [50 <./images//ferrite_and_cementite_lamellae_micrograph.jpg> <./images//fully_pearlitic_steel.jpg>]
+<./images//mechanical_properties_of_ferrite-pearlite_steels.jpg, id=218, 424.58624pt x 417.81094pt>
+File: ./images//mechanical_properties_of_ferrite-pearlite_steels.jpg Graphic file (type jpg)
+<use ./images//mechanical_properties_of_ferrite-pearlite_steels.jpg>
+Package pdftex.def Info: ./images//mechanical_properties_of_ferrite-pearlite_steels.jpg  used on input line 741.
+(pdftex.def)             Requested size: 362.37569pt x 356.60728pt.
+ [51 <./images//ferrite-pearlite_carbon_content_1.jpg> <./images//ferrite-pearlite_carbon_content_2.jpg> <./images//mechanical_properties_of_ferrite-pearlite_steels.jpg>]
+<./images//bct_crystal_structure_of_martensite.jpg, id=222, 113.67468pt x 140.77594pt>
+File: ./images//bct_crystal_structure_of_martensite.jpg Graphic file (type jpg)
+<use ./images//bct_crystal_structure_of_martensite.jpg>
+Package pdftex.def Info: ./images//bct_crystal_structure_of_martensite.jpg  used on input line 751.
+(pdftex.def)             Requested size: 113.24197pt x 140.24284pt.
+<./images//lath_martensite_microstructure.jpg, id=223, 225.09094pt x 177.66376pt>
+File: ./images//lath_martensite_microstructure.jpg Graphic file (type jpg)
+<use ./images//lath_martensite_microstructure.jpg>
+Package pdftex.def Info: ./images//lath_martensite_microstructure.jpg  used on input line 764.
+(pdftex.def)             Requested size: 203.84389pt x 170.72063pt.
+<./images//plate_martensite_microstructure.jpg, id=224, 216.05719pt x 176.91093pt>
+File: ./images//plate_martensite_microstructure.jpg Graphic file (type jpg)
+<use ./images//plate_martensite_microstructure.jpg>
+Package pdftex.def Info: ./images//plate_martensite_microstructure.jpg  used on input line 769.
+(pdftex.def)             Requested size: 203.84213pt x 170.71797pt.
+ [52 <./images//bct_crystal_structure_of_martensite.jpg>]
+<./images//upper_bainite_microstruce.jpg, id=228, 228.10219pt x 196.48407pt>
+File: ./images//upper_bainite_microstruce.jpg Graphic file (type jpg)
+<use ./images//upper_bainite_microstruce.jpg>
+Package pdftex.def Info: ./images//upper_bainite_microstruce.jpg  used on input line 787.
+(pdftex.def)             Requested size: 203.83865pt x 183.46281pt.
+<./images//lower_bainite_microstructure.jpg, id=229, 215.30438pt x 199.49532pt>
+File: ./images//lower_bainite_microstructure.jpg Graphic file (type jpg)
+<use ./images//lower_bainite_microstructure.jpg>
+Package pdftex.def Info: ./images//lower_bainite_microstructure.jpg  used on input line 792.
+(pdftex.def)             Requested size: 203.83823pt x 183.45876pt.
+ [53 <./images//lath_martensite_microstructure.jpg> <./images//plate_martensite_microstructure.jpg>]
+<./images//microstructure_of_fully_spheroidizel_steel.jpg, id=233, 326.72063pt x 234.1247pt>
+File: ./images//microstructure_of_fully_spheroidizel_steel.jpg Graphic file (type jpg)
+<use ./images//microstructure_of_fully_spheroidizel_steel.jpg>
+Package pdftex.def Info: ./images//microstructure_of_fully_spheroidizel_steel.jpg  used on input line 806.
+(pdftex.def)             Requested size: 249.13371pt x 178.52606pt.
+ [54 <./images//upper_bainite_microstruce.jpg> <./images//lower_bainite_microstructure.jpg> <./images//microstructure_of_fully_spheroidizel_steel.jpg>]
+<./images//duplex_microstructure_that_has_yellow_austenitic_phase.jpg, id=238, 381.67593pt x 225.09094pt>
+File: ./images//duplex_microstructure_that_has_yellow_austenitic_phase.jpg Graphic file (type jpg)
+<use ./images//duplex_microstructure_that_has_yellow_austenitic_phase.jpg>
+Package pdftex.def Info: ./images//duplex_microstructure_that_has_yellow_austenitic_phase.jpg  used on input line 817.
+(pdftex.def)             Requested size: 271.7835pt x 160.28964pt.
+ [55 <./images//duplex_microstructure_that_has_yellow_austenitic_phase.jpg>] [56] [57] [58]
+<./images//methane_molecular_chain.jpg, id=251, 132.495pt x 101.62968pt>
+File: ./images//methane_molecular_chain.jpg Graphic file (type jpg)
+<use ./images//methane_molecular_chain.jpg>
+Package pdftex.def Info: ./images//methane_molecular_chain.jpg  used on input line 867.
+(pdftex.def)             Requested size: 135.89174pt x 104.24242pt.
+<./images//ethylene_molecular_chain.jpg, id=252, 141.52875pt x 102.3825pt>
+File: ./images//ethylene_molecular_chain.jpg Graphic file (type jpg)
+<use ./images//ethylene_molecular_chain.jpg>
+Package pdftex.def Info: ./images//ethylene_molecular_chain.jpg  used on input line 872.
+(pdftex.def)             Requested size: 135.89174pt x 98.31264pt.
+<./images//polythylene_molecular_chain.jpg, id=253, 356.0803pt x 103.88812pt>
+File: ./images//polythylene_molecular_chain.jpg Graphic file (type jpg)
+<use ./images//polythylene_molecular_chain.jpg>
+Package pdftex.def Info: ./images//polythylene_molecular_chain.jpg  used on input line 877.
+(pdftex.def)             Requested size: 294.42636pt x 85.90373pt.
+ [59]
+<./images//linear_and_branched_hdpe.jpg, id=257, 508.90125pt x 129.48375pt>
+File: ./images//linear_and_branched_hdpe.jpg Graphic file (type jpg)
+<use ./images//linear_and_branched_hdpe.jpg>
+Package pdftex.def Info: ./images//linear_and_branched_hdpe.jpg  used on input line 893.
+(pdftex.def)             Requested size: 452.9679pt x 115.25595pt.
+ [60 <./images//methane_molecular_chain.jpg> <./images//ethylene_molecular_chain.jpg> <./images//polythylene_molecular_chain.jpg>]
+<./images//crosslinked_and_non_crosslinked_ldpe.jpg, id=262, 323.70938pt x 258.21469pt>
+File: ./images//crosslinked_and_non_crosslinked_ldpe.jpg Graphic file (type jpg)
+<use ./images//crosslinked_and_non_crosslinked_ldpe.jpg>
+Package pdftex.def Info: ./images//crosslinked_and_non_crosslinked_ldpe.jpg  used on input line 900.
+(pdftex.def)             Requested size: 271.7835pt x 216.80823pt.
+<./images//methods_available_for_crosslinking_polyethylene.png, id=263, 349.90726pt x 249.93375pt>
+File: ./images//methods_available_for_crosslinking_polyethylene.png Graphic file (type png)
+<use ./images//methods_available_for_crosslinking_polyethylene.png>
+Package pdftex.def Info: ./images//methods_available_for_crosslinking_polyethylene.png  used on input line 909.
+(pdftex.def)             Requested size: 339.72592pt x 242.66045pt.
+ [61 <./images//linear_and_branched_hdpe.jpg> <./images//crosslinked_and_non_crosslinked_ldpe.jpg>] [62 <./images//methods_available_for_crosslinking_polyethylene.png>]
+<./images//process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg, id=271, 523.9575pt x 237.13594pt>
+File: ./images//process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg Graphic file (type jpg)
+<use ./images//process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg>
+Package pdftex.def Info: ./images//process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg  used on input line 929.
+(pdftex.def)             Requested size: 407.66833pt x 184.50935pt.
+<./images//grafting_of_silane_on_pe.jpg, id=272, 532.23843pt x 185.19188pt>
+File: ./images//grafting_of_silane_on_pe.jpg Graphic file (type jpg)
+<use ./images//grafting_of_silane_on_pe.jpg>
+Package pdftex.def Info: ./images//grafting_of_silane_on_pe.jpg  used on input line 946.
+(pdftex.def)             Requested size: 407.66833pt x 141.85216pt.
+<./images//condensation.jpg, id=273, 537.50812pt x 150.5625pt>
+File: ./images//condensation.jpg Graphic file (type jpg)
+<use ./images//condensation.jpg>
+Package pdftex.def Info: ./images//condensation.jpg  used on input line 951.
+(pdftex.def)             Requested size: 407.66833pt x 114.19205pt.
+ [63 <./images//process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg>]
+<./images//polyethylene_energy_radiation.jpg, id=277, 519.44063pt x 138.5175pt>
+File: ./images//polyethylene_energy_radiation.jpg Graphic file (type jpg)
+<use ./images//polyethylene_energy_radiation.jpg>
+Package pdftex.def Info: ./images//polyethylene_energy_radiation.jpg  used on input line 970.
+(pdftex.def)             Requested size: 407.66833pt x 108.7111pt.
+<./images//resulting_crosslinked_pe.jpg, id=278, 460.72125pt x 109.1578pt>
+File: ./images//resulting_crosslinked_pe.jpg Graphic file (type jpg)
+<use ./images//resulting_crosslinked_pe.jpg>
+Package pdftex.def Info: ./images//resulting_crosslinked_pe.jpg  used on input line 975.
+(pdftex.def)             Requested size: 407.66833pt x 96.58716pt.
+ [64 <./images//grafting_of_silane_on_pe.jpg> <./images//condensation.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 989--994
+
  []
 
-[58] [59] [60] [61] [62] [63] [64] [65] [66] [67]
-Overfull \hbox (55.99876pt too wide) in paragraph at lines 765--770
-\OML/cmm/m/it/12  is a probability of crosslinking of chains after one electron volt of energy absorbed:$ 
- []
 
-
-Overfull \hbox (12.55476pt too wide) in paragraph at lines 765--770
-\OML/cmm/m/it/12 ^^L is a probability of chain scission after one electron volt of energy absorded:$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 765--770
+Underfull \hbox (badness 10000) in paragraph at lines 995--996
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-
- []
-
-[68] [69] [70]
+[65 <./images//polyethylene_energy_radiation.jpg> <./images//resulting_crosslinked_pe.jpg>]
+<./images//three_point_bending_apparatus_for_testing_escr.jpg, id=285, 452.3445pt x 173.448pt>
+File: ./images//three_point_bending_apparatus_for_testing_escr.jpg Graphic file (type jpg)
+<use ./images//three_point_bending_apparatus_for_testing_escr.jpg>
+Package pdftex.def Info: ./images//three_point_bending_apparatus_for_testing_escr.jpg  used on input line 1013.
+(pdftex.def)             Requested size: 362.37569pt x 138.95708pt.
+ [66] [67 <./images//three_point_bending_apparatus_for_testing_escr.jpg>]
 Chapter 4.
-[71
+[68
 
-] [72] [73] [74] [75]
+] [69]
+<./images//duplex_stainless_steel_sample.jpg, id=299, 319.302pt x 172.791pt>
+File: ./images//duplex_stainless_steel_sample.jpg Graphic file (type jpg)
+<use ./images//duplex_stainless_steel_sample.jpg>
+Package pdftex.def Info: ./images//duplex_stainless_steel_sample.jpg  used on input line 1102.
+(pdftex.def)             Requested size: 249.13371pt x 134.81862pt.
+<./images//mild_steel_sample.jpg, id=300, 312.732pt x 165.2355pt>
+File: ./images//mild_steel_sample.jpg Graphic file (type jpg)
+<use ./images//mild_steel_sample.jpg>
+Package pdftex.def Info: ./images//mild_steel_sample.jpg  used on input line 1109.
+(pdftex.def)             Requested size: 249.13371pt x 131.63641pt.
+<./images//hdpe_sample.jpg, id=301, 306.4905pt x 165.2355pt>
+File: ./images//hdpe_sample.jpg Graphic file (type jpg)
+<use ./images//hdpe_sample.jpg>
+Package pdftex.def Info: ./images//hdpe_sample.jpg  used on input line 1116.
+(pdftex.def)             Requested size: 249.13371pt x 134.31401pt.
+ [70 <./images//duplex_stainless_steel_sample.jpg> <./images//mild_steel_sample.jpg> <./images//hdpe_sample.jpg>]
+<./images//5mm_guillootine_machine.jpg, id=305, 263.457pt x 259.1865pt>
+File: ./images//5mm_guillootine_machine.jpg Graphic file (type jpg)
+<use ./images//5mm_guillootine_machine.jpg>
+Package pdftex.def Info: ./images//5mm_guillootine_machine.jpg  used on input line 1126.
+(pdftex.def)             Requested size: 181.18439pt x 178.24959pt.
+<./images//3mm_guillotine_machine.jpg, id=306, 299.592pt x 199.071pt>
+File: ./images//3mm_guillotine_machine.jpg Graphic file (type jpg)
+<use ./images//3mm_guillotine_machine.jpg>
+Package pdftex.def Info: ./images//3mm_guillotine_machine.jpg  used on input line 1133.
+(pdftex.def)             Requested size: 249.13371pt x 165.54782pt.
+<./images//samples_after_being_cut.jpg, id=307, 452.673pt x 184.2885pt>
+File: ./images//samples_after_being_cut.jpg Graphic file (type jpg)
+<use ./images//samples_after_being_cut.jpg>
+Package pdftex.def Info: ./images//samples_after_being_cut.jpg  used on input line 1142.
+(pdftex.def)             Requested size: 362.37569pt x 147.53223pt.
+ [71 <./images//5mm_guillootine_machine.jpg> <./images//3mm_guillotine_machine.jpg>]
+<./images//rectangular_file_and_bench_vice.jpg, id=311, 325.872pt x 192.501pt>
+File: ./images//rectangular_file_and_bench_vice.jpg Graphic file (type jpg)
+<use ./images//rectangular_file_and_bench_vice.jpg>
+Package pdftex.def Info: ./images//rectangular_file_and_bench_vice.jpg  used on input line 1151.
+(pdftex.def)             Requested size: 271.7835pt x 160.56299pt.
+<./images//hdpe_immersed_in_various_afff_solutions.jpg, id=312, 326.8575pt x 223.0515pt>
+File: ./images//hdpe_immersed_in_various_afff_solutions.jpg Graphic file (type jpg)
+<use ./images//hdpe_immersed_in_various_afff_solutions.jpg>
+Package pdftex.def Info: ./images//hdpe_immersed_in_various_afff_solutions.jpg  used on input line 1163.
+(pdftex.def)             Requested size: 226.48395pt x 154.55916pt.
+ [72 <./images//samples_after_being_cut.jpg> <./images//rectangular_file_and_bench_vice.jpg>]
+<./images//mild_steel_immersed_in_seawater.jpg, id=317, 334.7415pt x 194.472pt>
+File: ./images//mild_steel_immersed_in_seawater.jpg Graphic file (type jpg)
+<use ./images//mild_steel_immersed_in_seawater.jpg>
+Package pdftex.def Info: ./images//mild_steel_immersed_in_seawater.jpg  used on input line 1172.
+(pdftex.def)             Requested size: 226.48395pt x 131.58043pt.
+File: ./images//mild_steel_immersed_in_seawater.jpg Graphic file (type jpg)
+<use ./images//mild_steel_immersed_in_seawater.jpg>
+Package pdftex.def Info: ./images//mild_steel_immersed_in_seawater.jpg  used on input line 1177.
+(pdftex.def)             Requested size: 226.48395pt x 131.58043pt.
+ [73 <./images//hdpe_immersed_in_various_afff_solutions.jpg> <./images//mild_steel_immersed_in_seawater.jpg>]
+<./images//ftir_instrument.jpg, id=321, 333.099pt x 192.8295pt>
+File: ./images//ftir_instrument.jpg Graphic file (type jpg)
+<use ./images//ftir_instrument.jpg>
+Package pdftex.def Info: ./images//ftir_instrument.jpg  used on input line 1192.
+(pdftex.def)             Requested size: 271.7835pt x 157.33559pt.
+<./images//tem_instrument.png, id=322, 447.81589pt x 265.42018pt>
+File: ./images//tem_instrument.png Graphic file (type png)
+<use ./images//tem_instrument.png>
+Package pdftex.def Info: ./images//tem_instrument.png  used on input line 1201.
+(pdftex.def)             Requested size: 271.7835pt x 161.08392pt.
+<./images//dls_instrument.png, id=323, 471.9059pt x 263.26929pt>
+File: ./images//dls_instrument.png Graphic file (type png)
+<use ./images//dls_instrument.png>
+Package pdftex.def Info: ./images//dls_instrument.png  used on input line 1210.
+(pdftex.def)             Requested size: 271.7835pt x 151.63174pt.
+ [74 <./images//ftir_instrument.jpg> <./images//tem_instrument.png>]
+<./images//icp_instrument.png, id=328, 444.80464pt x 260.25804pt>
+File: ./images//icp_instrument.png Graphic file (type png)
+<use ./images//icp_instrument.png>
+Package pdftex.def Info: ./images//icp_instrument.png  used on input line 1219.
+(pdftex.def)             Requested size: 271.7835pt x 159.02719pt.
+ [75 <./images//dls_instrument.png> <./images//icp_instrument.png>]
 Chapter 5.
 [76
 
 ]
-Overfull \hbox (14.15388pt too wide) in paragraph at lines 908--908
-[]\OT1/cmr/bx/n/17.28 Infrared spec-troscopy of HDPE, Mild steel,
+<./images//ftir_spectra.png, id=337, 234.8775pt x 207.9405pt>
+File: ./images//ftir_spectra.png Graphic file (type png)
+<use ./images//ftir_spectra.png>
+Package pdftex.def Info: ./images//ftir_spectra.png  used on input line 1242.
+(pdftex.def)             Requested size: 203.83417pt x 180.4562pt.
+<./images//comparison.png, id=338, 220.095pt x 191.5155pt>
+File: ./images//comparison.png Graphic file (type png)
+<use ./images//comparison.png>
+Package pdftex.def Info: ./images//comparison.png  used on input line 1246.
+(pdftex.def)             Requested size: 203.83417pt x 177.3653pt.
+<./images//pure_hdpe_ftir_spectra.png, id=339, 239.4765pt x 199.728pt>
+File: ./images//pure_hdpe_ftir_spectra.png Graphic file (type png)
+<use ./images//pure_hdpe_ftir_spectra.png>
+Package pdftex.def Info: ./images//pure_hdpe_ftir_spectra.png  used on input line 1261.
+(pdftex.def)             Requested size: 203.83734pt x 170.72348pt.
+<./images//pure_ms_ftir_spetra.png, id=340, 218.124pt x 199.3995pt>
+File: ./images//pure_ms_ftir_spetra.png Graphic file (type png)
+<use ./images//pure_ms_ftir_spetra.png>
+Package pdftex.def Info: ./images//pure_ms_ftir_spetra.png  used on input line 1265.
+(pdftex.def)             Requested size: 203.84503pt x 170.72263pt.
+<./images//pure_ss_ftir_spectra.png, id=341, 262.4715pt x 196.7715pt>
+File: ./images//pure_ss_ftir_spectra.png Graphic file (type png)
+<use ./images//pure_ss_ftir_spectra.png>
+Package pdftex.def Info: ./images//pure_ss_ftir_spectra.png  used on input line 1269.
+(pdftex.def)             Requested size: 203.83417pt x 152.81157pt.
+ [77 <./images//ftir_spectra.png> <./images//comparison.png>]
+<./images//diffraction_image_1.png, id=345, 198.0855pt x 141.912pt>
+File: ./images//diffraction_image_1.png Graphic file (type png)
+<use ./images//diffraction_image_1.png>
+Package pdftex.def Info: ./images//diffraction_image_1.png  used on input line 1285.
+(pdftex.def)             Requested size: 203.8399pt x 150.80493pt.
+<./images//diffraction_image_2.png, id=346, 203.9985pt x 143.5545pt>
+File: ./images//diffraction_image_2.png Graphic file (type png)
+<use ./images//diffraction_image_2.png>
+Package pdftex.def Info: ./images//diffraction_image_2.png  used on input line 1289.
+(pdftex.def)             Requested size: 203.84547pt x 150.80676pt.
+<./images//diffraction_image_3.png, id=347, 203.3415pt x 164.25pt>
+File: ./images//diffraction_image_3.png Graphic file (type png)
+<use ./images//diffraction_image_3.png>
+Package pdftex.def Info: ./images//diffraction_image_3.png  used on input line 1293.
+(pdftex.def)             Requested size: 203.84674pt x 170.73074pt.
+<./images//diffraction_image_4.png, id=348, 206.298pt x 161.2935pt>
+File: ./images//diffraction_image_4.png Graphic file (type png)
+<use ./images//diffraction_image_4.png>
+Package pdftex.def Info: ./images//diffraction_image_4.png  used on input line 1297.
+(pdftex.def)             Requested size: 203.83272pt x 170.72664pt.
+ [78 <./images//pure_hdpe_ftir_spectra.png> <./images//pure_ms_ftir_spetra.png> <./images//pure_ss_ftir_spectra.png>]
+<./images//diffraction_image_5.png, id=353, 279.225pt x 222.3945pt>
+File: ./images//diffraction_image_5.png Graphic file (type png)
+<use ./images//diffraction_image_5.png>
+Package pdftex.def Info: ./images//diffraction_image_5.png  used on input line 1310.
+(pdftex.def)             Requested size: 203.8368pt x 170.71829pt.
+<./images//diffraction_image_6.png, id=354, 228.636pt x 208.5975pt>
+File: ./images//diffraction_image_6.png Graphic file (type png)
+<use ./images//diffraction_image_6.png>
+Package pdftex.def Info: ./images//diffraction_image_6.png  used on input line 1314.
+(pdftex.def)             Requested size: 203.84123pt x 170.71684pt.
+<./images//diffraction_image_7.png, id=355, 225.0225pt x 213.525pt>
+File: ./images//diffraction_image_7.png Graphic file (type png)
+<use ./images//diffraction_image_7.png>
+Package pdftex.def Info: ./images//diffraction_image_7.png  used on input line 1318.
+(pdftex.def)             Requested size: 203.83685pt x 170.72247pt.
+<./images//afff_solution_immersed_in_mild_steel.png, id=356, 224.037pt x 202.6845pt>
+File: ./images//afff_solution_immersed_in_mild_steel.png Graphic file (type png)
+<use ./images//afff_solution_immersed_in_mild_steel.png>
+Package pdftex.def Info: ./images//afff_solution_immersed_in_mild_steel.png  used on input line 1322.
+(pdftex.def)             Requested size: 203.83636pt x 170.72389pt.
+ [79 <./images//diffraction_image_1.png> <./images//diffraction_image_2.png> <./images//diffraction_image_3.png> <./images//diffraction_image_4.png>]
+<./images//diffraction_image_8.png, id=364, 231.5925pt x 197.4285pt>
+File: ./images//diffraction_image_8.png Graphic file (type png)
+<use ./images//diffraction_image_8.png>
+Package pdftex.def Info: ./images//diffraction_image_8.png  used on input line 1333.
+(pdftex.def)             Requested size: 203.84442pt x 170.71907pt.
+<./images//diffraction_image_9.png, id=365, 232.578pt x 201.3705pt>
+File: ./images//diffraction_image_9.png Graphic file (type png)
+<use ./images//diffraction_image_9.png>
+Package pdftex.def Info: ./images//diffraction_image_9.png  used on input line 1337.
+(pdftex.def)             Requested size: 203.84593pt x 170.72325pt.
+<./images//diffraction_image_10.png, id=366, 229.95pt x 193.815pt>
+File: ./images//diffraction_image_10.png Graphic file (type png)
+<use ./images//diffraction_image_10.png>
+Package pdftex.def Info: ./images//diffraction_image_10.png  used on input line 1341.
+(pdftex.def)             Requested size: 203.84433pt x 170.7174pt.
+<./images//afff_solution_immersed_in_stainless_steel.png, id=367, 240.1335pt x 212.211pt>
+File: ./images//afff_solution_immersed_in_stainless_steel.png Graphic file (type png)
+<use ./images//afff_solution_immersed_in_stainless_steel.png>
+Package pdftex.def Info: ./images//afff_solution_immersed_in_stainless_steel.png  used on input line 1345.
+(pdftex.def)             Requested size: 203.83961pt x 170.72102pt.
+ [80 <./images//diffraction_image_5.png> <./images//diffraction_image_6.png> <./images//diffraction_image_7.png> <./images//afff_solution_immersed_in_mild_steel.png>]
+<./images//diffraction_image_11.png, id=375, 257.544pt x 180.018pt>
+File: ./images//diffraction_image_11.png Graphic file (type png)
+<use ./images//diffraction_image_11.png>
+Package pdftex.def Info: ./images//diffraction_image_11.png  used on input line 1356.
+(pdftex.def)             Requested size: 203.84264pt x 156.49077pt.
+<./images//diffraction_image_12.png, id=376, 237.5055pt x 268.056pt>
+File: ./images//diffraction_image_12.png Graphic file (type png)
+<use ./images//diffraction_image_12.png>
+Package pdftex.def Info: ./images//diffraction_image_12.png  used on input line 1360.
+(pdftex.def)             Requested size: 203.8376pt x 156.49104pt.
+<./images//diffraction_image_13.png, id=377, 243.747pt x 194.472pt>
+File: ./images//diffraction_image_13.png Graphic file (type png)
+<use ./images//diffraction_image_13.png>
+Package pdftex.def Info: ./images//diffraction_image_13.png  used on input line 1364.
+(pdftex.def)             Requested size: 203.84229pt x 156.49176pt.
+<./images//afff_solution_in_hdpe.png, id=378, 238.491pt x 217.467pt>
+File: ./images//afff_solution_in_hdpe.png Graphic file (type png)
+<use ./images//afff_solution_in_hdpe.png>
+Package pdftex.def Info: ./images//afff_solution_in_hdpe.png  used on input line 1368.
+(pdftex.def)             Requested size: 203.83913pt x 156.49646pt.
+ [81 <./images//diffraction_image_8.png> <./images//diffraction_image_9.png> <./images//diffraction_image_10.png> <./images//afff_solution_immersed_in_stainless_steel.png>] [82 <./images//diffraction_image_11.png> <./images//diffraction_image_12.png> <./images//diffraction_image_13.png> <./images//afff_solution_in_hdpe.png>]
+<./images//samples_used_during_the_dls_analysis.png, id=393, 347.58429pt x 146.69089pt>
+File: ./images//samples_used_during_the_dls_analysis.png Graphic file (type png)
+<use ./images//samples_used_during_the_dls_analysis.png>
+Package pdftex.def Info: ./images//samples_used_during_the_dls_analysis.png  used on input line 1385.
+(pdftex.def)             Requested size: 271.7835pt x 114.70715pt.
+ [83 <./images//samples_used_during_the_dls_analysis.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1414--1421
+
  []
 
-[77]
-Overfull \hbox (6.07184pt too wide) in paragraph at lines 913--913
-[]\OT1/cmr/bx/n/17.28 Transmission Elec-tron Mi-croscopy (TEM) 
- []
 
-[78] [79] [80]
-Underfull \hbox (badness 10000) in paragraph at lines 959--966
+Underfull \hbox (badness 10000) in paragraph at lines 1431--1434
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 975--978
-
- []
-
-[81]
-Underfull \hbox (badness 10000) in paragraph at lines 987--990
+[84]
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1447
 
  []
 
-[82] [83] [84] [85]
+<./images//particle_size_distribution_of_pure_afff_solution.png, id=402, 666.77678pt x 254.23553pt>
+File: ./images//particle_size_distribution_of_pure_afff_solution.png Graphic file (type png)
+<use ./images//particle_size_distribution_of_pure_afff_solution.png>
+Package pdftex.def Info: ./images//particle_size_distribution_of_pure_afff_solution.png  used on input line 1455.
+(pdftex.def)             Requested size: 362.37569pt x 138.1735pt.
+[85 <./images//particle_size_distribution_of_pure_afff_solution.png>]
+<./images//particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png, id=407, 644.83768pt x 246.9225pt>
+File: ./images//particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png Graphic file (type png)
+<use ./images//particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png>
+Package pdftex.def Info: ./images//particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png  used on input line 1466.
+(pdftex.def)             Requested size: 362.37569pt x 138.76544pt.
+<./images//particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png, id=408, 623.75893pt x 239.17929pt>
+File: ./images//particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png Graphic file (type png)
+<use ./images//particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png>
+Package pdftex.def Info: ./images//particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png  used on input line 1475.
+(pdftex.def)             Requested size: 362.37569pt x 138.95035pt.
+ [86 <./images//particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png> <./images//particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png>]
+<./images//particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png, id=414, 630.64178pt x 249.0734pt>
+File: ./images//particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png Graphic file (type png)
+<use ./images//particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png>
+Package pdftex.def Info: ./images//particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png  used on input line 1484.
+(pdftex.def)             Requested size: 362.37569pt x 143.12106pt.
+ [87 <./images//particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png>] [88]
 Chapter 6.
-[86
+[89
 
-] (NHLANHLA.aux) ) 
+]
+Appendix A.
+<./images//original_composition_of_afff_concentrate.png, id=425, 452.892pt x 496.85625pt>
+File: ./images//original_composition_of_afff_concentrate.png Graphic file (type png)
+<use ./images//original_composition_of_afff_concentrate.png>
+Package pdftex.def Info: ./images//original_composition_of_afff_concentrate.png  used on input line 1510.
+(pdftex.def)             Requested size: 452.9679pt x 496.95358pt.
+[90
+
+]
+Overfull \vbox (18.78445pt too high) has occurred while \output is active []
+
+ [91 <./images//original_composition_of_afff_concentrate.png>]
+Appendix B.
+<./images//mechanical_and_physical_properties_of_mild_steel.jpg, id=434, 453.19313pt x 166.37157pt>
+File: ./images//mechanical_and_physical_properties_of_mild_steel.jpg Graphic file (type jpg)
+<use ./images//mechanical_and_physical_properties_of_mild_steel.jpg>
+Package pdftex.def Info: ./images//mechanical_and_physical_properties_of_mild_steel.jpg  used on input line 1517.
+(pdftex.def)             Requested size: 452.9679pt x 166.2899pt.
+<./images//weighed_composition_of_duplex_stainless_steel.jpg, id=435, 453.19313pt x 121.95563pt>
+File: ./images//weighed_composition_of_duplex_stainless_steel.jpg Graphic file (type jpg)
+<use ./images//weighed_composition_of_duplex_stainless_steel.jpg>
+Package pdftex.def Info: ./images//weighed_composition_of_duplex_stainless_steel.jpg  used on input line 1523.
+(pdftex.def)             Requested size: 452.9679pt x 121.89575pt.
+<./images//mechanical_and_physical_properties_of_stainless_steel.jpg, id=436, 453.19313pt x 293.59688pt>
+File: ./images//mechanical_and_physical_properties_of_stainless_steel.jpg Graphic file (type jpg)
+<use ./images//mechanical_and_physical_properties_of_stainless_steel.jpg>
+Package pdftex.def Info: ./images//mechanical_and_physical_properties_of_stainless_steel.jpg  used on input line 1529.
+(pdftex.def)             Requested size: 452.9679pt x 293.45277pt.
+[92
+
+ <./images//mechanical_and_physical_properties_of_mild_steel.jpg> <./images//weighed_composition_of_duplex_stainless_steel.jpg>] [93 <./images//mechanical_and_physical_properties_of_stainless_steel.jpg>]
+Appendix C.
+
+Underfull \hbox (badness 1527) in paragraph at lines 1545--1545
+\OT1/cmr/m/n/10 re-crys-tal-liza-tion pro-cesses; at el-e-vated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1545--1545
+\OT1/cmr/m/n/10 tem-per-a-tures edge dis-lo-ca-tions may
+ []
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 1546--1547
+[]|\OT1/cmr/m/n/10 Mobility of dis-lo-ca-tions, for ex-am-ple,
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 1548--1548
+\OT1/cmr/m/n/10 en-ergy/ordered crys-tal struc-ture; an-
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 1549--1549
+[]|\OT1/cmr/m/n/10 Lattice ori-en-ta-tion be-tween neigh-bor-
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 1549--1549
+\OT1/cmr/m/n/10 ing grains; sub-di-vi-sion in small-angle,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1549--1549
+\OT1/cmr/m/n/10 medium-angle and high-angle grain
+ []
+
+
+Underfull \hbox (badness 4024) in paragraph at lines 1553--1553
+[]|\OT1/cmr/m/n/10 Precipitates / dis-
+ []
+
+
+Overfull \hbox (35.99307pt too wide) in paragraph at lines 1540--1555
+ [][] 
+ []
+
+[94
+
+]
+Appendix D.
+<./images//full_annealing_temperature_cycle.jpg, id=446, 453.19313pt x 188.95593pt>
+File: ./images//full_annealing_temperature_cycle.jpg Graphic file (type jpg)
+<use ./images//full_annealing_temperature_cycle.jpg>
+Package pdftex.def Info: ./images//full_annealing_temperature_cycle.jpg  used on input line 1562.
+(pdftex.def)             Requested size: 452.9679pt x 188.86319pt.
+[95
+
+ <./images//full_annealing_temperature_cycle.jpg>]
+Appendix E.
+<./images//effect_of_changes_on_properties_of_pe.jpg, id=450, 453.19313pt x 387.69844pt>
+File: ./images//effect_of_changes_on_properties_of_pe.jpg Graphic file (type jpg)
+<use ./images//effect_of_changes_on_properties_of_pe.jpg>
+Package pdftex.def Info: ./images//effect_of_changes_on_properties_of_pe.jpg  used on input line 1569.
+(pdftex.def)             Requested size: 452.9679pt x 387.50816pt.
+<./images//cell_classifications_for_pe.jpg, id=451, 371.13657pt x 399.74344pt>
+File: ./images//cell_classifications_for_pe.jpg Graphic file (type jpg)
+<use ./images//cell_classifications_for_pe.jpg>
+Package pdftex.def Info: ./images//cell_classifications_for_pe.jpg  used on input line 1575.
+(pdftex.def)             Requested size: 452.9679pt x 487.89365pt.
+[96
+
+ <./images//effect_of_changes_on_properties_of_pe.jpg>] [97 <./images//cell_classifications_for_pe.jpg>] (NHLANHLA.aux) ) 
 Here is how much of TeX's memory you used:
- 18186 strings out of 475385
- 380410 string characters out of 2776906
- 724580 words of memory out of 3000000
- 39233 multiletter control sequences out of 15000+600000
- 476795 words of font info for 54 fonts, out of 8000000 for 9000
+ 19664 strings out of 475385
+ 425725 string characters out of 2776906
+ 744342 words of memory out of 3000000
+ 40617 multiletter control sequences out of 15000+600000
+ 477022 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,10n,131p,1429b,902s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 110i,10n,131p,1564b,888s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\sphem\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/sphem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on NHLANHLA.pdf (87 pages, 1588334 bytes).
+Output written on NHLANHLA.pdf (98 pages, 11041313 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
+ 513 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 words of extra memory for PDF output out of 10000 (max. 10000000)
 

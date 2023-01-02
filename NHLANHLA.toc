@@ -1,81 +1,87 @@
-\contentsline {chapter}{\numberline {1}Introduction}{7}{}%
-\contentsline {section}{\numberline {1.1}Overview}{7}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{8}{}%
+\contentsline {section}{\numberline {1.1}Overview}{8}{}%
 \contentsline {section}{\numberline {1.2}Thesis layout}{9}{}%
 \contentsline {chapter}{\numberline {2}Literature review}{11}{}%
 \contentsline {section}{\numberline {2.1}Introduction}{11}{}%
 \contentsline {section}{\numberline {2.2}A brief overview of various firefighting foams}{11}{}%
 \contentsline {section}{\numberline {2.3}Evolution of AFFF for effective extinguishment of Class B fires}{13}{}%
-\contentsline {section}{\numberline {2.4}Foam generating process}{15}{}%
-\contentsline {subsection}{\numberline {2.4.1}Aspirated nozzle}{16}{}%
-\contentsline {subsection}{\numberline {2.4.2}Compressed air foam (CAF)}{18}{}%
-\contentsline {subsection}{\numberline {2.4.3}Chemical reaction}{19}{}%
-\contentsline {section}{\numberline {2.5}Foaming ability and Mechanical stability}{19}{}%
-\contentsline {subsection}{\numberline {2.5.1}AFFF blanket stability/drainage time}{21}{}%
-\contentsline {section}{\numberline {2.6}Critical application rates}{24}{}%
-\contentsline {section}{\numberline {2.7}Effect of degradability}{26}{}%
-\contentsline {section}{\numberline {2.8}Environmental issues}{29}{}%
-\contentsline {section}{\numberline {2.9}Conclusions}{31}{}%
-\contentsline {chapter}{\numberline {3}Evaluation of materials of construction}{33}{}%
-\contentsline {section}{\numberline {3.1}Introduction}{33}{}%
-\contentsline {section}{\numberline {3.2}A brief overview of construction materials}{34}{}%
-\contentsline {subsection}{\numberline {3.2.1}Metallic materials}{36}{}%
-\contentsline {subsection}{\numberline {3.2.2}Metalic bonding}{37}{}%
-\contentsline {section}{\numberline {3.3}Mild steel the material}{40}{}%
-\contentsline {subsection}{\numberline {3.3.1}Useful properties}{41}{}%
-\contentsline {section}{\numberline {3.4}Stainless steel the material}{45}{}%
-\contentsline {section}{\numberline {3.5}Effect of corrosion on steels}{47}{}%
-\contentsline {subsection}{\numberline {3.5.1}Types of corrosion}{49}{}%
-\contentsline {subsubsection}{\numberline {3.5.1.1}Atmospheric corrosion}{50}{}%
-\contentsline {paragraph}{\numberline {3.5.1.1.1}Effects of atmospheric factors on corrosion}{52}{}%
-\contentsline {section}{\numberline {3.6}Microstructure morphology}{53}{}%
-\contentsline {subsection}{\numberline {3.6.1}Ferrite}{54}{}%
-\contentsline {subsection}{\numberline {3.6.2}Austenite}{55}{}%
-\contentsline {subsection}{\numberline {3.6.3}Pearlite}{55}{}%
-\contentsline {subsection}{\numberline {3.6.4}Ferrite-Pearlite}{56}{}%
-\contentsline {subsection}{\numberline {3.6.5}Martensite}{56}{}%
-\contentsline {subsection}{\numberline {3.6.6}Bainite}{57}{}%
-\contentsline {subsection}{\numberline {3.6.7}Ferrite-Cementite}{58}{}%
-\contentsline {subsection}{\numberline {3.6.8}Ferrite-Austenite}{58}{}%
-\contentsline {section}{\numberline {3.7}Characterization of defects}{59}{}%
-\contentsline {subsection}{\numberline {3.7.1}Vacancies}{60}{}%
-\contentsline {subsection}{\numberline {3.7.2}Dislocations}{60}{}%
-\contentsline {section}{\numberline {3.8}Effects of heat treatment on steels}{60}{}%
-\contentsline {subsection}{\numberline {3.8.1}Annealing}{61}{}%
-\contentsline {subsection}{\numberline {3.8.2}Normalizing}{61}{}%
-\contentsline {subsection}{\numberline {3.8.3}Tempering}{62}{}%
-\contentsline {subsection}{\numberline {3.8.4}Quenching}{62}{}%
-\contentsline {section}{\numberline {3.9}Polyethylene plastics}{64}{}%
-\contentsline {subsection}{\numberline {3.9.1}Cross-linked polyethylene (XLPE) material}{65}{}%
-\contentsline {subsubsection}{\numberline {3.9.1.1}Chemical processes}{66}{}%
-\contentsline {paragraph}{\numberline {3.9.1.1.1}Peroxide processes}{66}{}%
-\contentsline {paragraph}{\numberline {3.9.1.1.2}Silane processes}{67}{}%
-\contentsline {paragraph}{\numberline {3.9.1.1.3}Radiation (physical) processes}{67}{}%
-\contentsline {subsection}{\numberline {3.9.2}Environmental Stress Crack Resistance (ESCR)}{69}{}%
-\contentsline {section}{\numberline {3.10}Conclusions}{70}{}%
-\contentsline {chapter}{\numberline {4}Experimental set up}{71}{}%
-\contentsline {section}{\numberline {4.1}Introduction}{71}{}%
-\contentsline {section}{\numberline {4.2}Aim of the experiment}{71}{}%
-\contentsline {section}{\numberline {4.3}Methodology}{71}{}%
-\contentsline {section}{\numberline {4.4}Material description}{72}{}%
-\contentsline {section}{\numberline {4.5}Sample preparation}{73}{}%
-\contentsline {subsection}{\numberline {4.5.1}Experimental matrix}{73}{}%
-\contentsline {subsection}{\numberline {4.5.2}Material plates}{73}{}%
-\contentsline {subsection}{\numberline {4.5.3}The cutting process}{73}{}%
-\contentsline {subsection}{\numberline {4.5.4}AFFF solution samples}{74}{}%
-\contentsline {section}{\numberline {4.6}Testing}{74}{}%
-\contentsline {subsection}{\numberline {4.6.1}Fourier transform infrared spectroscopy (FTIR)}{74}{}%
+\contentsline {section}{\numberline {2.4}Foam generating process}{14}{}%
+\contentsline {subsection}{\numberline {2.4.1}Aspirated nozzle}{15}{}%
+\contentsline {subsection}{\numberline {2.4.2}Compressed air foam (CAF)}{16}{}%
+\contentsline {subsection}{\numberline {2.4.3}Chemical reaction}{17}{}%
+\contentsline {section}{\numberline {2.5}Foaming ability and Mechanical stability}{17}{}%
+\contentsline {subsection}{\numberline {2.5.1}AFFF blanket stability/drainage time}{18}{}%
+\contentsline {section}{\numberline {2.6}Critical application rates}{21}{}%
+\contentsline {section}{\numberline {2.7}Effect of degradability}{23}{}%
+\contentsline {section}{\numberline {2.8}Environmental issues}{25}{}%
+\contentsline {section}{\numberline {2.9}Conclusions}{27}{}%
+\contentsline {chapter}{\numberline {3}Evaluation of materials of construction}{28}{}%
+\contentsline {section}{\numberline {3.1}Introduction}{28}{}%
+\contentsline {section}{\numberline {3.2}A brief overview of construction materials}{28}{}%
+\contentsline {subsection}{\numberline {3.2.1}Metallic materials}{30}{}%
+\contentsline {subsection}{\numberline {3.2.2}Metalic bonding}{31}{}%
+\contentsline {section}{\numberline {3.3}Mild steel the material}{33}{}%
+\contentsline {subsection}{\numberline {3.3.1}Useful properties}{34}{}%
+\contentsline {section}{\numberline {3.4}Stainless steel the material}{36}{}%
+\contentsline {section}{\numberline {3.5}Effect of corrosion on steels}{38}{}%
+\contentsline {subsection}{\numberline {3.5.1}Types of corrosion}{41}{}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Atmospheric corrosion}{42}{}%
+\contentsline {paragraph}{\numberline {3.5.1.1.1}Effects of atmospheric factors on corrosion}{44}{}%
+\contentsline {section}{\numberline {3.6}Microstructure morphology}{45}{}%
+\contentsline {subsection}{\numberline {3.6.1}Ferrite}{45}{}%
+\contentsline {subsection}{\numberline {3.6.2}Austenite}{47}{}%
+\contentsline {subsection}{\numberline {3.6.3}Pearlite}{48}{}%
+\contentsline {subsection}{\numberline {3.6.4}Ferrite-Pearlite}{50}{}%
+\contentsline {subsection}{\numberline {3.6.5}Martensite}{52}{}%
+\contentsline {subsection}{\numberline {3.6.6}Bainite}{53}{}%
+\contentsline {subsection}{\numberline {3.6.7}Ferrite-Cementite}{54}{}%
+\contentsline {subsection}{\numberline {3.6.8}Ferrite-Austenite}{55}{}%
+\contentsline {section}{\numberline {3.7}Characterization of defects}{55}{}%
+\contentsline {subsection}{\numberline {3.7.1}Vacancies}{56}{}%
+\contentsline {subsection}{\numberline {3.7.2}Dislocations}{56}{}%
+\contentsline {section}{\numberline {3.8}Effects of heat treatment on steels}{56}{}%
+\contentsline {subsection}{\numberline {3.8.1}Annealing}{57}{}%
+\contentsline {subsection}{\numberline {3.8.2}Normalizing}{57}{}%
+\contentsline {subsection}{\numberline {3.8.3}Tempering}{57}{}%
+\contentsline {subsection}{\numberline {3.8.4}Quenching}{58}{}%
+\contentsline {section}{\numberline {3.9}Polyethylene plastics}{59}{}%
+\contentsline {subsection}{\numberline {3.9.1}Cross-linked polyethylene (XLPE) material}{60}{}%
+\contentsline {subsubsection}{\numberline {3.9.1.1}Chemical processes}{62}{}%
+\contentsline {paragraph}{\numberline {3.9.1.1.1}Peroxide processes}{62}{}%
+\contentsline {paragraph}{\numberline {3.9.1.1.2}Silane processes}{63}{}%
+\contentsline {paragraph}{\numberline {3.9.1.1.3}Radiation (physical) processes}{64}{}%
+\contentsline {subsection}{\numberline {3.9.2}Environmental Stress Crack Resistance (ESCR)}{66}{}%
+\contentsline {section}{\numberline {3.10}Conclusions}{67}{}%
+\contentsline {chapter}{\numberline {4}Experimental set up}{68}{}%
+\contentsline {section}{\numberline {4.1}Introduction}{68}{}%
+\contentsline {section}{\numberline {4.2}Aim of the experiment}{68}{}%
+\contentsline {section}{\numberline {4.3}Methodology}{68}{}%
+\contentsline {section}{\numberline {4.4}Material description}{69}{}%
+\contentsline {section}{\numberline {4.5}Sample preparation}{69}{}%
+\contentsline {subsection}{\numberline {4.5.1}Experimental matrix}{69}{}%
+\contentsline {subsection}{\numberline {4.5.2}Material plates}{70}{}%
+\contentsline {subsection}{\numberline {4.5.3}The cutting process}{71}{}%
+\contentsline {subsection}{\numberline {4.5.4}AFFF solution samples}{72}{}%
+\contentsline {section}{\numberline {4.6}Testing}{73}{}%
+\contentsline {subsection}{\numberline {4.6.1}Fourier transform infrared spectroscopy (FTIR)}{73}{}%
 \contentsline {subsection}{\numberline {4.6.2}Transmission electron microscopy (TEM)}{74}{}%
-\contentsline {subsection}{\numberline {4.6.3}Dynamic Light Scattering (DLS)}{75}{}%
+\contentsline {subsection}{\numberline {4.6.3}Dynamic Light Scattering (DLS)}{74}{}%
 \contentsline {subsection}{\numberline {4.6.4}Inductively Coupled Plasma (ICP)}{75}{}%
 \contentsline {section}{\numberline {4.7}Summary}{75}{}%
 \contentsline {chapter}{\numberline {5}Results and discussions}{76}{}%
 \contentsline {section}{\numberline {5.1}Introduction}{76}{}%
 \contentsline {section}{\numberline {5.2}AFFF solution Infrared spectroscopy}{76}{}%
-\contentsline {section}{\numberline {5.3}Infrared spectroscopy of HDPE, Mild steel, and Stainless steel}{78}{}%
+\contentsline {section}{\numberline {5.3}Infrared spectroscopy of HDPE, Mild steel, and Stainless steel}{77}{}%
 \contentsline {section}{\numberline {5.4}Transmission Electron Microscopy (TEM)}{78}{}%
-\contentsline {section}{\numberline {5.5}Dynamic Light Scattering (DLS)}{80}{}%
-\contentsline {subsection}{\numberline {5.5.1}Particle size analysis}{80}{}%
-\contentsline {chapter}{\numberline {6}Conclusions and recommendations}{86}{}%
-\contentsline {section}{\numberline {6.1}Summary of findings}{86}{}%
-\contentsline {section}{\numberline {6.2}Conclusions}{86}{}%
-\contentsline {section}{\numberline {6.3}Summary of contributions}{86}{}%
+\contentsline {section}{\numberline {5.5}Dynamic Light Scattering (DLS)}{83}{}%
+\contentsline {subsection}{\numberline {5.5.1}Particle size analysis}{83}{}%
+\contentsline {chapter}{\numberline {6}Conclusions and recommendations}{89}{}%
+\contentsline {section}{\numberline {6.1}Summary of findings}{89}{}%
+\contentsline {section}{\numberline {6.2}Conclusions}{89}{}%
+\contentsline {section}{\numberline {6.3}Summary of contributions}{89}{}%
+\contentsline {section}{\numberline {6.4}Future research or studies}{89}{}%
+\contentsline {chapter}{\numberline {A}Chemical composition of AFFF}{90}{}%
+\contentsline {chapter}{\numberline {B}Properties and composition of steels}{92}{}%
+\contentsline {chapter}{\numberline {C}Role of microstructural constituents}{94}{}%
+\contentsline {chapter}{\numberline {D}Full annealing temperature cycle}{95}{}%
+\contentsline {chapter}{\numberline {E}Effect of changing various substances in PE}{96}{}%

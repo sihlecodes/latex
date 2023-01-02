@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-
+\usepackage[a4paper, left=1in, right=1in, bottom=1in, top=1in]{geometry}
 % install / use required packages
 \usepackage{nomencl}
 \usepackage{array}
@@ -9,11 +9,17 @@
 \usepackage{subcaption}
 \usepackage{adjustbox}
 
+% \usepackage{chngcntr}
+% \counterwithin*{equation}{chapter}
+% \counterwithin*{equation}{section}
+% \counterwithin*{equation}{subsection}
+
 \usepackage{tikz}
-\usetikzlibrary{shapes.geometric,arrows}
+\usetikzlibrary{shapes.geometric,arrows,calc}
 
 \usepackage{caption}
 \captionsetup{justification=raggedright,singlelinecheck=false}
+\captionsetup[subfigure]{justification=centering}
 
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
@@ -81,9 +87,11 @@ This chapter aims to provide an overview and foundation of the current knowledge
 The first section of the literature is a brief overview of significant fundamentals of AFFF- focusing on the evolutionary changes, characterization, foaming ability, mechanical stability, and critical application rates. This is followed by a review and analysis of current problems and difficulties based on the optimization of AFFF. Issues concerning the compatibility of various storage facilities on AFFF are discussed. Previous studies and experimental work aiming at the optimization of AFFF are discussed.
 
 \section{A brief overview of various firefighting foams}
-In the aviation industry, fire is of great concern due to the incidences of fires that are usually devastating to both human lives and properties. Since fire is of great significant in the present research, it is beneficial to understand various classes of fire. Fire is usually classified in five (5) classes. In fire science, fire is classified by the type of fuel they burn namely: Class A, B, C, D, and K. [2].  The classes are discussed in detail in Table 2.1. However, the present research work will only focus on Class B fire, since AFFF is utilised to suppress this Class of fire.
+In the aviation industry, fire is of great concern due to the incidences of fires that are usually devastating to both human lives and properties. Since fire is of great significant in the present research, it is beneficial to understand various classes of fire. Fire is usually classified in five (5) classes. In fire science, fire is classified by the type of fuel they burn namely: Class A, B, C, D, and K. [2].  The classes are discussed in detail in Table \ref{ch2:table:classes}. However, the present research work will only focus on Class B fire, since AFFF is utilised to suppress this Class of fire.
 
-\begin{center}
+\begin{table}[H]
+\centering
+\caption{Various classes of fire [3].}
 \begin{tabular}{ m{.15\textwidth} m{.45\textwidth} m{.3\textwidth} }
 \hline
 Class of fire & Type of fire & commonly encountered \\ 
@@ -95,14 +103,15 @@ D & Combustible metals such as magnesium, titanium, and sodium. & Metal manufact
 K & Cooking oils, normal grease, and animal fat. & Production and FMCG industries. \\
 \hline
 \end{tabular}
-\end{center}
+\label{ch2:table:classes}
+\end{table}
 
 In the aviation industry, firefighting foam was declared by FAA as the sole optimal extinguishing medium used for suppression of Class B fire during emergency conditions. Originally, five types of firefighting foams are commonly used: fluoro protein foams (FPs), aqueous film-forming foams (AFFFs), film-forming fluoro protein foams (FFFPs), alcohol-resistant aqueous film-forming foams (AR-AFFFs) and alcohol-resistant film-forming fluoro protein foams (AR-AFFFPs) [4]. All of them were designed to be effective in handling precise fire conditions and contain one or more fluorinated surfactants as a key ingredient.
 In general, foam is made by first mixing foam concentrate with water to create a foam solution. This aqueous solution is then blended with air using standard aspirating nozzles to generate foam [4].  Fire-fighting foam is an extinguishing agent composed of numerous bubbles formed mechanically or chemically from the liquid, as shown in Figure \ref{ch2:figure:scheme}. These are commonly used to reduce the spread and extinguishing of Class B fires and to prevent re-ignition whilst in certain situations may be implemented to extinguishing Class A fires [2]. Sometimes capabilities of firefighting foams can be reduced due to ignorance. Hence foam may be assumed to have performance concerns, whereas it does not. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{extinguishing_mechanism_scheme.png}
+    \includegraphics[width=.8\textwidth]{extinguishing_mechanism_scheme.png}
     \caption{Scheme of the extinguishing mechanism by using firefighting foam [5]}
     \label{ch2:figure:scheme}
 \end{figure}
@@ -136,7 +145,7 @@ In the present study, the aspirated nozzle technique is evaluated against CAF an
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{bubble_characteristics.png}
+    \includegraphics[width=.95\textwidth]{bubble_characteristics.png}
     \caption{Bubble characteristics for different generation methods [10].}
     \label{ch2:figure:characteristics}
 \end{figure}
@@ -222,38 +231,45 @@ Drainage time is often used to analyze the stability of various foams, however, 
 Since AFFF is a low expansion foam, there are difficulties in maintaining the stability and heat resistance from the finished foam. This is due to short drainage time which indicates that finished foam losses its water content rapidly and renders it vulnerable to high-temperature flames and hot surfaces. A basic principle of measuring low expansion foam expansion ratios is shown in Figure \ref{ch2:figure:tests}. In recent years, most researchers concluded that the drainage times of finished foams do not solely depend on foam concentrate but also the type of foam generation [16]. In most cases, drainage time for low expansion foams such as AFFF is often expressed as 25\% drainage time, while for medium and high it’s usually 50\% drainage time. This is the time taken for 25\% or 50\% of the original foam solution content (by volume) to drain from the finished foam, as shown in Figure \ref{ch2:figure:tests}.
 
 \begin{figure}[H]
-    \begin{subfigure}{.5\textwidth}
-        \includegraphics[width=\textwidth]{low_expansion_test.png}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}{.5\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{drainage_test.png}
-        \caption{}
-    \end{subfigure}
-    
+
+\centering
+\begin{subfigure}{.45\textwidth}
     \centering
-    \caption{a) Low expansion test and b) drainage test [7].}
-    \label{ch2:figure:tests}
+    \includegraphics[width=\textwidth]{low_expansion_test.png}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{drainage_test.png}
+    \caption{}
+\end{subfigure}
+
+\caption{a) Low expansion test and b) drainage test [7].}
+\label{ch2:figure:tests}
 \end{figure}
 
-Researchers have been working on optimizing the foaming ability, hence the stability of foams, particularly for low expansion foams.  An experimental work to analyze and compare the drainage time and bubble size distribution of various firefighting foams was described by Mark et al [10]. Table 2.2 shows the results of [10] comparing the 25\% of drainage times at an expansion ratio of 7:1 for two (2) different foam concentrates. \\
+Researchers have been working on optimizing the foaming ability, hence the stability of foams, particularly for low expansion foams.  An experimental work to analyze and compare the drainage time and bubble size distribution of various firefighting foams was described by Mark et al [10]. Table \ref{ch2:table:times} shows the results of [10] comparing the 25\% of drainage times at an expansion ratio of 7:1 for two (2) different foam concentrates. \\
 
-\begin{center}    
+\begin{table}[H]
+\caption{Comparison of 25\% drainage times at 7:1 expansion [10].}   
+
+\centering
 \begin{tabular}{m{5em} m{5em} m{4em} m{4em} m{4em} m{5em}}
-\hline
-& & & & 25\% Drainage time (s) \\
-\hline
-Foam concentrate & Generation system & Mean & Max & Min & Standard Deviation \\ 
-Tolomet 6\% & ISNF & 342 & 450 & 264 & 93 \\
-& CAF & 488 & 533 & 430 & 53 \\
-& Aspirated & 197 & N/A & N/A & N/A \\
-FC-600 3\% & ISNF & 539 & 725 & 450 & 126 \\
-& CAF & 1060 & 1281 & 844 & 288 \\
-& Aspirated & 485 & N/A & N/A & N/A \\
-\hline
+    \hline
+    & & & & 25\% Drainage time (s) \\
+    \hline
+    Foam concentrate & Generation system & Mean & Max & Min & Standard Deviation \\ 
+    Tolomet 6\% & ISNF & 342 & 450 & 264 & 93 \\
+    & CAF & 488 & 533 & 430 & 53 \\
+    & Aspirated & 197 & N/A & N/A & N/A \\
+    FC-600 3\% & ISNF & 539 & 725 & 450 & 126 \\
+    & CAF & 1060 & 1281 & 844 & 288 \\
+    & Aspirated & 485 & N/A & N/A & N/A \\
+    \hline
 \end{tabular}
-\end{center}
+
+\label{ch2:table:times}
+\end{table}
 
 The results indicate that drainage rates for the various foam types were quite different, which may be explained by differences in the bubble size distributions as discussed below in Figure \ref{ch2:figure:distributions}. To explain the differences in foam drainage rates between the three foam types, they studied the bubble size distributions for each foam type.
 
@@ -264,7 +280,7 @@ The results indicate that drainage rates for the various foam types were quite d
     \label{ch2:figure:distributions}
 \end{figure}
 
-As shown in Figure \ref{ch2:figure:distributions}, the drainage time is profoundly dependent upon the foam generation type. Also, the aspirated foam generation method produced larger bubbles in terms of size. These bubbles contributed to shorter drainage times as seen in Table 2.2, hence the reduction of foam quality and stability. This correlation technique used was benchmarked by [2] and most researchers have concluded the same as [10]. Mukunda and Dixit [12] constructed a model of foam drainage based on momentum flux balance and conducted experiments with an apparatus with foam drainage through a fuel layer. Their results showed a linear relationship of 25\% drainage time with the height consistent with the theoretical expectations. A recommendation made by [10] indicates that there is a need for further research to develop a new surfactant formulations immune to the oxidation reaction that generates nitrogen bubbles. This foam generation method will simultaneously increase the drainage rates and stability of low expansion foams due to nitrogen bubbles.
+As shown in Figure \ref{ch2:figure:distributions}, the drainage time is profoundly dependent upon the foam generation type. Also, the aspirated foam generation method produced larger bubbles in terms of size. These bubbles contributed to shorter drainage times as seen in Table \ref{ch2:table:times}, hence the reduction of foam quality and stability. This correlation technique used was benchmarked by [2] and most researchers have concluded the same as [10]. Mukunda and Dixit [12] constructed a model of foam drainage based on momentum flux balance and conducted experiments with an apparatus with foam drainage through a fuel layer. Their results showed a linear relationship of 25\% drainage time with the height consistent with the theoretical expectations. A recommendation made by [10] indicates that there is a need for further research to develop a new surfactant formulations immune to the oxidation reaction that generates nitrogen bubbles. This foam generation method will simultaneously increase the drainage rates and stability of low expansion foams due to nitrogen bubbles.
 
 \section{Critical application rates}
 In the most recent decade, most researchers have been interested in the application rates of various firefighting foams. A number of studies on effective application rates have increased significantly and most of these studies have been based on protein and synthetic based foams. The underlying motivation for considering diverse critical application rates was to identify the compatibility of foams on various class of fires. With the original motivation behind the development of synthetic based foams being economic issues, the application rates were, thus critical.
@@ -302,28 +318,30 @@ Previous research on foam degradation has mostly focused on the natural aging pr
 Parameters such as bubble diameter or expansion ratio are much dependent on the foam generation method, which is discussed in section 2.4. Larger bubbles cause a rapid drainage rate than smaller bubbles, and according to [19], the increased drainage rate can cause the foam to degrade rapidly. In this way, the storage facility may indirectly affect foam degradation. This is due to the sediments or sludge, which may accumulate in the storage facility during the aging process. Consequently, sediments may affect foam characteristics, particularly bubble distribution during the foam generation process, this is shown by employing a flow process in Figure \ref{ch2:figure:effect}. The optimization of a storage facility in reducing the accumulation of sediments will prove to extensively reduce foam degradation.
 
 \begin{figure}[H]
-    \centering
-    \begin{adjustbox}{center}
-    \begin{tikzpicture}[node distance=2cm]
-        \tikzstyle{block} = [rectangle, rounded corners, draw, text centered, minimum height=1cm]
-        \tikzstyle{arrow} = [thick,->,>=stealth]
 
-        \node (storage) [block] {Storage facility};
-        \node (accumulation) [block, right of=storage, xshift=3.5cm] {Accumulation of sediments};
-        \node (sludge) [block, right of=accumulation, xshift=3.5cm] {Sludge in piping};
-        \node (generation) [block, below of=sludge] {Generation method};
-        \node (affect) [block, left of=generation, xshift=-3.3cm]{Affected foam characteristics};
-        \node (effect) [block, left of=affect, xshift=-4cm] {Effect on foam degradation};
+\centering
+\begin{adjustbox}{center}
+\begin{tikzpicture}[node distance=6cm]
+    \tikzstyle{block} = [rectangle, rounded corners, draw, text centered, text width=4cm, inner sep=1em, minimum height=1.7cm]
+    \tikzstyle{arrow} = [thick,->,>=stealth]
 
-        \draw [arrow] (storage) -- (accumulation);
-        \draw [arrow] (accumulation) -- (sludge);
-        \draw [arrow] (sludge) -- (generation);
-        \draw [arrow] (generation) -- (affect);
-        \draw [arrow] (affect) -- (effect);
-    \end{tikzpicture}
-    \end{adjustbox}
-    \caption{Effect of AFFF degradation.}
-    \label{ch2:figure:effect}
+    \node (storage) [block] {Storage facility};
+    \node (accumulation) [block, right of=storage] {Accumulation of sediments};
+    \node (sludge) [block, right of=accumulation] {Sludge in piping};
+    \node (generation) [block, below of=sludge, yshift=3cm] {Generation method};
+    \node (affect) [block, left of=generation]{Affected foam characteristics};
+    \node (effect) [block, left of=affect] {Effect on foam degradation};
+
+    \draw [arrow] (storage) -- (accumulation);
+    \draw [arrow] (accumulation) -- (sludge);
+    \draw [arrow] (sludge) -- (generation);
+    \draw [arrow] (generation) -- (affect);
+    \draw [arrow] (affect) -- (effect);
+\end{tikzpicture}
+\end{adjustbox}
+
+\caption{Effect of AFFF degradation.}
+\label{ch2:figure:effect}
 \end{figure}
 
 There have been fewer studies on the effect of surfactant formulation on degradation, further research should be conducted to detect the effect of this parameter on foam degradation. Furthermore, other parameters that may affect foam degradation should be extensively investigated in the future as foam degradation may regularly affect the performance of the foam.
@@ -350,7 +368,6 @@ This chapter reviewed the relevant literature to gain a better and in-depth unde
 The drainage time of AFFF was evaluated, this was based on the previous experimental work. It is concluded by many researchers that AFFF has a short drainage time which indicates that finished foam losses its water content rapidly and renders it vulnerable to high-temperature flames and hot surfaces.
 The critical rate at which AFFF should be applied was another key factor in this chapter. Not many researchers have succeeded in determining these critical rates. Consequently, some of the performance guidelines and specifications for firefighting foams have created divergent opinions, especially on the aviation industry. The degradation of AFFF concentrate was another discussion. It was found that the increase in the degradation may immensely impact the performance of AFFF. The causes for the increase of degradation are not well understood, due to the lack of research on foam degradation. This chapter concluded by addressing the environmental issues of AFFF. Numerous researchers have investigated effective ways of mitigating these environmental issues. Implementation of environmental surfactants was a recommendation of many researchers.
 The next chapter evaluates the various engineering materials commonly used to construct the storage facility for AFFF concentrate. It further investigates and recommends possible ways of enhancing the properties of these materials based on the current knowledge.
-
 
 \chapter{Evaluation of materials of construction}
 \section{Introduction}
@@ -411,25 +428,28 @@ When atoms are behaving like hard spheres, they are relatively bonded together b
     \label{ch3:figure:aluminium}
 \end{figure}
 
-The mentioned crystal structures are determined at room temperature.  However, the transition in the crystal structure is much possible in several metals. This transition varies with the temperature in which the metal is exposed to [34]. For example, metals such as pure iron may reveal two (2) different crystal structures. At room temperature it reveals b.c.c, but when the temperature is constantly increased towards a melting point (912-1394℃), its crystal structure changes to f.c.c. Further increasing the temperature to about 1538 ℃ will result in reverting the crystal structure to b.c.c [29, 30].For alloy metals, the transition in the crystal structure can be achieved by adding an element with a different crystal structure. The transition in alloy metals will be evaluated in detail in section 3.6. Table 3.1 shows the atom arrangement in a crystal structure of some commonly used pure metals.
+The mentioned crystal structures are determined at room temperature.  However, the transition in the crystal structure is much possible in several metals. This transition varies with the temperature in which the metal is exposed to [34]. For example, metals such as pure iron may reveal two (2) different crystal structures. At room temperature it reveals b.c.c, but when the temperature is constantly increased towards a melting point (912-1394℃), its crystal structure changes to f.c.c. Further increasing the temperature to about 1538 ℃ will result in reverting the crystal structure to b.c.c [29, 30].For alloy metals, the transition in the crystal structure can be achieved by adding an element with a different crystal structure. The transition in alloy metals will be evaluated in detail in section 3.6. Table \ref{ch3:table:structure} shows the atom arrangement in a crystal structure of some commonly used pure metals.
 
-% Table 3.1: Crystal structure for popular metals, at room temperature [25].
+\begin{table}[H]
+\caption{Crystal structure for popular metals, at room temperature [25].}
 
-\begin{center}
-\begin{tabular}{ c c c}
-\hline
-Metal & Crystal structure \\
-\hline
-Aluminum & FCC \\
-Chromium & BCC \\
-Copper & FCC \\
-Gold & FCC \\
-Iron & BCC \\
-Silver & FCC \\
-Nickel & FCC \\
-\hline
+\centering
+\begin{tabular}{ c c c }
+    \hline
+    Metal & Crystal structure \\
+    \hline
+    Aluminum & FCC \\
+    Chromium & BCC \\
+    Copper & FCC \\
+    Gold & FCC \\
+    Iron & BCC \\
+    Silver & FCC \\
+    Nickel & FCC \\
+    \hline
 \end{tabular}
-\end{center}
+
+\label{ch3:table:structure}
+\end{table}
 
 Several physical and mechanical properties of materials are determined by the metallic bonds and the arrangement of the atoms in the crystal structure. For example, when metallic material is heated to a melting point, the atoms have to gain sufficient energy to break free from the crystal structure [25]. This is evidence that the properties of materials can be altered by altering the arrangement of atoms in a crystal structure. Moreover, the crystal structure significantly determines the ability of atoms to slip over one another during the deformation of metals [34]. This is especially true in ductile metals due to their ability to deform without easily breaking. These types of materials are commonly used to construct liquid storage facilities due to their crystal structure that yields exceptional properties.
 
@@ -485,16 +505,16 @@ Another property of interest for the present study is the effect of corrosion on
 
 \section{Stainless steel the material} 
 Stainless steels are ferrous metallic materials that contain a minimum of 10.5\% of chromium and about 8\% of nickel as main alloying elements [42]. All the alloying elements have a significant role in the stainless steel family. Chromium element forms a protective self-healing oxide film, which greatly improves the corrosion resistance of stainless steel [30]. Large amounts of nickel contribute to both heat and corrosion resistance [43]. However, depending on the percentage of nickel added, it also contributes to high strength and excellent toughness. Other relevant elements are often added to enhance the properties of stainless steel. It is these alloying elements that make stainless steel to be generally more expensive than carbon steels.
-The classification of stainless steel is based on the nature of their metallurgical structure [44]. As previously stated in 3.2, the metallurgical structure is the arrangement of the atoms making up the grains of the steel. The microstructure is formed based on the chemical composition of the steel. With an appropriate combination of alloying elements that results in a unique microstructure, stainless steels can be fully austenitic, a mixture of ferrite and austenite (duplex), fully ferritic or martensitic [44]. These four possible microstructure phases are shown in Figure \ref{ch3:figure:steel}. These categories of stainless steel are obtained under specific cooling conditions, and all are beneficial for various applications.
+The classification of stainless steel is based on the nature of their metallurgical structure [44]. As previously stated in 3.2, the metallurgical structure is the arrangement of the atoms making up the grains of the steel. The microstructure is formed based on the chemical composition of the steel. With an appropriate combination of alloying elements that results in a unique microstructure, stainless steels can be fully austenitic, a mixture of ferrite and austenite (duplex), fully ferritic or martensitic [44]. These four possible microstructure phases are shown in Figure \ref{ch3:figure:steel_phase}. These categories of stainless steel are obtained under specific cooling conditions, and all are beneficial for various applications.
  
 \begin{figure}[H]
     \centering
     \includegraphics[width=.65\textwidth]{stainless_steel_phase.jpg}
     \caption{Stainless steel phase diagram as a function of chromium and nickel equivalents at room temperature [44].}
-    \label{ch3:figure:steel}
+    \label{ch3:figure:steel_phase}
 \end{figure}
 
-In the present research work, duplex stainless steel is of great significance. As can be seen in Figure \ref{ch3:figure:steel}, duplex contains a combination of austenite and ferrite, approximately 50\% of each. It is more beneficial and extensively used in liquid storage facilities, as it yields in a combination of properties. This is due to a large amount of chromium and less nickel content presence, which results in corrosion resistance, high strength, and excellent toughness [45]. The weighed composition of duplex stainless steel is detailed in Table B.3 on appendices. The less content of nickel in duplex stainless steel implies that duplex is relatively inexpensive compared to other classes [42]. The two-phase mixture also reduces the risk of intergranular attack; for the same reason, they are not prone to solidification cracking during welding [42]. Figure \ref{ch3:figure:weight} shows the comparison of the weight percentage of chromium (Cr), nickel (Ni), and molybdenum (Mo) in duplex and austenitic stainless steel.
+In the present research work, duplex stainless steel is of great significance. As can be seen in Figure \ref{ch3:figure:steel_phase}, duplex contains a combination of austenite and ferrite, approximately 50\% of each. It is more beneficial and extensively used in liquid storage facilities, as it yields in a combination of properties. This is due to a large amount of chromium and less nickel content presence, which results in corrosion resistance, high strength, and excellent toughness [45]. The weighed composition of duplex stainless steel is detailed in Table B.3 on appendices. The less content of nickel in duplex stainless steel implies that duplex is relatively inexpensive compared to other classes [42]. The two-phase mixture also reduces the risk of intergranular attack; for the same reason, they are not prone to solidification cracking during welding [42]. Figure \ref{ch3:figure:weight} shows the comparison of the weight percentage of chromium (Cr), nickel (Ni), and molybdenum (Mo) in duplex and austenitic stainless steel.
  
 \begin{figure}[H]
     \centering
@@ -516,11 +536,16 @@ In recent years, corrosion has become a vital matter in liquid storage facilitie
     \label{ch3:figure:ph}
 \end{figure}
 
-Although there is a lack or little knowledge of the corrosion phenomenon, some researchers have made significant efforts to understand it. The material is initially selected due to the desired properties. However, some recently published literature suggest that corrosion has a degrading effect on mechanical properties. Mahmoodian et al [35] conducted a study that concluded that corrosion can lead to a reduction of the thickness of the storage facilities, and thus in the reduction of yield strength, ultimate strength, and ductility on low carbon steels.  Marcus [50] further stated that the reduction of these properties is due to hydrogen accumulation within the steel, which is known as hydrogen embrittlement [HE). Besides, this accumulation of hydrogen results in a sudden reduction in the ductility of steel. Figure 3.8 shows the process of mechanical properties degradation due to corrosion.
+Although there is a lack or little knowledge of the corrosion phenomenon, some researchers have made significant efforts to understand it. The material is initially selected due to the desired properties. However, some recently published literature suggest that corrosion has a degrading effect on mechanical properties. Mahmoodian et al [35] conducted a study that concluded that corrosion can lead to a reduction of the thickness of the storage facilities, and thus in the reduction of yield strength, ultimate strength, and ductility on low carbon steels.  Marcus [50] further stated that the reduction of these properties is due to hydrogen accumulation within the steel, which is known as hydrogen embrittlement [HE). Besides, this accumulation of hydrogen results in a sudden reduction in the ductility of steel. Figure \ref{ch3:figure:degradation} shows the process of mechanical properties degradation due to corrosion.
  
-% Figure 3.8: Process of mechanical properties degradation due to corrosion [50].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{process_of_mechanical_properties.jpg}
+    \caption{Process of mechanical properties degradation due to corrosion [50].}
+    \label{ch3:figure:degradation}
+\end{figure}
 
-In more detail, corrosion occurs when there is a combination of oxygen reduction and hydrogen evolution reactions, as shown in equations 3.3 – 3.6 [35].  Consequently, during these reactions, atomic hydrogen is released. It then eventually accumulates at the defects within the steel, forming molecular hydrogen. Finally, the molecular hydrogen results in the increase of inside pressure, and eventually micro-cracking initiations, which consequently degrades the mechanical properties of steel [51].
+In more detail, corrosion occurs when there is a combination of oxygen reduction and hydrogen evolution reactions, as shown in equations \ref{ch3:equation:acid} – \ref{ch3:equation:neutralalkaline} [35].  Consequently, during these reactions, atomic hydrogen is released. It then eventually accumulates at the defects within the steel, forming molecular hydrogen. Finally, the molecular hydrogen results in the increase of inside pressure, and eventually micro-cracking initiations, which consequently degrades the mechanical properties of steel [51].
 
 \begin{center}
     Oxygen Reduction Reaction (ORR)
@@ -528,6 +553,7 @@ In more detail, corrosion occurs when there is a combination of oxygen reduction
 
 \begin{equation}
     \frac{1}{2}0_2 + 2H_3O^{+2e \rightarrow 3H_2OAcid}
+    \label{ch3:equation:acid}
 \end{equation}
 
 \begin{equation}
@@ -544,46 +570,65 @@ In more detail, corrosion occurs when there is a combination of oxygen reduction
 
 \begin{equation}
     H_2O + e \rightarrow \frac{1}{2}H_2 + OH^{-Neutral,alkaline}
+    \label{ch3:equation:neutralalkaline}
 \end{equation}
 
-Based on equations 3.6 – 3.9, it is sensible to believe that corrosion changes the elemental composition of the steel. However, few papers focus on monitoring the changes in element composition during corrosion. Corrosion may also result in the degradation of mechanical properties by changing three microstructural features: (1) grain size, (2) phase composition, and (3) formation of corrosion pits [35]. Presumably, corrosion is interrelated with the microstructure of the material. For example, grain size reduction causes more hydrogen absorption within steel [35]. However, there are several limitations to existing Research. To begin with, the hydrogen embrittlement phenomenon has been mainly carried out for high-strength low-alloy steel (HSLA) and stainless steel [35]. As a consequence, extensive research should be conducted to determine the degradation mechanism of mechanical properties due to corrosion, at both macro and micro levels.  
+Based on equations \ref{ch3:equation:neutralalkaline} – 3.9, it is sensible to believe that corrosion changes the elemental composition of the steel. However, few papers focus on monitoring the changes in element composition during corrosion. Corrosion may also result in the degradation of mechanical properties by changing three microstructural features: (1) grain size, (2) phase composition, and (3) formation of corrosion pits [35]. Presumably, corrosion is interrelated with the microstructure of the material. For example, grain size reduction causes more hydrogen absorption within steel [35]. However, there are several limitations to existing Research. To begin with, the hydrogen embrittlement phenomenon has been mainly carried out for high-strength low-alloy steel (HSLA) and stainless steel [35]. As a consequence, extensive research should be conducted to determine the degradation mechanism of mechanical properties due to corrosion, at both macro and micro levels.  
 Many researchers have been interested in the corrosion phenomenon, thus over the years, there have been several ways developed to prevent corrosion. Corrosion can occur in many ways, thus it also significant to understand different types of corrosion and evaluate the corrosion of interest. Stainless and mild steel are the metallic materials of interest in the present study; thus, it is vital to understand the different ways in which corrosion occurs in these two metallic materials. In this way, it is possible to optimize the current methods that are utilized to prevent corrosion, focusing precisely on the corrosion of interest.
-As previously stated, several half-truths and myths regarding corrosion exist. Stainless steel is popularly known for resisting corrosion due to the presence of a chromium element in its composition. However, these are myths and half-truths due to the incidences that have proven that stainless steel can suffer from corrosion. This is usually the case on welded products. In contrast, mild steel is well known for suffering from corrosion, this is due to the lack of corrosion protecting alloying elements such as chromium [52]. However, corrosion prevention is more practical than making an effort to eliminate it completely. A stainless steel storage facility that has suffered from corrosion on welded joints is shown in Figure 3.9.
+As previously stated, several half-truths and myths regarding corrosion exist. Stainless steel is popularly known for resisting corrosion due to the presence of a chromium element in its composition. However, these are myths and half-truths due to the incidences that have proven that stainless steel can suffer from corrosion. This is usually the case on welded products. In contrast, mild steel is well known for suffering from corrosion, this is due to the lack of corrosion protecting alloying elements such as chromium [52]. However, corrosion prevention is more practical than making an effort to eliminate it completely. A stainless steel storage facility that has suffered from corrosion on welded joints is shown in Figure \ref{ch3:figure:tank}.
  
-% Figure 3.9: Storage tank that corroded on welded joints [46].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{storage_tank.jpg}
+    \caption{Storage tank that corroded on welded joints [46].}
+    \label{ch3:figure:tank}
+\end{figure}
 
 \subsection{Types of corrosion} 
-The tendency of a metal to corrode depends upon the crystal structure of the metal, its composition as formed during alloying, and the temperature for deformation of a single metal surface developed during fabrication [42]. The environment plays a key role in corrosion of the material; thus, it can vary with the environment in which the substance is exposed. Consequently, this makes it complex to comprehend the corrosion mechanism. Corrosion can be caused by diverse factors that include reactivity of metal, presence of impurities, presence of air, moisture, gases like sulphur dioxide, and carbon [42]. Therefore, corrosion protection and prevention are significantly aimed at addressing these factors. There are various types of corrosion, and it is vital to understand which corrosion you are faced with. The different types of corrosion which depend upon the environment surrounding the material, type of material, or chemical reaction are briefly described in Table 3.2.
+The tendency of a metal to corrode depends upon the crystal structure of the metal, its composition as formed during alloying, and the temperature for deformation of a single metal surface developed during fabrication [42]. The environment plays a key role in corrosion of the material; thus, it can vary with the environment in which the substance is exposed. Consequently, this makes it complex to comprehend the corrosion mechanism. Corrosion can be caused by diverse factors that include reactivity of metal, presence of impurities, presence of air, moisture, gases like sulphur dioxide, and carbon [42]. Therefore, corrosion protection and prevention are significantly aimed at addressing these factors. There are various types of corrosion, and it is vital to understand which corrosion you are faced with. The different types of corrosion which depend upon the environment surrounding the material, type of material, or chemical reaction are briefly described in Table \ref{ch3:table:corrosions}.
 
-% Table 3.2: Types of corrosion [48].
+\begin{table}[H]
+\caption{Types of corrosion [48].}
 
-\begin{center}
+\centering
 \begin{tabular}{m{.35\textwidth} m{.65\textwidth}}
-\hline
-Type of corrosion & Description \\
-\hline
-Uniform corrosion & Deteriorates the whole surface of the metal and makes the surface thin. \\
-Galvanic corrosion & Occurs with an electrolyte with metal having different values of electrical potentials. \\
-Pitting corrosion & Occurs because of the random attacks on particular parts of the metal’s surface to form pits. The pit acts as an anode, while the undamaged part of the metal is the cathode. \\
-Stress corrosion cracking & A complex form of corrosion which arises due to stress and  corrosive environment. \\
-Corrosion fatigue & A combination of cyclic stress and corrosion.  \\
-Intergranular corrosion & Corrosion occurs on or near the grain boundaries of a metal.  \\
-Crevice corrosion & Concentration cell corrosion due to the trapping of corrosive liquid  between the gaps of the metal. \\
-Filiform corrosion & Concentration cell corrosion on metallic surfaces coated with a thin  organic film. \\
-Erosion corrosion & Flow-assisted corrosion which is due to the movement of corrosive  liquids on metal surface. \\
-Fretting corrosion & A form of corrosion which shows the combined effect of corrosion and  fretting of metal. \\
-\hline
+    \hline
+    Type of corrosion & Description \\
+    \hline
+    Uniform corrosion & Deteriorates the whole surface of the metal and makes the surface thin. \\
+    Galvanic corrosion & Occurs with an electrolyte with metal having different values of electrical potentials. \\
+    Pitting corrosion & Occurs because of the random attacks on particular parts of the metal’s surface to form pits. The pit acts as an anode, while the undamaged part of the metal is the cathode. \\
+    Stress corrosion cracking & A complex form of corrosion which arises due to stress and  corrosive environment. \\
+    Corrosion fatigue & A combination of cyclic stress and corrosion.  \\
+    Intergranular corrosion & Corrosion occurs on or near the grain boundaries of a metal.  \\
+    Crevice corrosion & Concentration cell corrosion due to the trapping of corrosive liquid  between the gaps of the metal. \\
+    Filiform corrosion & Concentration cell corrosion on metallic surfaces coated with a thin  organic film. \\
+    Erosion corrosion & Flow-assisted corrosion which is due to the movement of corrosive  liquids on metal surface. \\
+    Fretting corrosion & A form of corrosion which shows the combined effect of corrosion and  fretting of metal. \\
+    \hline
 \end{tabular}
-\end{center}
 
-In the present study, the focus is on stress corrosion cracking/atmospheric corrosion. As can be observed in Table 3.2, stress corrosion cracking is a complex form of corrosion which arises due to the stress and corrosive atmosphere. However, the cracking of the storage facility due to stresses is not a concern in the present study, thus the focus is particularly on the corrosive atmospheric environment.
+\label{ch3:table:corrosions}
+\end{table}
+
+In the present study, the focus is on stress corrosion cracking/atmospheric corrosion. As can be observed in Table \ref{ch3:table:corrosions}, stress corrosion cracking is a complex form of corrosion which arises due to the stress and corrosive atmosphere. However, the cracking of the storage facility due to stresses is not a concern in the present study, thus the focus is particularly on the corrosive atmospheric environment.
 
 \subsubsection{Atmospheric corrosion}
-Atmospheric corrosion is a naturally occurring chemical deterioration of a material due to reaction with the environment, and especially with oxygen. The extent of deterioration of a ferrous metal depends on the chemical composition and grain structure of the material. For example, when the iron is exposed to an industrial atmosphere for a long period, iron oxide, also known as rust, forms on the surface, as shown in Figure 3.10 [28]. The rust is very porous to oxygen and water in the atmosphere, and consequently, the corrosion process continues until the metal is entirely consumed [50].  The atmospheric corrosion generally occurs in three various environments rural, industrial, and marine. For the present study, the industrial environment is the benchmark since the storage facility is located in an industrial environment. Figure 3.11 shows the storage facility, which was initially protected from the corrosion yet ended up suffering from rural atmospheric corrosion.
+Atmospheric corrosion is a naturally occurring chemical deterioration of a material due to reaction with the environment, and especially with oxygen. The extent of deterioration of a ferrous metal depends on the chemical composition and grain structure of the material. For example, when the iron is exposed to an industrial atmosphere for a long period, iron oxide, also known as rust, forms on the surface, as shown in Figure \ref{ch3:figure:corrosion} [28]. The rust is very porous to oxygen and water in the atmosphere, and consequently, the corrosion process continues until the metal is entirely consumed [50].  The atmospheric corrosion generally occurs in three various environments rural, industrial, and marine. For the present study, the industrial environment is the benchmark since the storage facility is located in an industrial environment. Figure \ref{ch3:figure:corroded} shows the storage facility, which was initially protected from the corrosion yet ended up suffering from rural atmospheric corrosion.
 
-% Figure 3.10: Atmospheric corrosion of storage facilities in industrial environment [48]. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\textwidth]{corrosion_of_storage_facilities.jpg}
+    \caption{Atmospheric corrosion of storage facilities in industrial environment [48].}
+    \label{ch3:figure:corrosion}
+\end{figure}
  
-% Figure 3.11: Corroded storage facility [50].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{corroded_storage.jpg}
+    \caption{Corroded storage facility [50].}
+    \label{ch3:figure:corroded}
+\end{figure}
 
 Atmospheric corrosion is one of the most common types of corrosion, which is affected by several environmental factors. It commonly affects infrastructure, transportation, energy, and other industries [53]. Over the decades, the research has shown that contributing environmental factors affecting the outdoors atmospheric corrosion rate include: temperature, relative humidity (RH), atmospheric pollutants (commonly sulphur dioxide and chlorides), and wind [39, 41]. It is difficult to individually analyse the impact of these factors due to the existence of complex interaction between them.
 In the past years, several researchers have made significant efforts in analysing the influence of the single factor on atmospheric corrosion. Cai et al [54] studied the effects of RH, temperature, sulfur dioxide, and chlorides on the short-term corrosion behaviour in the dynamic environment. They demonstrated that RH is the most influential factor in corrosion, and the temperature is secondary. The effect of RH can be reflected by the time of wetness (TOW) according to ISO9223 by the International Standardization Organization (ISO) [40, 41]. In 2020, Pei et al [53] further investigated the environmental impacts of RH, temperature, and rainfall on the initial corrosion behaviour of steels. The outcomes showed that rainfall is the most influencing factor in the initial atmospheric corrosion rate.  Moreover, RH significantly influenced the corrosion of steels in low precipitation environments and non-rainfall period.
@@ -609,66 +654,170 @@ Microstructures of steels critically determine the mechanical, physical, and che
 The resulting properties of steels are often controlled by several microstructural features. These features include two-dimensional defects such as grain boundaries and heterophase interfaces, one-dimensional defects such as dislocations, and zero-dimensional defects such as point defects [57]. However, the enhancement of the resulting properties is possible through controlling the atomic arrangement and microstructure using various optimization processes such as casting, powder metallurgy, working, and heat treatment. During these optimization methods, steels are subjected to various microstructural phases.
 
 \subsection{Ferrite} 
-Iron is a pure metal that can be microscopically thought of as a 3-D lattice of stacked billiard balls. Iron is dominant in most low carbon steels, hence the 99\% of the microstructure is still iron, with all other elements combining to form typically less than 1\% of the overall composition [59]. However, no matter how well billiard balls are packed, they will always be small gaps between them. These small gaps are commonly known as interstices [59]. Nevertheless, the smallest elements like carbon and nitrogen can fit in these gaps, as shown in Figure3.12. As alloying increases, the straining in the atomic lattice increases, requiring more force to deform a work piece, thus increasing the strength. When a very small portion of the interstices in between the iron lattice is occupied by carbon atoms, this interstitial-free (IF) steel is said to have a microstructure of ferrite [44]
+Iron is a pure metal that can be microscopically thought of as a 3-D lattice of stacked billiard balls. Iron is dominant in most low carbon steels, hence the 99\% of the microstructure is still iron, with all other elements combining to form typically less than 1\% of the overall composition [59]. However, no matter how well billiard balls are packed, they will always be small gaps between them. These small gaps are commonly known as interstices [59]. Nevertheless, the smallest elements like carbon and nitrogen can fit in these gaps, as shown in Figure \ref{ch3:figure:gaps}. As alloying increases, the straining in the atomic lattice increases, requiring more force to deform a work piece, thus increasing the strength. When a very small portion of the interstices in between the iron lattice is occupied by carbon atoms, this interstitial-free (IF) steel is said to have a microstructure of ferrite [44]
  
-% Figure 3.12: Small gaps between atoms, called “interstices” [59].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{small_gaps_between_atoms.jpg}
+    \caption{Small gaps between atoms, called “interstices” [59].}
+    \label{ch3:figure:gaps}
+\end{figure}
 
-Ferrite is a solid solution of iron, containing carbon, or one or more alloying elements, such as silicon, chromium, manganese, and nickel [30]. In addition, it has an interstitial solid solution and a substitutional solid solution. Since the carbon elements have occupied the interstices, larger elements such as manganese, magnesium, silicon, and phosphorus substitute for iron in the lattice, see Figure 3.9 [60]. However, there is a limitation on how much carbon can occupy the interstices. Commonly, 0.02\% carbon at 725 ℃, but dropping to 0.006\% carbon at room temperature is more than enough to fit in the interstices [44]. Ferrite has a bcc crystal structure with a microstructural phase that is soft, ductile, which is similar to pure iron [59]. The microstructure of ferrite is shown in Figure 3.13.
- 
-%  Figure 3.13: Microstructure of fully ferritic, ultralow carbon steel. Marshalls etch + HF, 300x [30].
+Ferrite is a solid solution of iron, containing carbon, or one or more alloying elements, such as silicon, chromium, manganese, and nickel [30]. In addition, it has an interstitial solid solution and a substitutional solid solution. Since the carbon elements have occupied the interstices, larger elements such as manganese, magnesium, silicon, and phosphorus substitute for iron in the lattice, see Figure \ref{ch3:figure:tank} [60]. However, there is a limitation on how much carbon can occupy the interstices. Commonly, 0.02\% carbon at 725 ℃, but dropping to 0.006\% carbon at room temperature is more than enough to fit in the interstices [44]. Ferrite has a bcc crystal structure with a microstructural phase that is soft, ductile, which is similar to pure iron [59]. The microstructure of ferrite is shown in Figure \ref{ch3:figure:microstructure}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{microstructure_of_carbon_steel.jpg}
+    \caption{Microstructure of fully ferritic, ultralow carbon steel. Marshalls etch + HF, 300x [30].}
+    \label{ch3:figure:microstructure}
+\end{figure}
 
 \subsection{Austenite} 
-In the phase known as austenite, the interstices are much larger than in the ferrite phase and have the fcc crystal structure, as shown in Figure 3.14 [59]. This allows more carbon content to occupy the interstices. At critical temperatures, which is around 1,150 ℃, carbon content up to 2\% can fit into the austenite, as the result of larger interstices [44]. As a consequence, in plain-carbon and low alloy steels, austenite phase is not possible to form at room temperature but can only exist in relatively small amounts of retained austenite that was unable to transform during the rapid cooling process [30].
+In the phase known as austenite, the interstices are much larger than in the ferrite phase and have the fcc crystal structure, as shown in Figure \ref{ch3:figure:austenite} [59]. This allows more carbon content to occupy the interstices. At critical temperatures, which is around 1,150 ℃, carbon content up to 2\% can fit into the austenite, as the result of larger interstices [44]. As a consequence, in plain-carbon and low alloy steels, austenite phase is not possible to form at room temperature but can only exist in relatively small amounts of retained austenite that was unable to transform during the rapid cooling process [30].
 Since the austenite phase is not possible to form at room temperature for most low alloy steels, then their properties are also affected. Consequently, austenitic steels usually suffer from stress-corrosion cracking and low yield strength. Moreover, their strengthening processes are limited to only cold working, interstitial solid-solution strengthening, or precipitation hardening [30]. However, fcc alloy has low-temperature toughness, excellent weldability, and resistance to corrosion [44]
  
-% Figure 3.14: An austenite fcc crystal structure [59].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{austenite_fcc_crystal_structure.jpg}
+    \caption{An austenite fcc crystal structure [59].}
+    \label{ch3:figure:austenite}
+\end{figure}
 
 \subsection{Pearlite} 
-When the largest amount of carbon has occupied the interstices to form austenite at the critical temperature, the steel gradually cools at eutectoid temperature (723℃) on the iron-iron carbide equilibrium diagram, shown in Figure 3.15. Thus, the carbon content is forced out of the solution [44]. During this cooling process, the austenite transforms into a combination of ferrite and another phase known as cementite, also known as iron carbide, which has the chemical composition of Fe3C [61]. The combination of ferrite and cementite is known as pearlite.  
+When the largest amount of carbon has occupied the interstices to form austenite at the critical temperature, the steel gradually cools at eutectoid temperature (723℃) on the iron-iron carbide equilibrium diagram, shown in Figure \ref{ch3:figure:equilibrium}. Thus, the carbon content is forced out of the solution [44]. During this cooling process, the austenite transforms into a combination of ferrite and another phase known as cementite, also known as iron carbide, which has the chemical composition of Fe3C [61]. The combination of ferrite and cementite is known as pearlite.  
 For plain carbon steels, ferrite, cementite, and pearlite phases are the principal constituents of the microstructure, provided that they have been cautiously subjected to slow cooling to avoid the formation of the metastable phases. Consequently, it is significant to evaluate the nucleation and growth of these phases and to determine the factors which control their morphology [44]
- 
-% Figure 3.15: Iron-iron carbide equilibrium diagram showing the austenite (γ), ferrite (α) and cementite (Fe3C) phase regions with eutectoid composition and temperature [61].
 
-Cementite on its own has characteristics of ceramic materials, very hard and brittle, with low toughness and little resistance to crack initiation and propagation, which is unlike ferrite [59] As a result, pearlite may reveal more than one microstructure due to the alternating layers of ferrite and cementite. A fully pearlitic microstructure is significantly formed at the eutectoid composition of 0.78\%C, as shown in Figure 3.15 [30]. In contrast to cementite, the fully pearlitic steels have high strength, high hardness, and good wear resistance. However, they commonly suffer from poor ductility and poor toughness [30]. Figure 3.16 shows a microstructure fully pearlite steel and pearlite showing ferrite and cementite lamellae.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{iron-iron_carbide_equilibrium_diagram.jpg}
+    \caption{Iron-iron carbide equilibrium diagram showing the austenite ($\gamma$), ferrite ($\alpha$) and cementite (Fe3C) phase regions with eutectoid composition and temperature [61].}
+    \label{ch3:figure:equilibrium}
+\end{figure}
 
-% Figure 3.16: Pearlite microstructures:  a) SEM micrograph of pearlite showing ferrite and cementite lamellae. 4% picral etch. 10000x. b) Fully pearlitic steel showing the characteristic fine pearlite interlamellar spacing. 2% nital + 4% picral etch. 500x [30].
+Cementite on its own has characteristics of ceramic materials, very hard and brittle, with low toughness and little resistance to crack initiation and propagation, which is unlike ferrite [59] As a result, pearlite may reveal more than one microstructure due to the alternating layers of ferrite and cementite. A fully pearlitic microstructure is significantly formed at the eutectoid composition of 0.78\%C, as shown in Figure \ref{ch3:figure:equilibrium} [30]. In contrast to cementite, the fully pearlitic steels have high strength, high hardness, and good wear resistance. However, they commonly suffer from poor ductility and poor toughness [30]. Figure \ref{ch3:figure:pearlite:microstructures} shows a microstructure fully pearlite steel and pearlite showing ferrite and cementite lamellae.
+
+\begin{figure}[H]
+
+\centering
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=5cm,width=\textwidth]{ferrite_and_cementite_lamellae_micrograph.jpg}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=5cm,width=\textwidth]{fully_pearlitic_steel.jpg}
+    \caption{}
+\end{subfigure}
+
+\caption{Pearlite microstructures:  a) SEM micrograph of pearlite showing ferrite and cementite lamellae. 4\% picral etch. 10000x. b) Fully pearlitic steel showing the characteristic fine pearlite interlamellar spacing. 2\% nital + 4\% picral etch. 500x [30].}
+\label{ch3:figure:pearlite:microstructures}
+\end{figure}
 
 \subsection{Ferrite-Pearlite}
-Ferrite-pearlite is the common microstructural phase that makes most plain carbon steels. The microstructure and properties of these steels are distinguished, usually by the carbon content present and the size of the grains, as shown in Figure 3.14 [30]. However, as previously stated in section 3.6, carbon content has an impact on some properties of steel, thus it has a strong relationship with the tensile strength of ferrite-pearlite steels. As illustrated in Figure 3.18, carbon content has a direct relationship with the ultimate strength of ferrite-pearlite steels due to the gradual increase of ultimate tensile strength as a function of carbon content [62]. 
-Pearlite has more carbon content on the microstructure, thus this is the main reason for the increase of the ultimate strength on ferrite-pearlite steels [59] Consequently, the strength of pearlite is much higher than that of ferrite [30]. In contrast, the yield strength of ferrite-pearlite steels is not dependent upon the carbon content. However, the ferrite matrix commonly governs the yielding in ferrite-pearlite steels. Ferrite matrix is regarded as a repeating phase in the microstructure of ferrite-pearlite, hence pearlite alone has a slight effect on the yielding behavior [30]. Figure 3.17 shows the microstructure of ferrite-pearlite steels at two different carbon contents, to further understand the effect of carbon on steels.
+Ferrite-pearlite is the common microstructural phase that makes most plain carbon steels. The microstructure and properties of these steels are distinguished, usually by the carbon content present and the size of the grains, as shown in Figure \ref{ch3:figure:austenite} [30]. However, as previously stated in section 3.6, carbon content has an impact on some properties of steel, thus it has a strong relationship with the tensile strength of ferrite-pearlite steels. As illustrated in Figure \ref{ch3:figure:properties}, carbon content has a direct relationship with the ultimate strength of ferrite-pearlite steels due to the gradual increase of ultimate tensile strength as a function of carbon content [62]. 
+Pearlite has more carbon content on the microstructure, thus this is the main reason for the increase of the ultimate strength on ferrite-pearlite steels [59] Consequently, the strength of pearlite is much higher than that of ferrite [30]. In contrast, the yield strength of ferrite-pearlite steels is not dependent upon the carbon content. However, the ferrite matrix commonly governs the yielding in ferrite-pearlite steels. Ferrite matrix is regarded as a repeating phase in the microstructure of ferrite-pearlite, hence pearlite alone has a slight effect on the yielding behavior [30]. Figure \ref{ch3:figure:contents} shows the microstructure of ferrite-pearlite steels at two different carbon contents, to further understand the effect of carbon on steels.
 
-% Figure 3.17: Microstructure of typical ferrite-pearlite steels at two different carbon contents: a) 0.10% C and b) 0.25% C. 2% nital + 4% picral etch. 200x [30].
+\begin{figure}[H]
+
+\centering
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=.95\textwidth, width=\textwidth]{ferrite-pearlite_carbon_content_1.jpg}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=.95\textwidth, width=\textwidth]{ferrite-pearlite_carbon_content_2.jpg}
+    \caption{}
+\end{subfigure}
+
+\caption{Microstructure of typical ferrite-pearlite steels at two different carbon contents: a) 0.10\% C and b) 0.25\% C. 2\% nital + 4\% picral etch. 200x [30].}
+\label{ch3:figure:contents}
+\end{figure}
  
-% Figure 3.18: Mechanical properties of ferrite-pearlite steels, as a function of carbon content [30]. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{mechanical_properties_of_ferrite-pearlite_steels.jpg}
+    \caption{Mechanical properties of ferrite-pearlite steels, as a function of carbon content [30]. }
+    \label{ch3:figure:properties}
+\end{figure}
 
 \subsection{Martensite}
-Martensite is a supersaturated solid solution of carbon in iron [30]. It is generally formed during the rapid cooling process when the waste carbon of the fcc austenite does not have time to diffuse out of the crystal structure and form cementite [59] Instead, the carbon content is 'trapped' in with the now almost pure iron, and is relatively forced into interstitial locations that are not large enough to accommodate the carbon atoms. Consequently, this distorts and strains the crystal matrix into a body-centered tetragonal (bct) structure, as shown in Figure 3.19. Thus this forms a very hard phase known as martensite [30].
+Martensite is a supersaturated solid solution of carbon in iron [30]. It is generally formed during the rapid cooling process when the waste carbon of the fcc austenite does not have time to diffuse out of the crystal structure and form cementite [59] Instead, the carbon content is 'trapped' in with the now almost pure iron, and is relatively forced into interstitial locations that are not large enough to accommodate the carbon atoms. Consequently, this distorts and strains the crystal matrix into a body-centered tetragonal (bct) structure, as shown in Figure \ref{ch3:figure:martensite}. Thus this forms a very hard phase known as martensite [30].
  
-% Figure 3.19: A bct crystal structure of martensite, which has larger gaps within the unit cell [59].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.25\textwidth]{bct_crystal_structure_of_martensite.jpg}
+    \caption{A bct crystal structure of martensite, which has larger gaps within the unit cell [59].}
+    \label{ch3:figure:martensite}
+\end{figure}
 
-When the content of carbon is constantly increasing to higher levels, more carbon is frozen into the bct structure, further straining the crystal matrix. Thus this is the main reason for the hardness of martensite to increase a function of carbon content [59] In addition, the volume of the bct martensite structure is larger than that of the fcc austenite. Consequently, the transformation of fresh martensite is significantly compressed by the surrounding matrix [59]. A typical microstructure of martensite is shown in Figure 3.20.
-The hardness of martensite can be significantly reduced by further heating the martensite. In such cases, the carbon content has the opportunity to diffuse out from the bct structure, reducing the distortion of the crystal matrix in that process, and thus reducing the hardness and increasing the toughness [44]. However, after the heat treatment process, the microstructure of ferrite and iron carbide is formed, which leads to the formation of tempered martensite [59]. Since the martensitic matrix is strained, it results in an increased amount of iron carbide nucleation sites in tempered martensite, which eventually leads to a more widespread distribution of iron carbide than seen in the lamellar (layered) structure of pearlite, shown in Figure 3.13 [59] The bcc ferrite has a smaller volume compared to bct martensite, thus when martensite is tempered, some of the remaining martensite compression stresses from the austenite-to-martensite transition are mitigated [30].
-    
-% Figure 3.20: Martensite microstructures: a) a typical lath martensite and b) a plate martensite. 4\% picral + HCl. 200x [30].
+When the content of carbon is constantly increasing to higher levels, more carbon is frozen into the bct structure, further straining the crystal matrix. Thus this is the main reason for the hardness of martensite to increase a function of carbon content [59] In addition, the volume of the bct martensite structure is larger than that of the fcc austenite. Consequently, the transformation of fresh martensite is significantly compressed by the surrounding matrix [59]. A typical microstructure of martensite is shown in Figure \ref{ch3:figure:martensite:microstructures}.
+The hardness of martensite can be significantly reduced by further heating the martensite. In such cases, the carbon content has the opportunity to diffuse out from the bct structure, reducing the distortion of the crystal matrix in that process, and thus reducing the hardness and increasing the toughness [44]. However, after the heat treatment process, the microstructure of ferrite and iron carbide is formed, which leads to the formation of tempered martensite [59]. Since the martensitic matrix is strained, it results in an increased amount of iron carbide nucleation sites in tempered martensite, which eventually leads to a more widespread distribution of iron carbide than seen in the lamellar (layered) structure of pearlite, shown in Figure \ref{ch3:figure:microstructure} [59] The bcc ferrite has a smaller volume compared to bct martensite, thus when martensite is tempered, some of the remaining martensite compression stresses from the austenite-to-martensite transition are mitigated [30].
+
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=6cm, width=\textwidth]{lath_martensite_microstructure.jpg}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=6cm, width=\textwidth]{plate_martensite_microstructure.jpg}
+    \caption{}
+\end{subfigure}
+
+\caption{Martensite microstructures: a) a typical lath martensite and b) a plate martensite. 4\% picral + HCl. 200x [30].}
+\label{ch3:figure:martensite:microstructures}
+\end{figure}
 
 \subsection{Bainite}
 Bainite is another possible microstructure that can form when austenite is cooled. It is typically the mixture of ferrite, cementite, and retained austenite. However, ferrite has an acicular morphology and the carbides are discrete particles, which is the main difference from the pearlite microstructure [30]. Retained austenite is the term given to austenite that does not transform to martensite during quenching [59] The cooling rate required to form bainite is much slower compared to the cooling rate needed to form martensite. As a consequence, carbon has the opportunity to diffuse out of the fcc austenite, thus allowing the formation of bcc ferrite.  
 Bainitic microstructures have an excellent balance in terms of strength and ductility, which is useful in many applications. These are the results of a sufficient cooling rate that significantly increases the strength. The higher cooling rates required to produce bainite give the harder components of the microstructure enough energy to transform into a more rounded shape [59]. In this way, the hard microstructural constituents do not easily suffer to crack initiation and propagation as compared to flat and elongated.
-Normally bainite has two morphologies as namely, upper bainite and lower bainite, which are shown in Figure 3.21. These two morphologies depend upon the temperature regions at which bainite was formed during the isothermal transformation [30]. The upper bainite is typically formed isothermally in the temperature range of 400-550 $^\circ C$, while lower bainite is also formed by an isothermal process in the temperature range of 250-400 $^\circ C$ [30]. Consequently, the iron carbide phase critically forms at the lath boundaries in upper bainite, while the carbide phase forms on certain crystallographic planes within the laths in lower bainite [59]. The lower bainite has higher strength and higher toughness compared to the upper bainite due to the fine acicular structure and the carbides within the laths. Generally, lower bainite has higher strength and higher toughness compared to upper bainite. This is due to the fine acicular structure and carbides possessed by lower bainite within the laths [30].
+Normally bainite has two morphologies as namely, upper bainite and lower bainite, which are shown in Figure \ref{ch3:figure:bainite:microstructures}. These two morphologies depend upon the temperature regions at which bainite was formed during the isothermal transformation [30]. The upper bainite is typically formed isothermally in the temperature range of 400-550 $^\circ C$, while lower bainite is also formed by an isothermal process in the temperature range of 250-400 $^\circ C$ [30]. Consequently, the iron carbide phase critically forms at the lath boundaries in upper bainite, while the carbide phase forms on certain crystallographic planes within the laths in lower bainite [59]. The lower bainite has higher strength and higher toughness compared to the upper bainite due to the fine acicular structure and the carbides within the laths. Generally, lower bainite has higher strength and higher toughness compared to upper bainite. This is due to the fine acicular structure and carbides possessed by lower bainite within the laths [30].
      
-% Figure 3.21: Bainite microstructures: a) upper bainite and b) lower bainite in Cr-Mo-V rotor steel. 2\% nital + 4% picral etch. 500x [30].
+\begin{figure}[H]
+
+\centering
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=.9\textwidth, width=\textwidth]{upper_bainite_microstruce.jpg}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \centering
+    \includegraphics[height=.9\textwidth, width=\textwidth]{lower_bainite_microstructure.jpg}
+    \caption{}
+\end{subfigure}
+
+\caption{Bainite microstructures: a) upper bainite and b) lower bainite in Cr-Mo-V rotor steel. 2\% nital + 4\% picral etch. 500x [30].}
+\label{ch3:figure:bainite:microstructures}
+\end{figure}
 
 \subsection{Ferrite-Cementite}
-When plain carbon steels are heated to temperatures slightly below the lower critical temperature, a ferrite-cementite microstructure that has a spheroidized shape as shown in Figure 3.22 is significantly formed [30]. However, the spheroidized structure is commonly revealed after the formation of pearlite. During the spheroidization, the cementite lamellae of the pearlite change their morphology to result to form spheroids [30].
+When plain carbon steels are heated to temperatures slightly below the lower critical temperature, a ferrite-cementite microstructure that has a spheroidized shape as shown in Figure \ref{ch3:figure:spheroidized_steel} is significantly formed [30]. However, the spheroidized structure is commonly revealed after the formation of pearlite. During the spheroidization, the cementite lamellae of the pearlite change their morphology to result to form spheroids [30].
 The critical and controlling factors during this process are the diffusion of carbon and portions of lamellae that should significantly dissolve and then diffuse to yield in the formation of a spheroid from the remaining portions of lamellae [30]. The ferrite-pearlite phase has several benefits in terms of the resulting properties. For example, fully spheroidized structures normally have enhanced machinability properties for most plain carbon steels [30].  Machinability of steels is one of the vital properties in the present study thus the formation of ferrite-cementite should be thoroughly evaluated and assessed.
 
-% Figure 3.22: Microstructure of fully spheroidized steel. 4\% picral etch. 100x [30].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{microstructure_of_fully_spheroidizel_steel.jpg}
+    \caption{Microstructure of fully spheroidized steel. 4\% picral etch. 100x [30].}
+    \label{ch3:figure:spheroidized_steel}
+\end{figure}
 
 \subsection{Ferrite-Austenite}
-The ferrite-austenite are the two phases that are present in duplex stainless steels, see Figure 3.5. The proportion of these two phases in duplex stainless steels in relatively equal. The duplex stainless steels can be altered to a completely ferritic structure. This is possible when they are melted and solidifies from the liquid phase[63].  However, as the materials significantly cool to room temperature, about half of the ferritic grains transform into austenitic grains [64]. Figure 3.23 shows a combination of ferrite and austenite phases that forms one microstructure.
-The combination of ferrite and austenite structures yields in several attractive properties. Consequently, duplex stainless steels are about twice as stronger compared to regular austenitic and ferritic stainless steel [64] The ductility of duplex steels is relatively fair, they however do not reach the excellent values of austenitic grades due to the different levels of nickel [30]. The stress corrosion resistance is another property that has made duplex stainless steels to be the extensively utilized family of stainless steels.
- 
-% Figure 3.23: Duplex microstructure that has yellow austenitic phase as “islands” surrounded by the blue ferritic phase [64]. 
+The ferrite-austenite are the two phases that are present in duplex stainless steels, see Figure \ref{ch3:figure:steel_phase}. The proportion of these two phases in duplex stainless steels in relatively equal. The duplex stainless steels can be altered to a completely ferritic structure. This is possible when they are melted and solidifies from the liquid phase[63].  However, as the materials significantly cool to room temperature, about half of the ferritic grains transform into austenitic grains [64]. Figure \ref{ch3:figure:duplex_microstructure} shows a combination of ferrite and austenite phases that forms one microstructure.
+The combination of ferrite and austenite structures yields in several attractive properties. Consequently, duplex stainless steels are about twice as stronger compared to regular austenitic and ferritic stainless steel [64] The ductility of duplex steels is relatively fair, they however do not reach the excellent values of austenitic grades due to the different levels of nickel [30]. The stress corrosion resistance is another property that has made duplex stainless steels to be the extensively utilized family of stainless steels. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\textwidth]{duplex_microstructure_that_has_yellow_austenitic_phase.jpg}
+    \caption{Duplex microstructure that has yellow austenitic phase as “islands” surrounded by the blue ferritic phase [64].}
+    \label{ch3:figure:duplex_microstructure}
+\end{figure}
 
 \section{Characterization of defects} 
 While the microstructure of steels critically determines the resulting properties, they may still have a variety of imperfections known as defects and discontinuity. Both material discontinuity and crystal defects have diverse effects on the deformation behavior and some of the physical and chemical properties of steels [58]. Hence it is of great significance to determine the nature and quantity of the crystal defects present in a steel material. 
@@ -708,24 +857,59 @@ One of the objectives of the present research work is to improve the corrosion r
 Plastics also known as polymers have become a major class of engineering materials. Polymers are substances whose molecules have high molar masses and are composed of relatively large number repeating units. There are both naturally occurring and synthetic polymers [72]. They offer several beneficial properties (mechanical, physical, chemical and optical) when utilised for certain industrial applications [73]. In contrast to metals, polymers are generally characterised by lower density, strength, elastic modulus, thermal and electrical conductivity, high corrosion resistance, and cost [72]. Thus, this is the reason for the rapid increase on plastic processing on annul basis. In addition, they are the preferred materials over metals in nowadays for numerous industrial applications. However, their setback to date is they are a waste that affects the environment if no longer in use. Nonetheless, there have been developments over the years that are aiming to rectify this issue, with the notable one being recycling.  
 There are many plastic materials that fall under polymer tree. However, for the purpose of the present study polyethylene (PE) plastics will be discussed. This is due to the growing demand of this material for manufacturing liquid storage facilities. PE is undoubtable the most popular plastic material in the world. It is a commodity material, which statically accounts for about 70\% of the plastic family [72].  PE is a thermoplastic in nature and therefore it can be reprocessed repeatedly, thus this is the reason it is easily available at relatively low cost and can be easily processed [74]. Moreover, it can be utilised for diverse industrial applications. 
 PE is often classed by the density it contains. Therefore, there is a Low-Density Polyethylene (LDPE) ($0.910 < density < 0.925$), Medium-Density Polyethylene (MDPE) ($0.926 < density < 0.940$), and High-Density Polyethylene (HDPE) [75]. Consequently, changing the density of the PE will results in altering the properties. The effect of changes in density, melt index, and molecular weight distribution on the properties of PE are tabulated in Table E.7 on appendices. 
-HDPE is commonly used in the manufacturing of chemical or liquid storage facilities, due to the seamless final product that is produced, for greater strength and corrosion resistance, thus it is off great importance in the present study. HDPE is a thermoplastic material composed of mainly carbon and hydrogen atoms joined together to form a high molecular weight products as shown in Figure 3.24 [75]. Methane gas is converted into ethylene then, with the application of heat and pressure it is further converted to polyethylene. The polymer chain may be 500,000 to 1,000,000 carbon units long. The longer the main chain, great the number of atoms [75]. As expected, the properties of HDPE or any plastic material depends upon the arrangement of the molecular chains. 
-                                             
-%  a) Methane b) Ethylene c) Polyethylene molecular chain 
-% Figure 3.24: a) Methane gas, b) ethylene and c) polyethylene [75]. 
+HDPE is commonly used in the manufacturing of chemical or liquid storage facilities, due to the seamless final product that is produced, for greater strength and corrosion resistance, thus it is off great importance in the present study. HDPE is a thermoplastic material composed of mainly carbon and hydrogen atoms joined together to form a high molecular weight products as shown in Figure \ref{ch3:figure:molecular_chains} [75]. Methane gas is converted into ethylene then, with the application of heat and pressure it is further converted to polyethylene. The polymer chain may be 500,000 to 1,000,000 carbon units long. The longer the main chain, great the number of atoms [75]. As expected, the properties of HDPE or any plastic material depends upon the arrangement of the molecular chains. 
+               
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{methane_molecular_chain.jpg}
+    \caption{Methane}
+\end{subfigure}
+\begin{subfigure}{.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{ethylene_molecular_chain.jpg}
+    \caption{Ethylene}
+\end{subfigure}
+\begin{subfigure}{.65\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{polythylene_molecular_chain.jpg}
+    \caption{Polyethylene molecular chain}
+\end{subfigure}
+
+\caption{a) Methane gas, b) ethylene and c) polyethylene [75].}
+\label{ch3:figure:molecular_chains}
+\end{figure}
 
 \subsection{Cross-linked polyethylene (XLPE) material}
 
 Since early 1030’s many researchers have been making efforts in obtaining a PE with specific chemical, mechanical, and thermal characteristics for the fabrication of complex-shaped products, or for use in adverse environmental conditions [74]. In general, plastic is a light and weak substance that easily melts when exposed to heat. However, altering the carbon atoms within the structure changes this perspective. To be precise, cross-linking the carbon atoms within the structure usually transforms such material into a superior material that may be resistant to temperature, pressure, corrosion, and that can be used in a variety of applications [76]. Crosslinking is known as a process in which carbon atoms of same or different polyethylene chains are joined together to form the three-dimensional network structure [74].
 The crosslinking technique was first discovered in late 1960’s by the European scientist known as Engel [76]. The introduction of cross-linked polyethylene (XLPE) was another milestone in the plastic era. As a consequence, when PE is cross-linked, it is advantageously employed in the manufacturing of storage facilities due to the advanced resulting properties. In fact, the fundamental way to enhance material properties such as impact strength, chemical resistance, and thermal characteristics is via cross-linking [77]. Cross-linking will however change the nature of polymer from thermoplastic to thermosetting polymer, thus yielding to a non-melting and more durable polymer matrix [57]. Crosslinking method is easily achieved in branched polymers. From the branched HDPE it is convenient to crosslink the polymer. However, this is a long and tiring process as compared to LDPE.
-Since HDPE has a linear molecular structure, therefore crosslinking this type of polymer requires a special attention as compared to LDPE. Figure 3.25 and 3.26 shows the process of branching HDPE and LDPE respectively.
+Since HDPE has a linear molecular structure, therefore crosslinking this type of polymer requires a special attention as compared to LDPE. Figure \ref{ch3:figure:hdpe} and \ref{ch3:figure:ldpe} shows the process of branching HDPE and LDPE respectively.
  
-% Figure 3.25: Linear and branched HDPE [75].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{linear_and_branched_hdpe.jpg}
+    \caption{Linear and branched HDPE [75].}
+    \label{ch3:figure:hdpe}
+\end{figure}
 
-% Figure 3.26: Crosslinked and non-crosslinked LDPE. [74].
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\textwidth]{crosslinked_and_non_crosslinked_ldpe.jpg}
+    \caption{Crosslinked and non-crosslinked LDPE. [74].}
+    \label{ch3:figure:ldpe}
+\end{figure}
 
-Over the past decades, there have several crosslinking methods that have been developed. However, to date, there are two tested methods that are used to crosslink polymers, chemical and radiation (physical) methods [57, 59]. These two methods are unique in their own way and are often utilized for a specific purpose. They usually depend upon the state (molten or solid) of the polymer during crosslinking and the type of activator used to promote crosslinking [74]. Figure 3.27 illustrates the available crosslinked methods in detail, as discussed above.
+Over the past decades, there have several crosslinking methods that have been developed. However, to date, there are two tested methods that are used to crosslink polymers, chemical and radiation (physical) methods [57, 59]. These two methods are unique in their own way and are often utilized for a specific purpose. They usually depend upon the state (molten or solid) of the polymer during crosslinking and the type of activator used to promote crosslinking [74]. Figure \ref{ch3:figure:crosslinking_methods} illustrates the available crosslinked methods in detail, as discussed above.
 
-% Figure 3.27: Methods available for crosslinking polyethylene [78]. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{methods_available_for_crosslinking_polyethylene.png}
+    \caption{Methods available for crosslinking polyethylene [78].}
+    \label{ch3:figure:crosslinking_methods}
+\end{figure}
 
 \subsubsection{Chemical processes}
 This is an extensively used method for crosslinking polymers. In order for the method to work as desired, a chemical substance usually peroxide or silane is required to significantly activate the links in the polymer chain, thus it is known as a chemical process [76]. During chemical process, the crosslinking takes place through direct carbon-to-carbon bonds. An alternative may be through the chemical bridges that connect various polyethylene molecules [74].  
@@ -738,23 +922,63 @@ In recent years, most researchers have been interested in knowing the crosslinki
     R^1-O-O-R^2
  \end{equation}
 
-Where: R1 and R2 values can be aryl, alkyl, or acyl groups and O being the two oxygen atoms which are bonded together. The alkyl peroxides significantly produce the most reactive free radicals thus they are the most used peroxides for crosslinking [74]. Figure 3.28 shows the entire schematic representation of crosslinking polyethylene using the peroxide substance. Peroxide process has the advantages of producing high thermal stability products due to the C-C bonds, however, this is achieved relatively high costs [78].
+Where: R1 and R2 values can be aryl, alkyl, or acyl groups and O being the two oxygen atoms which are bonded together. The alkyl peroxides significantly produce the most reactive free radicals thus they are the most used peroxides for crosslinking [74]. Figure \ref{ch3:figure:crosslinking_process} shows the entire schematic representation of crosslinking polyethylene using the peroxide substance. Peroxide process has the advantages of producing high thermal stability products due to the C-C bonds, however, this is achieved relatively high costs [78].
 
-% Figure 3.28: Process of crosslinking using the organic peroxide as the initiator [76]. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\textwidth]{process_of_crosslinking_using_the_organic_peroxide_as_the_initiator.jpg}
+    \caption{Process of crosslinking using the organic peroxide as the initiator [76]. }
+    \label{ch3:figure:crosslinking_process}
+\end{figure}
 
 \paragraph{Silane processes}
 For this process to be possible, the crosslinking is significantly activated by silane coupling agents, which react with many chemicals, including polymers, through typical organic chemistry reactions. The organ silane molecule critically includes a central silicon atom (Si) bounded to two different categories of groups (vinyl and alkoxy), which usually displays different reactivity [74]. Both these groups are vital in the process of crosslinking. The vinyl groups usually allow silane grafting to the PE and alkoxy grounps generate a three-dimensional network of siloxane linkages in the presence of water or moisture (through condensation or hydrolysis). 
 
-In contrast to peroxide process, the PE is cross-linked in the crystalline state in silane process. Thus, the uses of silanes result in the formation of siloxane (Si-O-Si) bridges, which are less rigid than carbon-to-carbon (C-C) bonds produced in the peroxide process. The silane process is shown in Figure 3.29 in a two-step process, starting from grafting of silane on PE to condensation (crosslinking). At first, silane is grafted on PE, then the condensation takes place yielding in crosslinking. One of the advantages of silane process is that it can be achieved at room temperature and at relatively low cost. 
+In contrast to peroxide process, the PE is cross-linked in the crystalline state in silane process. Thus, the uses of silanes result in the formation of siloxane (Si-O-Si) bridges, which are less rigid than carbon-to-carbon (C-C) bonds produced in the peroxide process. The silane process is shown in Figure \ref{ch3:figure:reaction} in a two-step process, starting from grafting of silane on PE to condensation (crosslinking). At first, silane is grafted on PE, then the condensation takes place yielding in crosslinking. One of the advantages of silane process is that it can be achieved at room temperature and at relatively low cost. 
 
-% a) Grafting of silane on PE b) Condensation (crosslinking) 
-% Figure 3.29: Silane grafted polyethylene crosslinking reaction. [74]. 
+\begin{figure}[H]
+\captionsetup[subfigure]{justification=raggedright}
+
+\centering
+
+\begin{subfigure}{.9\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{grafting_of_silane_on_pe.jpg}
+    \caption{Grafting of silane on PE}
+\end{subfigure}
+\begin{subfigure}{.9\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{condensation.jpg}
+    \caption{Condensation (crosslinking)}
+\end{subfigure}
+
+\caption{Silane grafted polyethylene crosslinking reaction [74].}
+\label{ch3:figure:reaction}
+\end{figure}
 
 \paragraph{Radiation (physical) processes}
-In contrast to chemical processes, radiation processes do not necessarily require any addition of any sort of chemicals in the original compound of PE. In radiation method, crosslinking is significantly achieved by free radical mechanism, which is generated in radiations polymer chain using high energy [76]. As a consequence, two or more chains will join together where the free radical is generated. Figure 3.30 shows a schematic process of crosslinking PE by radiation. 
-The involvement of high energy radiation on polymeric materials can critically produce crosslinking or cause a degradation in the main chain, which is termed as ‘scission’ [79]. In this way, both chain scission and crosslinking occur simultaneously and competitively. However, the dominance of one or other may significantly depend upon several factors such as sensitivity of the polymer to radiation, irradiation dose, and polymer radiation environment [79]. To be precise, in the presence of oxygen (O2) scission is relatively dominant over crosslinking, while in an environment that contains other gases such a nitrogen (Ni), crosslinking is normally dominant [76]. However, the changes and chemical properties of the finished product depend mostly on the efficiency of crosslinking reaction and its relative ratio with degradation [79]. For AFFF storage facilities chemical properties of cross-linked polymer are of great important. This is due to the uses of AFFF, as its chemical composition should not be influenced by the holding storage facility. 
+In contrast to chemical processes, radiation processes do not necessarily require any addition of any sort of chemicals in the original compound of PE. In radiation method, crosslinking is significantly achieved by free radical mechanism, which is generated in radiations polymer chain using high energy [76]. As a consequence, two or more chains will join together where the free radical is generated. Figure \ref{ch3:figure:radiation} shows a schematic process of crosslinking PE by radiation. 
+The involvement of high energy radiation on polymeric materials can critically produce crosslinking or cause a degradation in the main chain, which is termed as ‘scission’ [79]. In this way, both chain scission and crosslinking occur simultaneously and competitively. However, the dominance of one or other may significantly depend upon several factors such as sensitivity of the polymer to radiation, irradiation dose, and polymer radiation environment [79]. To be precise, in the presence of oxygen (O2) scission is relatively dominant over crosslinking, while in an environment that contains other gases such a nitrogen (Ni), crosslinking is normally dominant [76]. However, the changes and chemical properties of the finished product depend mostly on the efficiency of crosslinking reaction and its relative ratio with degradation [79]. For AFFF storage facilities chemical properties of cross-linked polymer are of great important. This is due to the uses of AFFF, as its chemical composition should not be influenced by the holding storage facility.  
 
-% Figure 3.30: a) Polyethylene energy radiation and b) the resulting crosslinked PE [76]. 
+\begin{figure}[H]
+\captionsetup[subfigure]{justification=raggedright}
+
+\centering
+
+\begin{subfigure}{.9\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{polyethylene_energy_radiation.jpg}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.9\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{resulting_crosslinked_pe.jpg}
+    \caption{}
+\end{subfigure}
+
+\caption{a) Polyethylene energy radiation and b) the resulting crosslinked PE [76].}
+\label{ch3:figure:radiation}
+\end{figure}
 
 Mathematically, the scission and crosslinking can be related in order to estimate the probability between them. This probability can be expressed as a ratio that is given by the following equation.
 
@@ -782,10 +1006,14 @@ According to several scientists the bond energy for breaking of C-H bond is typi
 \subsection{Environmental Stress Crack Resistance (ESCR)}
 AFFF solution contains sensitive chemicals within its composition. Therefore, under certain temperature and stress conditions, the PE material may begin to crack sooner than expected due to the presence of chemicals contained in AFFF solution. It has been experimentally proven that storage facilities containing liquids that are chemically free do not suffer to cracks as much as those containing chemical liquids. This phenomenon is known as the environmental stress crack (ESC). One of the objectives of the present work is to assess and evaluate the chemical resistance of XLDE in the presence of AFFF solution. The test methods that are usually utilised to evaluate ESC and other substances are provided in Table E.8 on appendices. 
 All engineering materials that are suitable for storing liquids containing chemicals, are critically evaluated against ECS. For PE, normally the stress cracking agents are polar materials such as alcohols, detergents, halogens and aromatics [75]. AFFF may be thought of as a detergent due to the bubbles it creates during utilisation. Consequently, it definitely causes problems to PE polymers. The property of a material to resist ESC is called environmental stress crack resistance (ESCR) [75]. Researchers have been working on understanding the mechanism of ESCR, however, to date it is not entirely understood. In most instances, failures of PE polymers that are caused by ESC tend to be due to the development of cracks in area tensile stress which gradually grow and propagate over time [76]. 
-Over the past years, there have been several efforts made in order to avoid ESC. Therefore, using an appropriate resin formulations of ESCR materials, designing the geometric appropriately, carefully using the manufacturing controls that prevents occurrence of severe stress risers, and limiting stresses and strains during the storage facility installation, all these are usually sufficient to avoid ESC [75]. Moreover, PE polymer may be cross-linked to improve the chemical properties and thus resist cracking.  With this regard, it is vital to test the compatibility of PE, especially XLPE with AFFF concentrate in order to avoid unexpected circumstances during fire conditions. To date, there are over 40 different ESCR test methods that are used to determine the chemical resistance of various materials. The standard test that is currently used in the industry of polyethylene is bent-strip test [75]. The method is normally used to assess the performance of polyethylene cable insulation but can be cautiously used to evaluate the performance of XLPE storage facilities in the presence of AFFF concentrate. The bent-strip test is shown in Figure 3.31. Where the specimen is immersed into a surfactant of interest, and the time to failure is noted. The results are reported using the notation $F_{xx}$, where xx is the percentage of samples that has been tested.
+Over the past years, there have been several efforts made in order to avoid ESC. Therefore, using an appropriate resin formulations of ESCR materials, designing the geometric appropriately, carefully using the manufacturing controls that prevents occurrence of severe stress risers, and limiting stresses and strains during the storage facility installation, all these are usually sufficient to avoid ESC [75]. Moreover, PE polymer may be cross-linked to improve the chemical properties and thus resist cracking.  With this regard, it is vital to test the compatibility of PE, especially XLPE with AFFF concentrate in order to avoid unexpected circumstances during fire conditions. To date, there are over 40 different ESCR test methods that are used to determine the chemical resistance of various materials. The standard test that is currently used in the industry of polyethylene is bent-strip test [75]. The method is normally used to assess the performance of polyethylene cable insulation but can be cautiously used to evaluate the performance of XLPE storage facilities in the presence of AFFF concentrate. The bent-strip test is shown in Figure \ref{ch3:figure:bending_apparatus}. Where the specimen is immersed into a surfactant of interest, and the time to failure is noted. The results are reported using the notation $F_{xx}$, where xx is the percentage of samples that has been tested.
  
-
-% Figure 3.31: Three point bending apparatus for testing ESCR under constant strain. [80]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{three_point_bending_apparatus_for_testing_escr.jpg}
+    \caption{Three point bending apparatus for testing ESCR under constant strain. [80]}
+    \label{ch3:figure:bending_apparatus}
+\end{figure}
 
 Research shows that the density of the PE polymer plays a critical role towards ESCR. For PE resins of the same molecular weight, the lesser the density, the greater the ESCR. The greater the proportion of crystals, the greater the density and the brittleness of the resin, which causes a rapid crack initiation [75]. However, since the phenomenon of ESC is not fully understood, then the density alone is inadequate to predict the ESCS. 
 
@@ -803,9 +1031,43 @@ The experimental work aims to evaluate and assess the impact and compatibility o
 
 \section{Methodology}
 Samples of stainless-steel, mild steel, and HDPE together with AFFF solution were carefully prepared. A guillotine machine was used to cut the material sheets into desired shapes and sizes. All the material sheets were cut to the same sizes and shapes for a fair comparison. A total of 5 samples were used during the experiments. These sample materials were exposed to natural environmental conditions, with another sample of mild steel being exposed to seawater for 60 days. All the samples were then immersed and soaked in 3\% proportion of AFFF solution for further 120 days. Fourier transform infrared spectroscopy (FTIR), Transmission electron microscopy (TEM), Dynamic Light Scattering (DLS), and Inductively Coupled Plasma (ICP) wet analysis were performed on sample materials. This was done to analyse the composition, properties and stability of AFFF solution after being exposed to these materials. 
-During the tests, clean sample materials and AFFF solution from the manufacturer were used as a benchmark and their properties were compared to the exposed material to deduce any vital changes occurred. All the findings were carefully recorded and analysed. However, it should be noted that the objective was to analyze the AFFF solution. The experimental procedure followed for all the samples is presented in the flowchart in Figure 5.1. 
+During the tests, clean sample materials and AFFF solution from the manufacturer were used as a benchmark and their properties were compared to the exposed material to deduce any vital changes occurred. All the findings were carefully recorded and analysed. However, it should be noted that the objective was to analyze the AFFF solution. The experimental procedure followed for all the samples is presented in the flowchart in Figure \ref{ch4:figure:procedure}. 
 
-% Figure 4.1: Typical experimental procedure.
+\begin{figure}[H]
+\centering
+
+\begin{tikzpicture}[node distance=3cm]
+    \tikzstyle{block} = [rectangle, minimum height=1.5cm, inner sep=1em, text centered, text width=5cm, draw=black]
+    \tikzstyle{arrow} = [thick, ->, >=stealth]
+
+    \node (prepare) [block] {Prepared materials and AFFF solution samples};
+
+    \node (expose) [block, below of=prepare] {Exposed material samples to natural environmental conditions 60 days};
+
+    \node (immerse) [block, below of=expose] {Immersed and soaked material samples to AFFF solution for 5 months};
+
+    \node (perform) [block, right of=prepare, xshift=6cm] {Performed FTIR, TEM, DLS and ICP tests on material samples};
+
+    \node (test) [block, below of=perform] {Tested and analysed the elementary composition and performance parameters on AFFF solution};
+
+    \node (analyse) [block, below of=test] {Data analysis};
+
+    \newcommand*{\connector}[4][]{
+        \draw[#1] (#3) -| ($(#3) !#2! (#4)$) |- (#4);
+    }
+
+    \draw [arrow] (prepare) -- (expose);
+    \draw [arrow] (expose) -- (immerse);
+
+    \connector[->, black]{0.5}{immerse}{perform}
+
+    \draw [arrow] (test) -- (analyse);
+
+\end{tikzpicture}
+
+\caption{Typical experimental procedure}
+\label{ch4:figure:procedure}
+\end{figure}
 
 \section{Material description}
 On the present experiments, 3, 4 and 5mm sheets of duplex stainless steel, mild steel and HDPE respectively were selected as the materials of interest. The sample sheets were scribed to ease and ensure that the cut sizes are precise during the cutting stage. The cut samples were further cut to three small pieces for accurate testing and the average results were considered. This was also done to accommodate the percentage errors and external factors which may have occurred during the experimental setup. Glass beakers of 800ml in volume were prepared to fill the 3\% proportion of AFFF solution and immerse the material samples. 
@@ -813,57 +1075,111 @@ On the present experiments, 3, 4 and 5mm sheets of duplex stainless steel, mild 
 \section{Sample preparation}
 \subsection{Experimental matrix}
 
-% Table 4.1: Experimental matrix with AFFF solution.
+\begin{table}[H]
 
-\begin{center}    
+\centering
 \begin{tabular}{m{.25\textwidth} m{.25\textwidth} m{.4\textwidth}}
-\hline
-Material & Instrument & Analyses \\
-\hline
-AFFF solution & FTIR & Functional groups \\
-& TEM & Particle size and shape \\
-& & HR imaging \\
-& & Electron diffraction images \\
-& DLS & Particle size distribution \\
-& ICP & Elementary identification \\
-\hline
+    \hline
+    Material & Instrument & Analyses \\
+    \hline
+    AFFF solution & FTIR & Functional groups \\
+    & TEM & Particle size and shape \\
+    & & HR imaging \\
+    & & Electron diffraction images \\
+    & DLS & Particle size distribution \\
+    & ICP & Elementary identification \\
+    \hline
 \end{tabular}
-\end{center}
+
+\caption{Experimental matrix with AFFF solution.}
+\end{table}
 
 \subsection{Material plates} 
-The sheets of stainless steel, mild steel, and HDPE respectively were prepared for the experiments. These sheets required to be cut to the desired shapes and sizes so that they can fit in beakers filled with AFFF solution. The scriber was used to scribe the precise sizes and the shapes to be cut. This was done at the Durban University of Technology (DUT) manufacturing workshop, using a guillotine cutting machine. The prepared material samples can be seen in Figure 4.2, 4.3 and 4.4.
+The sheets of stainless steel, mild steel, and HDPE respectively were prepared for the experiments. These sheets required to be cut to the desired shapes and sizes so that they can fit in beakers filled with AFFF solution. The scriber was used to scribe the precise sizes and the shapes to be cut. This was done at the Durban University of Technology (DUT) manufacturing workshop, using a guillotine cutting machine. The prepared material samples can be seen in Figure \ref{ch4:figure:stainless_steel}, \ref{ch4:figure:mild_steel} and \ref{ch4:figure:hdpe}.
  
-% Figure 4.2: Duplex stainless steel sample.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{duplex_stainless_steel_sample.jpg}
+    \caption{Duplex stainless steel sample.}
+    \label{ch4:figure:stainless_steel}
+\end{figure}
  
-% Figure 4.3: Mild steel sample.
- 
-% Figure 4.4: HDPE sample
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{mild_steel_sample.jpg}
+    \caption{Mild steel sample.}
+    \label{ch4:figure:mild_steel}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{hdpe_sample.jpg}
+    \caption{HDPE sample}
+    \label{ch4:figure:hdpe}
+\end{figure}
 
 \subsection{The cutting process}
-The prepared samples were cut to the sizes of 60mm x 100mm using a guillotine machine. It can be seen in Figures 4.2, 4.3 and 4.4 that the samples were firstly scribed before being cut to ensure the precision. Stainless steel and mild steel were cut using a guillotine that can cut up to a thickness of 5mm. In contrast HDPE was cut in guillotine that can cut up to 3mm thickness, it is not hard as the two steels. Figure 4.5 and 4.6 shows the two guillotine machines that were used to cut the samples.
+The prepared samples were cut to the sizes of 60mm x 100mm using a guillotine machine. It can be seen in Figures \ref{ch4:figure:stainless_steel}, \ref{ch4:figure:mild_steel} and \ref{ch4:figure:hdpe} that the samples were firstly scribed before being cut to ensure the precision. Stainless steel and mild steel were cut using a guillotine that can cut up to a thickness of 5mm. In contrast HDPE was cut in guillotine that can cut up to 3mm thickness, it is not hard as the two steels. Figure \ref{ch4:figure:5mm_guillotine} and \ref{ch4:figure:3mm_guillotine} shows the two guillotine machines that were used to cut the samples.
  
-% Figure 4.5: Guillotine machine that cuts up to 5mm thickness.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\textwidth]{5mm_guillootine_machine.jpg}
+    \caption{Guillotine machine that cuts up to 5mm thickness.}
+    \label{ch4:figure:5mm_guillotine}
+\end{figure}
  
-% Figure 4.6: Guillotine machine that cuts up to 3mm thickness
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{3mm_guillotine_machine.jpg}
+    \caption{Guillotine machine that cuts up to 3mm thickness}
+    \label{ch4:figure:3mm_guillotine}
+\end{figure}
 
-As indicated in section 4.5.3 the samples were cut to numerous pieces and to the desired shapes and size to fit glass beakers. Figure 4.7 shows the samples after the cutting process. 
+As indicated in section 4.5.3 the samples were cut to numerous pieces and to the desired shapes and size to fit glass beakers. Figure \ref{ch4:figure:samples} shows the samples after the cutting process. 
  
-% Figure 4.7: Samples after being cut to the desired sizes.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{samples_after_being_cut.jpg}
+    \caption{Samples after being cut to the desired sizes.}
+    \label{ch4:figure:samples}
+\end{figure}
 
-The samples were polished and cleaned using the rectangular file. This was done to remove the roughness and dangerous chips, to avoid any possible injuries during the experimental setup. Figure 5.8 shows the tools used when cleaning and polishing the samples.
+The samples were polished and cleaned using the rectangular file. This was done to remove the roughness and dangerous chips, to avoid any possible injuries during the experimental setup. Figure \ref{ch4:figure:file_and_vice} shows the tools used when cleaning and polishing the samples.
  
-% Figure 4.8: Rectangular file and bench vice 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\textwidth]{rectangular_file_and_bench_vice.jpg}
+    \caption{Rectangular file and bench vice}
+    \label{ch4:figure:file_and_vice}
+\end{figure}
 
 \subsection{AFFF solution samples}
 The 3\% proportion AFFF solution samples were prepared in 20 litres each and stored in room temperature at the laboratory in DUT. These were carefully stored in their original containers until the material samples were available and ready. Figure 4.10 shows the AFFF solution from the suppliers in 20 litre containers.
 Picture of AFFF 20 litres
-AFFF solution were filled in respective glass beakers to immerse various material samples. There were 10 glass beakers which were prepared in total. Only four beakers were used initially, with the first 2 glass beakers being prepared for clean HDPE that was immersed in AFFF solutions to investigate whether the solution will initiate the ESC on HDPE. The other two beakers were filled with seawater and then mild steel was immersed to increase the rate of corrosion. Figure 5.11 shows the first 4 glass beakers used during the experimental work.
+AFFF solution were filled in respective glass beakers to immerse various material samples. There were 10 glass beakers which were prepared in total. Only four beakers were used initially, with the first 2 glass beakers being prepared for clean HDPE that was immersed in AFFF solutions to investigate whether the solution will initiate the ESC on HDPE. The other two beakers were filled with seawater and then mild steel was immersed to increase the rate of corrosion. Figure \ref{ch4:figure:hdpe_immersed} shows the first 4 glass beakers used during the experimental work.
  
-% Figure 4.9: HDPE immersed in various AFFF solutions.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{hdpe_immersed_in_various_afff_solutions.jpg}
+    \caption{HDPE immersed in various AFFF solutions.}
+    \label{ch4:figure:hdpe_immersed}
+\end{figure}
  
-% Figure 4.10: Mild steel immersed in seawater.
- 
-% Figure 4.10: Mild steel immersed in seawater.
+\begin{figure}[H]
+\centering
+\begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=.5\textwidth]{mild_steel_immersed_in_seawater.jpg}
+\end{subfigure}
+\par\medskip
+\begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=.5\textwidth]{mild_steel_immersed_in_seawater.jpg}
+\end{subfigure}
+
+\caption{Mild steel immersed in seawater.}
+\label{ch4:figure:steel_immersed}
+\end{figure}
 
 \section{Testing} 
 The different tests that were performed after the experiments are discussed in this section. The apparatus and various materials that were utilised when conducting the tests are concisely described. 
@@ -872,22 +1188,38 @@ Fourier transform infrared spectroscopy (FTIR), Transmission electron microscopy
 \subsection{Fourier transform infrared spectroscopy (FTIR)}
 All the AFFF samples were analyzed using the FTIR technique. This was achieved by comparing the clean samples that were from the manufacturer with the samples that has been exposed to various materials experiments. The FTIR analysis assisted in identifying the functional groups for various exposed samples.
  
-% Figure 4.11: FTIR instrument used for functional groups. 
+\begin{figure}[H]
+    \includegraphics[width=.6\textwidth]{ftir_instrument.jpg}
+    \caption{FTIR instrument used for functional groups.}
+    \label{ch4:figure:ftir}
+\end{figure}
 
 \subsection{Transmission electron microscopy (TEM)}
 Since the FTIR does not provide conclusive information, it was essential to validate the FTIR analysis with other tests. TEM analysis were conducted to analyse large variety of particle, overall particle shape, and visual overall size and shape of the AFFF solution particles using HR imaging and electron diffraction images. It should be noted that TEM does not provide sufficient information on how the particles in the exposed AFFF solution are distributed and does not covey the precise particle sizes. 
  
-% Figure 4.12: TEM instrument used to analyze particles.  
+\begin{figure}[H]
+    \includegraphics[width=.6\textwidth]{tem_instrument.png}
+    \caption{TEM instrument used to analyze particles.}
+    \label{ch4:figure:tem}
+\end{figure}
 
 \subsection{Dynamic Light Scattering (DLS)}
 The DLS tests were conducted to deduce the particle size distribution and precise particle sizes. This was achieved by measurement of the hydrodynamic diameter (Z-average) of any present particles in units of nm. This was done to validate the findings of TEM, and it further assisted in depth understanding of the behaviour of the AFFF solution particles when exposed to various materials and how they affect its properties.  
  
-% Figure 4.13: DLS instrument used to analyze particle distribution.  
+\begin{figure}[H]
+    \includegraphics[width=.6\textwidth]{dls_instrument.png}
+    \caption{DLS instrument used to analyze particle distribution.}
+    \label{ch4:figure:dls}
+\end{figure}
 
 \subsection{Inductively Coupled Plasma (ICP)}
 Finally, the ICP test was conducted to identify the chemical elements or composition within the exposed AFFF solution and benchmark these with the standard qualities. The changes in chemical composition can greatly affect the properties, hence the performance of AFFF during the firefighting circumstances. Thus, it is vital to assess the impact of the various materials on the composition of the AFFF solution. 
  
-% Figure 4.13: ICP instrument used for elementary analysis.  
+\begin{figure}[H]
+    \includegraphics[width=.6\textwidth]{icp_instrument.png}
+    \caption{ICP instrument used for elementary analysis.}
+    \label{ch4:figure:icp}
+\end{figure}
 
 \section{Summary}
 The present chapter outlined the aim of the experiment, the material description, sample preparation, the techniques employed to test the samples and as well as the equipment and testing standards used. The instruments used for analysing the AFFF solution samples were presented with thorough explanation of the purpose of each test. The experimental procedure followed in this investigation was explained. The results from the investigation are presented in chapter 5.
@@ -898,46 +1230,165 @@ In this chapter, the results of the experimental tests conducted during this stu
 To begin with, the FTIR results were analysed to deduce the functional groups of AFFF solution. The TEM was used to determine the overall size and shape of the particles, DLS was used to determine the particle size distribution and lastly ICP was used to identify the elemental composition of AFFF solution.  
 
 \section{AFFF solution Infrared spectroscopy}
-Figure 5.1and 5.2 shows the FTIR spectra of the Pure AFFF solution compared to AFFF solution that has been exposed to the materials of interest.  Their functionality in terms of stability, oxidation and reactivity was revealed. Unsurprisingly, most of the chemical and functional groups appear within the group frequency of wavenumber 4000-1500 cm$^{-1}$.
-Referring to Figure 5.1 it can be observed that at the single bond region a broad band appears at 3355 cm$^{-1}$, which has been associated with hydroxy group, H-bonded OH stretch [ref 4]. This functional group is responsible for enhancing the AFFF solution to dissolve in water[ref1].  Medial alkyne C$\equiv$C stretch appears as a weak band at 2120 cm$^{-1}$, this is a vital distinguishing tool since very few organic compound reveal an abortion in this region [ref 3]. The medium band detected at 1637 cm$^{-1}$ can be assigned to Alkenyl C=C stretch vibration. Interestingly, the fingerprint region also revealed quite a few functional groups. However, the Methylene C-H bend and Skeletal C-C vibrations can be disregarded since they appear in most organic compounds. The fluoro compounds, C-F stretch at 1083 cm$^{-1}$ confirms the presence of fluorosurfactant in AFFF concentrate. 
-Referring to Figure 5.2, which compares the FTIR spectra of pure AFFF solution with AFFF solution that has been exposed materials of interest to deduce the significant shifts of functional groups. In the single bond region, a hydroxy group, H-bonded OH stretch still appears in all the FTIR spectra. However, there is a strange absorption peak of aldehyde C-C stretching which appears in AFFF solution (HDPE and Stainless steel exposed) at bands 2710 cm$^{-1}$  and 2697 cm$^{-1}$ respectively[ref. This may indicate an interaction between the AFFF solution and two materials (HDPE and Stainless steel). Moreover, there is a significant shift which can be observed on the triple bond region at bands 2056 cm$^{-1}$ and 2060 cm$^{-1}$ for exposed HDPE and Stainless steel AFFF solution respectively. Consequently, this shift confirms the presence of isothiocyanate N=C=S stretching, which is a very unusual functional group, especially in organic compounds.
-It can be clearly observed that there are minor shifts in the functional groups. However, these minor shifts can be subsequently utilised to predict the reaction of the materials with AFFF solution in a long term. This is a very useful prediction technique, since in the present study these materials were immersed to AFFF solution for only five months. In addition, the major reaction in the real world may probably take years to occur. Figure 5.3-5.6 in section 6.3 compare the FTIR spectrum of pure materials (HDPE, Mild steel and Stainless steel) with materials exposed to AFFF solution. This was done to further examine and validate the functional group shifts on the exposed materials of interest.  
-  
-% Figure 5.1: FTIR spectra, comparison Pure AFFF solution with the AFFF solution that has been exposed to various materials.
+Figure \ref{ch5:figure:spectra} and \ref{ch5:figure:materials} shows the FTIR spectra of the Pure AFFF solution compared to AFFF solution that has been exposed to the materials of interest.  Their functionality in terms of stability, oxidation and reactivity was revealed. Unsurprisingly, most of the chemical and functional groups appear within the group frequency of wavenumber 4000-1500 cm$^{-1}$.
+Referring to Figure \ref{ch5:figure:spectra} it can be observed that at the single bond region a broad band appears at 3355 cm$^{-1}$, which has been associated with hydroxy group, H-bonded OH stretch [ref 4]. This functional group is responsible for enhancing the AFFF solution to dissolve in water[ref1].  Medial alkyne C$\equiv$C stretch appears as a weak band at 2120 cm$^{-1}$, this is a vital distinguishing tool since very few organic compound reveal an abortion in this region [ref 3]. The medium band detected at 1637 cm$^{-1}$ can be assigned to Alkenyl C=C stretch vibration. Interestingly, the fingerprint region also revealed quite a few functional groups. However, the Methylene C-H bend and Skeletal C-C vibrations can be disregarded since they appear in most organic compounds. The fluoro compounds, C-F stretch at 1083 cm$^{-1}$ confirms the presence of fluorosurfactant in AFFF concentrate. 
+Referring to Figure \ref{ch5:figure:materials}, which compares the FTIR spectra of pure AFFF solution with AFFF solution that has been exposed materials of interest to deduce the significant shifts of functional groups. In the single bond region, a hydroxy group, H-bonded OH stretch still appears in all the FTIR spectra. However, there is a strange absorption peak of aldehyde C-C stretching which appears in AFFF solution (HDPE and Stainless steel exposed) at bands 2710 cm$^{-1}$  and 2697 cm$^{-1}$ respectively[ref. This may indicate an interaction between the AFFF solution and two materials (HDPE and Stainless steel). Moreover, there is a significant shift which can be observed on the triple bond region at bands 2056 cm$^{-1}$ and 2060 cm$^{-1}$ for exposed HDPE and Stainless steel AFFF solution respectively. Consequently, this shift confirms the presence of isothiocyanate N=C=S stretching, which is a very unusual functional group, especially in organic compounds.
+It can be clearly observed that there are minor shifts in the functional groups. However, these minor shifts can be subsequently utilised to predict the reaction of the materials with AFFF solution in a long term. This is a very useful prediction technique, since in the present study these materials were immersed to AFFF solution for only five months. In addition, the major reaction in the real world may probably take years to occur. Figure \ref{ch5:figure:pure_afff_images}-\ref{ch5:figure:hdpe_images} in section 6.3 compare the FTIR spectrum of pure materials (HDPE, Mild steel and Stainless steel) with materials exposed to AFFF solution. This was done to further examine and validate the functional group shifts on the exposed materials of interest.  
+
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[width=\textwidth]{ftir_spectra.png}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[width=\textwidth]{comparison.png}
+    \caption{}
+\end{subfigure}
+
+\caption{FTIR spectra, comparison Pure AFFF solution with the AFFF solution that has been exposed to various materials.}
+\label{ch5:figure:spectra}
+\end{figure}
 
 \section{Infrared spectroscopy of HDPE, Mild steel, and Stainless steel}  
-The FTIR spectra of the materials of interest was conducted to substantiate the minor shifts of the functional group on the exposed AFFF solution. Figure 5.2 (a-c) shows the FTIR spectra of the materials of interest. The reactivity of AFFF solution with the materials of interest was the point of interest. It can be observed from Figure 5.2 (a-c) that there are significant shifts of functional groups, in Figure 5.2 (a) the O-H stretching which can be observed at 3583 cm$^{-1}$ in pure HDPE, shifted to a wavenumber of 3817 cm$^{-1}$ when the materials was immersed to AFFF solution. A strong amine N-H stretching at 3358 cm$^{-1}$ can be further observed in pure HDPE, of which in immersed solution it shifted to a broad band at 3406 cm$^{-1}$
+The FTIR spectra of the materials of interest was conducted to substantiate the minor shifts of the functional group on the exposed AFFF solution. Figure \ref{ch5:figure:materials} (a-c) shows the FTIR spectra of the materials of interest. The reactivity of AFFF solution with the materials of interest was the point of interest. It can be observed from Figure \ref{ch5:figure:materials} (a-c) that there are significant shifts of functional groups, in Figure \ref{ch5:figure:materials} (a) the O-H stretching which can be observed at 3583 cm$^{-1}$ in pure HDPE, shifted to a wavenumber of 3817 cm$^{-1}$ when the materials was immersed to AFFF solution. A strong amine N-H stretching at 3358 cm$^{-1}$ can be further observed in pure HDPE, of which in immersed solution it shifted to a broad band at 3406 cm$^{-1}$
 
-% Figure 5.2: FTIR spectra, comparing various materials. 
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{pure_hdpe_ftir_spectra.png}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{pure_ms_ftir_spetra.png}
+    \caption{}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[width=\textwidth]{pure_ss_ftir_spectra.png}
+    \caption{}
+\end{subfigure}
+
+\caption{FTIR spectra, comparing various materials.}
+\label{ch5:figure:materials}
+\end{figure}
 
 \section{Transmission Electron Microscopy (TEM)}
 The JEOL JEM-1010 TEM used for the present study is equipped with highly integrated technology. The 40kV to 100kV operating voltage range is suitable for applications in material science. Because of its low operating voltage and unique objective pole piece design, the JEM-1010 is a TEM with outstanding contrast [81]. Additionally, it has a 2k x 2k AMT CCD camera for taking digital images. The TEM was able to provide overall particle shape, large variety of particles and visual overall of the particle shape of the AFFF solution samples using the high resolution (HR) and electron diffraction imaging.  
-The TEM images of pure AFFF solution are shown in Figure 5.3. These will be utilized as a benchmark and will be compared to the immersed solution to observe any critical particle changes. All the samples depict the HR and electron diffraction images in various parts. This was done to understand the overall particle shape of the solution before making any conclusions. 
+The TEM images of pure AFFF solution are shown in Figure \ref{ch5:figure:pure_afff_images}. These will be utilized as a benchmark and will be compared to the immersed solution to observe any critical particle changes. All the samples depict the HR and electron diffraction images in various parts. This was done to understand the overall particle shape of the solution before making any conclusions. 
 
-% Figure 5.3: HR (a-c) and electron diffraction images (d) of pure AFFF solution. 
+\begin{figure}[H]
+\centering
 
-It can be observed from Figure 5.3 (d) that the electron diffraction image of pure AFFF solution provides numerous spot that are aligned in a particular direction. This is a demonstration that the solution in a pure state has a single crystalline structure. This shows that the solution has uniform property characteristics and is more stable in its pure form [82].  Moreover, Figure 5.3 (a-c) reveal that the particles of pure AFFF solution are scattered along the solution. This might be caused by the collision of two or more repelling particles within the solution [83]. Figure 5.4 – 5.6 depict the HR and electron diffraction images when various materials were immersed in AFFF solution. 
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.3cm, width=\textwidth]{diffraction_image_1.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.3cm, width=\textwidth]{diffraction_image_2.png}
+\end{subfigure}
+\par\bigskip
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_3.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_4.png}
+\end{subfigure}
+
+\caption{HR (a-c) and electron diffraction images (d) of pure AFFF solution.}
+\label{ch5:figure:pure_afff_images}
+\end{figure}
+
+It can be observed from Figure \ref{ch5:figure:pure_afff_images} (d) that the electron diffraction image of pure AFFF solution provides numerous spot that are aligned in a particular direction. This is a demonstration that the solution in a pure state has a single crystalline structure. This shows that the solution has uniform property characteristics and is more stable in its pure form [82].  Moreover, Figure \ref{ch5:figure:pure_afff_images} (a-c) reveal that the particles of pure AFFF solution are scattered along the solution. This might be caused by the collision of two or more repelling particles within the solution [83]. Figure \ref{ch5:figure:mild_steel_images} – \ref{ch5:figure:hdpe_images} depict the HR and electron diffraction images when various materials were immersed in AFFF solution. 
   
-% Figure 5.4: HR (a-c) and electron diffraction images (d) of AFFF solution immersed in mild steel.
+\begin{figure}[H]
+\centering
 
-% Figure 5.5: HR (a-c) and electron diffraction images (d) of AFFF solution immersed in stainless steel. 
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_5.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_6.png}
+\end{subfigure}
+\par\bigskip
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_7.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{afff_solution_immersed_in_mild_steel.png}
+\end{subfigure}
 
-% Figure 5.6: HR (a-c) and electron diffraction images (d) of AFFF solution immersed in HDPE. 
+\caption{HR (a-c) and electron diffraction images (d) of AFFF solution immersed in mild steel.}
+\label{ch5:figure:mild_steel_images}
+\end{figure}
 
-The overall crystal structure and the difference in particle shape for three samples comparing them to pure AFFF sample were studied. Although, the present TEM analysis are not able to provide the precise particle sizes of the samples, it nonetheless provides the significant overall change in crystal structure. Figure 5.3 revealed that in a pure state, AFFF solution possesses a single crystalline structure. However, when studying Figure 5.4-5.6, it is observed that the immersed AFFF solution has critically changed to a polycrystalline. This is seen in Figure 5.4 -5.6 (d) when closely studying the electron diffraction images of these samples. The concentrated circular rounds imply that all these materials are polycrystalline. This is confirmed by the morphology (particles, grains and crystallite), as several grains are observed in Figure 5.4-5.6. These grains are separated by grain boundaries and have random crystallographic orientations. It can be further observed that Figure 5.4 has the numerous grains compared to Figure 5.5 and 5.6.  Consequently, this implies that most of the crystal structural changes occurred when mild steel was immersed in AFFF solution. 
-When comparing the differences topographically (structure and shape), it can be observed in Figure 5.3 that the particles for pure AFFF solution are scattered and distributed along the solution. However, when closely observing Figure 5.4-5.6 it can been see that the particles for these samples are concentrated in one area, especially in Figure 5.4. This demonstrates that there has been a structural and shape particle change when the materials of interest where immersed in AFFF solution. The alteration in crystal structure and particle shape in AFFF solution complements the shifts in functional groups obtained using the FTIR. An et al [84] experimentally investigated the effect of the particle shape on the viscosity of the liquid. Their results indicated that the spherical particles have lower viscosity and any other particle shape will result in a higher viscosity. In addition, a change in any additive of AFFF solution will affect the foam drainage time. It should be noted that the causes of these alterations are not known as yet. However, conclusive analysis and interpretation are done in section 5.5 and 5.6 using the DLS and elementary analysis to validate the vital information provided by FTIR and TEM.
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_8.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_9.png}
+\end{subfigure}
+\par\bigskip
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{diffraction_image_10.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=6cm, width=\textwidth]{afff_solution_immersed_in_stainless_steel.png}
+\end{subfigure}
+
+\caption{HR (a-c) and electron diffraction images (d) of AFFF solution immersed in stainless steel.}
+\label{ch5:figure:stainless_steel_images}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.5cm, width=\textwidth]{diffraction_image_11.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.5cm, width=\textwidth]{diffraction_image_12.png}
+\end{subfigure}
+\par\bigskip
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.5cm, width=\textwidth]{diffraction_image_13.png}
+\end{subfigure}
+\hspace{-1em}
+\begin{subfigure}{.45\textwidth}
+    \includegraphics[height=5.5cm, width=\textwidth]{afff_solution_in_hdpe.png}
+\end{subfigure}
+
+\caption{HR (a-c) and electron diffraction images (d) of AFFF solution immersed in HDPE.}
+\label{ch5:figure:hdpe_images}
+\end{figure}
+
+The overall crystal structure and the difference in particle shape for three samples comparing them to pure AFFF sample were studied. Although, the present TEM analysis are not able to provide the precise particle sizes of the samples, it nonetheless provides the significant overall change in crystal structure. Figure \ref{ch5:figure:pure_afff_images} revealed that in a pure state, AFFF solution possesses a single crystalline structure. However, when studying Figure \ref{ch5:figure:mild_steel_images}-\ref{ch5:figure:hdpe_images}, it is observed that the immersed AFFF solution has critically changed to a polycrystalline. This is seen in Figure \ref{ch5:figure:mild_steel_images}-\ref{ch5:figure:hdpe_images} (d) when closely studying the electron diffraction images of these samples. The concentrated circular rounds imply that all these materials are polycrystalline. This is confirmed by the morphology (particles, grains and crystallite), as several grains are observed in Figure \ref{ch5:figure:mild_steel_images}-\ref{ch5:figure:hdpe_images}. These grains are separated by grain boundaries and have random crystallographic orientations. It can be further observed that Figure \ref{ch5:figure:mild_steel_images} has the numerous grains compared to Figure \ref{ch5:figure:stainless_steel_images} and \ref{ch5:figure:hdpe_images}.  Consequently, this implies that most of the crystal structural changes occurred when mild steel was immersed in AFFF solution. 
+When comparing the differences topographically (structure and shape), it can be observed in Figure \ref{ch5:figure:pure_afff_images} that the particles for pure AFFF solution are scattered and distributed along the solution. However, when closely observing Figure \ref{ch5:figure:mild_steel_images}-\ref{ch5:figure:hdpe_images} it can been see that the particles for these samples are concentrated in one area, especially in Figure \ref{ch5:figure:mild_steel_images}. This demonstrates that there has been a structural and shape particle change when the materials of interest where immersed in AFFF solution. The alteration in crystal structure and particle shape in AFFF solution complements the shifts in functional groups obtained using the FTIR. An et al [84] experimentally investigated the effect of the particle shape on the viscosity of the liquid. Their results indicated that the spherical particles have lower viscosity and any other particle shape will result in a higher viscosity. In addition, a change in any additive of AFFF solution will affect the foam drainage time. It should be noted that the causes of these alterations are not known as yet. However, conclusive analysis and interpretation are done in section 5.5 and 5.6 using the DLS and elementary analysis to validate the vital information provided by FTIR and TEM.
 
 \section{Dynamic Light Scattering (DLS)}
 In this section, the in-depth understanding of the cause of crystal structure and particle shape changes within the AFFF solution and the impact these changes possess on the performance parameters are discussed. This is achieved by evaluating the particle size and particle size distribution of AFFF solution by measurement of the hydrodynamic diameter (Z-average) of any present particles in units of nanometre (nm) using a DLS technique. DLS is a noninvasive technique that depends on the particles moving randomly as a result of collisions with the solvent molecules (Brownian motion). As a result, only particles suspended in a liquid may be categorized [85]. The determination of particle size and size distribution is essential because these characteristics have a large effect on the properties of the AFFF solution including the mechanical stability, foaming ability and viscosity [86].
 
 \subsection{Particle size analysis}
-Figure 5.7 depict the four samples used during the DLS analysis, where 1,2 and 3 are AFFF solution when mild steel, stainless steel, and HDPE respectively, have been immersed. Sample 4 is a pure AFFF solution for benchmark purposes. Table 5.1 shows the summary of the results for average particle sizes for the four samples in nm.  
+Figure \ref{ch5:figure:samples} depict the four samples used during the DLS analysis, where 1,2 and 3 are AFFF solution when mild steel, stainless steel, and HDPE respectively, have been immersed. Sample 4 is a pure AFFF solution for benchmark purposes. Table \ref{ch5:table:sizes} shows the summary of the results for average particle sizes for the four samples in nm.  
   
-% Figure 5.7: Samples used during the DLS analysis. 
+\begin{figure}[H]
+    \includegraphics[width=.6\textwidth]{samples_used_during_the_dls_analysis.png}
+    \caption{Samples used during the DLS analysis.}
+    \label{ch5:figure:samples}
+\end{figure}
 
-% Table 5.1: Summary of average particle sizes. 
-
-\begin{center}
+\begin{table}[H]
+\centering
 \begin{tabular}{c c}
 \hline
 \textbf{SAMPLE ID} & \textbf{Z-AVERAGE (D)} \\
@@ -948,12 +1399,16 @@ Figure 5.7 depict the four samples used during the DLS analysis, where 1,2 and 3
 \textbf{4} & 3.586 nm \\
 \hline
 \end{tabular}
-\end{center}
 
-It can be observed from Table 5.1 that there have been changes in particle size diameter. The pure AFFF solution has an average particle size of 3.586nm, which is a very small particle size. However, when comparing this to sample 2 and 3 it can be observed that there is a slight difference or change. To be precise, the change in Z-average is around 1.306nm at most. At this point, it is not known if these changes are slight in such a way that they do not have any effect on the properties of AFFF solution. Sample 1, in Table 5.1 shows a major change in particle size. Samples 1 has an average particle size of 660.7 nm, which is way above the other three samples by about 655.808 nm at most. This difference is extremely surprising and obviously has some implications. As a matter of fact, larger particles have a gradual diffusion speed than smaller particles. In a fluid, a particle's translational diffusion coefficient and hydrodynamic diameter are related by the Stokes-Einstein equation [84], as demonstrated by equation 2.4.
+\caption{Summary of average particle sizes.}
+\label{ch5:table:sizes}
+\end{table}
+
+It can be observed from Table \ref{ch5:table:sizes} that there have been changes in particle size diameter. The pure AFFF solution has an average particle size of 3.586nm, which is a very small particle size. However, when comparing this to sample 2 and 3 it can be observed that there is a slight difference or change. To be precise, the change in Z-average is around 1.306nm at most. At this point, it is not known if these changes are slight in such a way that they do not have any effect on the properties of AFFF solution. Sample 1, in Table \ref{ch5:table:sizes} shows a major change in particle size. Samples 1 has an average particle size of 660.7 nm, which is way above the other three samples by about 655.808 nm at most. This difference is extremely surprising and obviously has some implications. As a matter of fact, larger particles have a gradual diffusion speed than smaller particles. In a fluid, a particle's translational diffusion coefficient and hydrodynamic diameter are related by the Stokes-Einstein equation [84], as demonstrated by equation \ref{ch5:equation:stokes_einstein}.
 
 \begin{equation}
     D_T=\frac{K_bT}{b\pi \eta R_h}
+    \label{ch5:equation:stokes_einstein}
 \end{equation}
 
 \noindent Where, \\
@@ -964,12 +1419,13 @@ $T\ is\ the\ Temperature\ in\ K$ \\
 $\eta\ is\ the\ viscosity\ of\ the\ medium\ in\ \nicefrac{Ns}{m^2}$ \\
 $b\ is\ the\ constant\ that\ depends\ on\ the\ size\ of\ the\ diffusing\ molecules$ \\
 
-As a matter of fact, for a AFFF stability, a raping diffusion of fluorosurfactant molecules is required. It can be observed from equation 2.4 that the rate of diffusion is inversely proportion to the particle size. However, it also depends on the surface area and temperature. For the present study, all the samples were exposed to the same temperature (atmospheric) for equitable comparison. This is a demonstration that once AFFF solution has been in contact with mild steel, it decreases its diffusion rate rapidly and thus decrease the foam ability of AFFF solution.  On the other hand, the Z-average (particle size diameter) results demonstrate that when stainless steel and HDPE have been immersed in AFFF solution there are slight differences in particle diameter when compared to pure AFFF solution. When visually observing the numbers, the difference looks slightly. In contrary, the percentage increase calculations demonstrate a relatively large difference. The percentage increase in particle size for AFFF solution when stainless steel was immersed can be calculated from the basic equation given as: 
+As a matter of fact, for a AFFF stability, a raping diffusion of fluorosurfactant molecules is required. It can be observed from equation \ref{ch5:equation:stokes_einstein} that the rate of diffusion is inversely proportion to the particle size. However, it also depends on the surface area and temperature. For the present study, all the samples were exposed to the same temperature (atmospheric) for equitable comparison. This is a demonstration that once AFFF solution has been in contact with mild steel, it decreases its diffusion rate rapidly and thus decrease the foam ability of AFFF solution.  On the other hand, the Z-average (particle size diameter) results demonstrate that when stainless steel and HDPE have been immersed in AFFF solution there are slight differences in particle diameter when compared to pure AFFF solution. When visually observing the numbers, the difference looks slightly. In contrary, the percentage increase calculations demonstrate a relatively large difference. The percentage increase in particle size for AFFF solution when stainless steel was immersed can be calculated from the basic equation given as: 
 
 \begin{gather}
     \%Increase = \frac{D_s - D_O}{3.586} \times 100 \\ 
     \nonumber \%Increase = \frac{4.892 - 3.586}{3.586}\times 100 \\
-    \nonumber \%Increase = 36.419\% 
+    \nonumber \%Increase = 36.419\%
+    \label{ch5:equation:stainless_steel}
 \end{gather}
 
 Where, \\
@@ -982,37 +1438,61 @@ Using the same equation, the percentage increase in particle size diameter for A
     \%Increase = \frac{D_s - D_O}{D_O} \times 100 \\ 
     \nonumber \%Increase = \frac{4.036 - 3.586}{3.586}\times 100 \\
     \nonumber \%Increase = 12.549\% 
+    \label{ch5:equation:hdpe}
 \end{gather}
  
 Where, \\
 $D_s\ is\ the\ particle\ size\ diameter\ of\ sample\ 2\ in\ nm$ \\
 $D_O\ is\ the\ particle\ size\ diameter\ of\ sample\ 4\ in\ nm$ \\
 
-It can be seen from equation 2.5 that the particle size percentage change is 36.419\% when stainless steel was immersed in AFFF solution. This can be regarded as a huge increase since there is more than a quarter (1/4) difference between the two particles. When analyzing equation 2.6, it can be observed that when HDPE was immersed in AFF solution, the particle size has an average change of 12.549 nm. This is a much less percentage compared to 36.419 nm, with a difference of 23.87 nm. Nonetheless, it cannot be guaranteed that it does not influence the foam ability property of AFFF solution.  At this moment, there are still doubts regarding the effects of these materials on AFFF solution. However, the analysis of the particle size distribution (PSD) and element composition will be conducted in sections 5.5.2 and 5.6, respectively, for further validation.
+It can be seen from equation \ref{ch5:equation:stainless_steel} that the particle size percentage change is 36.419\% when stainless steel was immersed in AFFF solution. This can be regarded as a huge increase since there is more than a quarter (1/4) difference between the two particles. When analyzing equation \ref{ch5:equation:hdpe}, it can be observed that when HDPE was immersed in AFF solution, the particle size has an average change of 12.549 nm. This is a much less percentage compared to 36.419 nm, with a difference of 23.87 nm. Nonetheless, it cannot be guaranteed that it does not influence the foam ability property of AFFF solution.  At this moment, there are still doubts regarding the effects of these materials on AFFF solution. However, the analysis of the particle size distribution (PSD) and element composition will be conducted in sections 5.5.2 and 5.6, respectively, for further validation.
 Particle size distribution (PSD) analysis 
-DLS is a widely accepted method to evaluate the hydrodynamic size of solution particles. The DLS particle size results can be represented using volume, number and intensity However, as stated in the international standard (ISO 22412:2017), intensity-based results are the most reliable parameters provided by DLS to describe particle size and particle size distribution (PSD) [83]. As a consequence, the intensity-based results were opted on the present research work to analyse the PSD of pure AFFF solution and AFFF solution after the three materials were immersed. A comparison in size distribution is then made, in order to understand the influence of each material on the properties of AFFF solution. As a matter of fact, PSD is essential for understanding the chemical and physical properties of a sample. The particles within the AFFF solution have similar size and are relatively uniform. Figure 5.8 depict the PSD curve of the pure AFFF solution by intensity. This PSD curve is used to compare the alteration in PSD of AFFF solution when various materials where immersed. 
+DLS is a widely accepted method to evaluate the hydrodynamic size of solution particles. The DLS particle size results can be represented using volume, number and intensity However, as stated in the international standard (ISO 22412:2017), intensity-based results are the most reliable parameters provided by DLS to describe particle size and particle size distribution (PSD) [83]. As a consequence, the intensity-based results were opted on the present research work to analyse the PSD of pure AFFF solution and AFFF solution after the three materials were immersed. A comparison in size distribution is then made, in order to understand the influence of each material on the properties of AFFF solution. As a matter of fact, PSD is essential for understanding the chemical and physical properties of a sample. The particles within the AFFF solution have similar size and are relatively uniform. Figure \ref{ch5:figure:pure_afff} depict the PSD curve of the pure AFFF solution by intensity. This PSD curve is used to compare the alteration in PSD of AFFF solution when various materials where immersed. 
 
 %  Figure 5.8: Particle size distribution of pure AFFF solution.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{particle_size_distribution_of_pure_afff_solution.png}
+    \caption{Particle size distribution of pure AFFF solution.}
+    \label{ch5:figure:pure_afff}
+\end{figure}
 
- It can be observed from Figure 5.8 that the particle size distribution curve shows that the peaks are divided into three intensities. As expected, the major peak is at a particle size of 3.586 nm, as previously shown in Table 5.1 and the second and third peaks can be estimated at ~ 350 and 5500 nm, respectively. De la Calle et al. [85] studied the particle size distribution of aqueous solution. They demonstrated that the solution with narrow PSD is able to disperse easily. Similarly, it can be seen from Figure 5.8 that the first peak is very narrow. As expected, this is evidence that in a pure state, AFFF solution is able to disperse or spread rapidly over a large surface area. 
- Since this is the intensity based results it is vital to further analyse the amount of scattered light within AFFF solution as it can validate the size of the particles. In Figure 5.8, the amount of intensity can be estimated to be around 22\%. Based on these findings, it is observed that for AFFF solution, in particular, smaller particles scattered more light. This is further validated by Figure 5.9-5.11.
+ It can be observed from Figure \ref{ch5:figure:pure_afff} that the particle size distribution curve shows that the peaks are divided into three intensities. As expected, the major peak is at a particle size of 3.586 nm, as previously shown in Table \ref{ch5:table:sizes} and the second and third peaks can be estimated at ~ 350 and 5500 nm, respectively. De la Calle et al. [85] studied the particle size distribution of aqueous solution. They demonstrated that the solution with narrow PSD is able to disperse easily. Similarly, it can be seen from Figure \ref{ch5:figure:pure_afff} that the first peak is very narrow. As expected, this is evidence that in a pure state, AFFF solution is able to disperse or spread rapidly over a large surface area. 
+ Since this is the intensity based results it is vital to further analyse the amount of scattered light within AFFF solution as it can validate the size of the particles. In Figure \ref{ch5:figure:pure_afff}, the amount of intensity can be estimated to be around 22\%. Based on these findings, it is observed that for AFFF solution, in particular, smaller particles scattered more light. This is further validated by Figure \ref{ch5:figure:stainless_steel}-5.11.
  [ALSO COMMENT ON THE NUMBER OF PEAKS AND RESEARCH MORE ON THE SCATTERED LIGHT what influence does it have, otherwise remove paragraph 2 here]
 
-% Figure 5.9: Particle size distribution of AFFF solution when stainless steel was immersed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{particle_size_distribution_of_afff_solution_when_stainless_steel_was_immersed.png}
+    \caption{Particle size distribution of AFFF solution when stainless steel was immersed.}
+    \label{ch5:figure:stainless_steel}
+\end{figure}
 
-Referring to Figure 5.9, it is observed that the AFFF solution possesses 3 peaks. This is precisely the same observation with Figure 5.8. Unsurprisingly, the main peak can be attributed to a particle size of 4.892 nm. Moreover, it can be seen from Figure 5.9 that the main peak has a narrow PSD. However, when closely observing it is slightly wider compared to Figure 5.8. This demonstrates that stainless steel did not cause any critical alteration of PSD within the AFF solution, as it is still able to disperse easily. This is a validation that stainless steel does not influence the spreading ability of AFFF. This further concludes the minor particle size alteration discussed in section 5.5.1 and equation 2.5 do not have significant impact on the diffusion rate of fluorosurfactant molecules.     
+Referring to Figure \ref{ch5:figure:stainless_steel}, it is observed that the AFFF solution possesses 3 peaks. This is precisely the same observation with Figure \ref{ch5:figure:pure_afff}. Unsurprisingly, the main peak can be attributed to a particle size of 4.892 nm. Moreover, it can be seen from Figure \ref{ch5:figure:stainless_steel} that the main peak has a narrow PSD. However, when closely observing it is slightly wider compared to Figure \ref{ch5:figure:pure_afff}. This demonstrates that stainless steel did not cause any critical alteration of PSD within the AFF solution, as it is still able to disperse easily. This is a validation that stainless steel does not influence the spreading ability of AFFF. This further concludes the minor particle size alteration discussed in section 5.5.1 and equation \ref{ch5:equation:stainless_steel} do not have significant impact on the diffusion rate of fluorosurfactant molecules.     
   
-% Figure 5.10: Particle size distribution of AFFF solution when HDPE was immersed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{particle_size_distribution_of_afff_solution_when_hdpe_was_immersed.png}
+    \caption{Particle size distribution of AFFF solution when HDPE was immersed.}
+    \label{ch5:figure:hdpe}
+\end{figure}
 
-It can be observed from Figure 5.10 that the PSD curve consists of the peaks that are divided into two intensities. This is contrasting when comparing with Figures 5.8 and 5.9 where the peaks were divided into three intensities. The major peak can be associated with particle size of 4.036 nm, whereas the other peak can be estimated at ~ 5000 nm. When observing the broadness of the major peak, it can be noticed that it is wider than the peak in Figure 5.8 and almost the same size as Figure 5.9. However, this can be relatively regarded as a narrow peak. Moreover, this provides sufficient evidence that HDPE does not alter the PSD within the pure AFFF solution, which suggests that the dispersion rate is not affected. This further concludes that the minor particle size alteration discussed in section 5.5.1 and equation 2.6 do not have significant impact on the diffusion rate of fluorosurfactant molecules.    
+It can be observed from Figure \ref{ch5:figure:hdpe} that the PSD curve consists of the peaks that are divided into two intensities. This is contrasting when comparing with Figures \ref{ch5:figure:pure_afff} and \ref{ch5:figure:stainless_steel} where the peaks were divided into three intensities. The major peak can be associated with particle size of 4.036 nm, whereas the other peak can be estimated at ~ 5000 nm. When observing the broadness of the major peak, it can be noticed that it is wider than the peak in Figure \ref{ch5:figure:pure_afff} and almost the same size as Figure \ref{ch5:figure:stainless_steel}. However, this can be relatively regarded as a narrow peak. Moreover, this provides sufficient evidence that HDPE does not alter the PSD within the pure AFFF solution, which suggests that the dispersion rate is not affected. This further concludes that the minor particle size alteration discussed in section 5.5.1 and equation \ref{ch5:equation:hdpe} do not have significant impact on the diffusion rate of fluorosurfactant molecules.    
   
-% Figure 5.11: Particle size distribution of AFFF solution when mild steel was immersed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{particle_size_distribution_of_afff_solution_when_mild_steel_was_immersed.png}
+    \caption{Particle size distribution of AFFF solution when mild steel was immersed.}
+    \label{ch5:figure:mild_steel}
+\end{figure}
 
-Surprisingly, Figure 5.11 depicts a distinct PSD compared to Figure 5.8-5.10. It can be observed that Figure 5.11 reveals peaks that are divided into two intensities. These peaks can be associated with particle size of 660.7 nm, whereas the other peak can be estimated at ~ 5500 nm.  Due to large difference in sizes of these two peaks, they can be generally regarded as major and minor peaks, respectively.  It is interesting to note that Figure 5.11 possesses a wide major peak compared to all previous peaks illustrated in Figure 5.8-5.10. This is an indication that there has been a sensitive reaction between mild steel and AFFF solution. Moreover, this demonstrates that the spreading ability of the solution has been reduced. This could be caused by several parameters, such as the increase in viscosity causing the solution to be slightly thicker. However, it is well known that viscosity is largely dependent on the shape of the particles, where any deviation from spherical shape of the particle results in an increase in viscosity [87]. Nevertheless, it is noticed in Figure 5.11 that the PSD can have a slight impact on the spreading capability of a solution, thus on the viscosity.
+Surprisingly, Figure \ref{ch5:figure:mild_steel} depicts a distinct PSD compared to Figure \ref{ch5:figure:pure_afff}-\ref{ch5:figure:hdpe}. It can be observed that Figure \ref{ch5:figure:mild_steel} reveals peaks that are divided into two intensities. These peaks can be associated with particle size of 660.7 nm, whereas the other peak can be estimated at ~ 5500 nm.  Due to large difference in sizes of these two peaks, they can be generally regarded as major and minor peaks, respectively.  It is interesting to note that Figure \ref{ch5:figure:mild_steel} possesses a wide major peak compared to all previous peaks illustrated in Figure \ref{ch5:figure:pure_afff}-\ref{ch5:figure:hdpe}. This is an indication that there has been a sensitive reaction between mild steel and AFFF solution. Moreover, this demonstrates that the spreading ability of the solution has been reduced. This could be caused by several parameters, such as the increase in viscosity causing the solution to be slightly thicker. However, it is well known that viscosity is largely dependent on the shape of the particles, where any deviation from spherical shape of the particle results in an increase in viscosity [87]. Nevertheless, it is noticed in Figure \ref{ch5:figure:mild_steel} that the PSD can have a slight impact on the spreading capability of a solution, thus on the viscosity.
 However, according to the Rayleigh approximation, larger particles scatter more light (I $\propto$d$^6$, d is diameter of particle) which means that the presence of even small fractions of large particles in the dispersion create a large contribution to the intensity distribution.
 Inductively Coupled Plasma (ICP) 
 This demonstrates that there has been a structural particle change when the materials of interest where immersed in AFFF solution. The alteration in crystal structure and particle shape in AFFF solution complements the shifts in functional groups obtained using the FTIR. The causes of these alterations are not known as yet. However, further analysis and interpretation are done in section 5.5 and 5.6 using the DLS and elementary analysis to validate the vital information provided by FTIR and TEM.
-Here mention the effect of the particle shapes on the viscosity of the AFFF (sphere particles result in lower viscosity, whereas, ellipsoidal or any other shape results in higher viscosity ) then discuss each shape.  
+
+\textbf{Here mention the effect of the particle shapes on the viscosity of the AFFF (sphere particles result in lower viscosity, whereas, ellipsoidal or any other shape results in higher viscosity ) then discuss each shape.}
+
 Here have a conclusive information based on the elements. Like, there was a chemical change when mild steel was immersed it reacted with AFFF solution, as the iron content of AFFF has immensely increased. This is the reason behind the particle shape change observed in section 5.4, The particle shape change has a impact on the viscosity of AFFF solution. 
 All techniques used confirmed the……
   
@@ -1020,6 +1500,81 @@ All techniques used confirmed the……
 \section{Summary of findings}
 \section{Conclusions}
 \section{Summary of contributions}
+\section{Future research or studies}
+
+\appendix
+
+\chapter{Chemical composition of AFFF}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{original_composition_of_afff_concentrate.png}
+    \caption{Original composition of AFFF concentrate [3].}
+\end{table}
+
+\chapter{Properties and composition of steels}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{mechanical_and_physical_properties_of_mild_steel.jpg}
+    \caption{Mechanical and physical properties of mild steel (AISI 1020) [37]}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{weighed_composition_of_duplex_stainless_steel.jpg}
+    \caption{Weighed composition of duplex stainless steel [42]}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{mechanical_and_physical_properties_of_stainless_steel.jpg}
+    \caption{Mechanical and physical properties of stainless steel [44]}
+\end{table}
+
+\chapter{Role of microstructural constituents}
+\begin{table}[H]
+
+\fontsize{10}{12}\selectfont
+\renewcommand{\arraystretch}{1.2}
+
+\centering
+\begin{tabular}{p{.2\textwidth} m{.4\textwidth} m{.4\textwidth}}
+\hline
+Microstructural constituents & Dependent on/characteristics(selection) & Responsible for (examples) \\
+\hline
+Vacancies & Temperature, deformation & Hardening at low temperatures; diffusion processes at elevated temperatures; diffusional creep \\
+Dislocations & Deformation, temperature, recovery and recrystallization processes; at elevated temperatures edge dislocations may climb, and leave their slip planes & Plastic deformation strength is controlled by their number and motion; driving force for recrystallization; dislocation creep \\
+Stacking faults & Crystal structure, alloying & Mobility of dislocations, for example, climb of edge dislocations and cross-slip of screw dislocations is hampered \\
+Mechanical twins & Stacking fault energy, deformation, temperature & Additional deformation mechanism at low temperatures and/or high strain rates \\
+Subgrains/domains & Deformation, temperature, stacking fault energy/ordered crystal structure; antiphase boundary energy & Work hardening, creep, creation of antiphase boundaries \\
+Grain boundaries & Lattice orientation between neighboring grains; subdivision in small-angle, medium-angle and high-angle grain boundaries & Work hardening by acting as barries to slip from one grain to the next; segregation site of impurity atoms \\
+Phase boundaries & Alloy system, composition, phase stability at elavated temperatures & Strengthening effects, for example, in duplex or multiphase steels\\
+Grains & Alloy system, type of nucleation, processing, deformation, heat treatment, recrytallization & Strengthening (see grain boundaries) but ductility is maintained; grain boundary sliding at elavated temperatures (creep, superplasticity)\\
+Annealing twins & Stacking fault energy; characteristic of face-cenntered cubic materials exhibiting a low stacking fault energy & Lowering of total boundary energy during grain growth \\
+Precipitates / dispersoids & Alloy system, composition, heat treatment, processing; the interface between particle and matrix can be coherent, semicoherent, or incoherent & Increase in strength by the interaction of moving dislocation; dislocations can loop, cut through or cross-slip the particles at ambient temperatures; at elevated temperatures the dislocations can surmount the particles by climb processes\\
+\end{tabular}
+
+\caption{Role of microstructural constituents on metallic materials [58].}
+\end{table}
+
+\chapter{Full annealing temperature cycle}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{full_annealing_temperature_cycle.jpg}
+    \caption{Full annealing temperature cycle of popular steel and hardness range [66]}
+\end{table}
+
+\chapter{Effect of changing various substances in PE}
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{effect_of_changes_on_properties_of_pe.jpg}
+    \caption{The effect of changes in density, melt index, and molecular weight distribution on the properties of PE [75]}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \includegraphics[width=\textwidth]{cell_classifications_for_pe.jpg}
+    \caption{Cell classifications for PE [76].}
+\end{table}
 
 \end{document}
 
