@@ -9,6 +9,9 @@
 \usepackage{subcaption}
 \usepackage{adjustbox}
 \usepackage{multirow,tabularx}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,calc}
@@ -20,7 +23,51 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
-\usepackage{titlesec}
+\usepackage[acronym]{glossaries}
+
+% \newacronym[options]{label}{abbrv}{long}
+
+% AFFF             	-        	Aqueous film-forming foam
+% FAA                	-           	Federal Aviation Administration 
+% NAA                	-          	National Aviation Authority 
+% NFPA              	-          	National Fire Protection Association 
+% FP                    	-          	Fluoro protein foam 
+% FFFP                	-          	Film-forming fluoro protein foam 
+% AR-AFFF         	-         	Alcohol-resistant aqueous film-forming foam
+% AR-AFFFP       	-         	Alcohol-resistant film-forming fluoro protein foams 
+% JP-4                   	-         	Jet propellant 
+% Ph                     	-          	Potential for hydrogen 
+% AHJ                  	-          	Authority having jurisdiction
+% CAA                 	-          	Civil aviation authorities 
+% ICAO                	-         	International civil aviation authority
+% CAF                 	-          	Compressed air form
+% NRCC              	-           	National Research Centre of Canada
+% NDT                	-            	Non-destructive testing 
+% LLDPE            	-           	Linear low-density polyethylene 
+%  FCC                	-          	Face centred cubic 
+% HCP                 	-          	Hexagonal closed pack 
+% BCC                 	-          	Body centred cubic 
+% OSHA              	-           	Occupational Safety and Health Act
+% SAIW               	-           	The Southern African Institute of Welding 
+% FEA                  	-          	Finite element analysis
+% ACSA               	-          	Airports Company South Africa 
+% Cr                      	-          	Chromium 
+% Ni                      	-           	Nickel 
+%  Mo                    	-           	Molybdenum 
+% HSLA                	-           	High-strength low-alloy steel 
+% HE                     	-           	Hydrogen embrittlement 
+% RH                     	-           	Relative humidity 
+% MICAT              	-          	The Ibero-American Map of Atmospheric Corrosiveness 
+% OSD                   	-          	On-site Stormwater Detention  
+% UN/ECE             	-          	United Nations Economic Commission for Europe
+% TOW                   	-          	Time of wetness  
+% ISO                     	-          	International Standardization Organization 
+% TEM                   	-          	Transmission Electron Microscopy
+% PE                       	-          	Polyethylene 
+% LDPE                  	-         	Low-density polyethylene 
+% MDPE                 	-        	Medium-density polyethylene 
+% HDPE                  -        	High-density polyethylene
+
 
 \setcounter{secnumdepth}{4}
 
@@ -34,6 +81,8 @@
 
 % start the actual document content
 \begin{document}
+\onehalfspacing
+
 \input{titlepage}
 
 \cleardoublepage
