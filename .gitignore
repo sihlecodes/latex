@@ -11,3 +11,5 @@
 *.nlo
 *.pdf
 *.out
+*.ist
+*.glo
