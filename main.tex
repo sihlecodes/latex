@@ -11,7 +11,9 @@
 \usepackage{multirow,tabularx}
 \usepackage{setspace}
 \usepackage{titlesec}
+
 \usepackage[hidelinks]{hyperref}
+\usepackage[acronym]{glossaries}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,calc}
@@ -21,92 +23,108 @@
 \captionsetup[subfigure]{justification=centering}
 
 \usepackage{graphicx}
-\graphicspath{ {./images/} }
-
-\usepackage[acronym]{glossaries}
-
-% \newacronym[options]{label}{abbrv}{long}
-
-% AFFF             	-        	Aqueous film-forming foam
-% FAA                	-           	Federal Aviation Administration 
-% NAA                	-          	National Aviation Authority 
-% NFPA              	-          	National Fire Protection Association 
-% FP                    	-          	Fluoro protein foam 
-% FFFP                	-          	Film-forming fluoro protein foam 
-% AR-AFFF         	-         	Alcohol-resistant aqueous film-forming foam
-% AR-AFFFP       	-         	Alcohol-resistant film-forming fluoro protein foams 
-% JP-4                   	-         	Jet propellant 
-% Ph                     	-          	Potential for hydrogen 
-% AHJ                  	-          	Authority having jurisdiction
-% CAA                 	-          	Civil aviation authorities 
-% ICAO                	-         	International civil aviation authority
-% CAF                 	-          	Compressed air form
-% NRCC              	-           	National Research Centre of Canada
-% NDT                	-            	Non-destructive testing 
-% LLDPE            	-           	Linear low-density polyethylene 
-%  FCC                	-          	Face centred cubic 
-% HCP                 	-          	Hexagonal closed pack 
-% BCC                 	-          	Body centred cubic 
-% OSHA              	-           	Occupational Safety and Health Act
-% SAIW               	-           	The Southern African Institute of Welding 
-% FEA                  	-          	Finite element analysis
-% ACSA               	-          	Airports Company South Africa 
-% Cr                      	-          	Chromium 
-% Ni                      	-           	Nickel 
-%  Mo                    	-           	Molybdenum 
-% HSLA                	-           	High-strength low-alloy steel 
-% HE                     	-           	Hydrogen embrittlement 
-% RH                     	-           	Relative humidity 
-% MICAT              	-          	The Ibero-American Map of Atmospheric Corrosiveness 
-% OSD                   	-          	On-site Stormwater Detention  
-% UN/ECE             	-          	United Nations Economic Commission for Europe
-% TOW                   	-          	Time of wetness  
-% ISO                     	-          	International Standardization Organization 
-% TEM                   	-          	Transmission Electron Microscopy
-% PE                       	-          	Polyethylene 
-% LDPE                  	-         	Low-density polyethylene 
-% MDPE                 	-        	Medium-density polyethylene 
-% HDPE                  -        	High-density polyethylene
-
-
-\setcounter{secnumdepth}{4}
+\graphicspath{{./images/}}
 
 \makeatletter
+% set the default path to search for input latex files
 \def\input@path{{./content/}}
 \makeatother
 
-% Todo: reset equation counters 
-% Todo: space out tables
-% Todo: Fix declaration page
+\makeglossary
+\input{acronyms}
 
-% start the actual document content
+\setcounter{secnumdepth}{4}
+
+% TODO: reset equation counters 
+% TODO: space out tables
+% TODO: Fix declaration page
+
+% TODO: convert this to a latex nomenclature  
+% P  		Pressure  			Pa
+% V                                       Velocity 		m⁄s
+% H 	Height 		m
+% G 	Gravitational acceleration		 m⁄s^2 
+% ρ  	Density		 kg⁄m^3 
+% Q 	Flowrate		 m^3⁄s
+% A 	Cross-sectional area		 m^2
+% M 	Mass		kg
+% C_p  	Specific heat capacity		 kJ⁄(kg.℃)
+% ∆T  	Temperature difference		 ℃
+% K  	Thermal conductivity		 W⁄(m.℃)
+% ∆r   	Distance difference 		m
+% H 	Hydrogen
+% C 	Carbon
+% O 	Oxygen
+% OH 	Hydroxide
+% H_3 O 	Oxonium 
+% H_2 O 	Water 
+% R 		Aryl, Alkyl, or Acyl
+% Si 	Silicon
+% α,β   	Probability 
+% G(X) 	Number of crosslinking
+% G(S)  	Number of scission
+% F  	Force 	N
+% S_p  	Minimum proof strength		 Pa
+% k  	Stiffness		 N⁄〖mm〗^2 
+% L  	Length		 m
+% S 	Welding speed	 m⁄s
+% η  	Efficiency	%
+% D_T	Translational diffusion coefficient		 m^2⁄s
+% R_H  	Hydrodynamic radius		 m
+% K_b  	Boltzmann constant		 J⁄K
+% T 	Temperature	 K
+% η  	Viscosity of the medium		 Ns⁄m^2 
+% b 	Constant of the diffusing molecules
+
+
 \begin{document}
+% change the line spacing for the entire document.
 \onehalfspacing
+% change the margins around chapter title for the entire document.
+\titlespacing*{\chapter}{0pt}{-25pt}{20pt}
 
 \input{titlepage}
 
-\cleardoublepage
+% \cleardoublepage
 \pagenumbering{roman}
+
+% change the chapter title format for the first section of the document.
 \titleformat{\chapter}{\normalfont\Large\bfseries}{}{0em}{}
-\titlespacing*{\chapter}{0pt}{-25pt}{20pt}
 
 \input{declaration}
 \input{acknowledgements}
 \input{abstract}
 \input{dedication}
 
-\tableofcontents[Table of Contents]
+% change the title of the table of contents
+\renewcommand*\contentsname{Table of Contents}
+\tableofcontents
+
 \listoffigures
+\addcontentsline{toc}{chapter}{List of figures}
+
 \listoftables
+\addcontentsline{toc}{chapter}{List of tables}
+
+\printglossary[type=\acronymtype]
+\printglossary
+\printglossaries
+
+\glsaddallunused
 
 \nomenclature{P}{Pressure}
 \printnomenclature
+\addcontentsline{toc}{chapter}{Nomenclature}
 
 \makenomenclature
+\addcontentsline{toc}{chapter}{List of acronyms}
 
+% reset the chapter numbering
 \setcounter{chapter}{0}
-\cleardoublepage
+% \cleardoublepage
 \pagenumbering{arabic}
+
+% change the chapter title format for the entire document.
 \titleformat{\chapter}{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter:}{0.5em}{}
 
 \input{chapter1}
@@ -117,7 +135,8 @@
 \input{chapter6}
 
 \bibliographystyle{plain}
-\bibliography{references}
+\bibliography[title=References]{references}
+\addcontentsline{toc}{chapter}{References}
 
 \appendix
 
