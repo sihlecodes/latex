@@ -41,7 +41,7 @@
 
 % TODO: space out tables
 % TODO: Fix declaration page
-% TODO: Fix bookmark locations
+% TODO: Fix bookmark locations (Chapter 1, 2, 3 and 4)
 
 % change the title of the table of contents
 \renewcommand*\contentsname{Table of Contents}
@@ -82,7 +82,6 @@
 \include{dedication}
 
 \doublespacing
-
 \tableofcontents
 
 \clearpage
@@ -96,7 +95,7 @@
 \listoftables}
 
 \phantomaddcontentsline{toc}{chapter}{Nomenclature}
-\printnomenclature
+\include{nomeclature}
 
 \phantomaddcontentsline{toc}{chapter}{List of acronyms}
 \printglossary[title=List of acronyms, type=\acronymtype, nonumberlist]
