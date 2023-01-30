@@ -37,7 +37,10 @@
 \input{acronyms}
 
 \setcounter{secnumdepth}{4}
+
+% configure paragraph spacing options
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
 
 % TODO: space out tables
 % TODO: Fix declaration page
@@ -112,13 +115,13 @@
 \include{chapter1}
 \include{chapter2}
 \include{chapter3}
-\include{chapter4}
+% \include{chapter4}
 \include{chapter5}
 \include{chapter6}
 
 \phantomaddcontentsline{toc}{chapter}{References}
-% \bibliographystyle{plain}
-% \bibliography{references}
+\bibliographystyle{plain}
+\bibliography{references}
 
 \appendix
 
