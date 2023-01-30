@@ -6,10 +6,11 @@
 *.toc
 *.bbl
 *.blg
-*.nlo
+*.nl[os]
 *.pdf
 *.out
 *.ist
 *.gl[ogs]
 *.ac[rn]
 *.alg
+*.ilg
