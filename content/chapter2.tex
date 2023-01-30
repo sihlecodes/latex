@@ -7,11 +7,12 @@ The first section of the literature is a brief overview of significant fundament
 In the aviation industry, fire is of great concern due to the incidences of fires that are usually devastating to both human lives and properties. Since fire is of great significant in the present research, it is beneficial to understand various classes of fire. Fire is usually classified in five (5) classes. In fire science, fire is classified by the type of fuel they burn namely: Class A, B, C, D, and K. \cite{oguike2013study}.  The classes are discussed in detail in Table \ref{ch2:table:classes}. However, the present research work will only focus on Class B fire, since AFFF is utilised to suppress this Class of fire.
 
 \begin{table}[H]
+\onehalfspacing
 \centering
 \caption{Various classes of fire \cite{hinnant2020characterizing}.}
-\begin{tabular}{ m{.15\textwidth} m{.45\textwidth} m{.3\textwidth} }
+\begin{tabularx}{\textwidth}{ >{\hsize=.45\hsize}X >{\hsize=1.35\hsize}X >{\hsize=.9\hsize}X }
 \hline
-Class of fire & Type of fire & commonly encountered \\ 
+Class of fire & Type of fire & Commonly encountered \\ 
 \hline
 A & Common combustibles such as wood, paper, and rubber materials. & General places. \\
 B & Flammable liquids such as fuel, petroleum greases, and flammable gases. & Airports and petroleum industries. \\
@@ -19,7 +20,7 @@ C & Energized electrical equipment and conductors. & Electrical distribution ind
 D & Combustible metals such as magnesium, titanium, and sodium. & Metal manufacturers. \\ 
 K & Cooking oils, normal grease, and animal fat. & Production and FMCG industries. \\
 \hline
-\end{tabular}
+\end{tabularx}
 \label{ch2:table:classes}
 \end{table}
 
@@ -89,15 +90,17 @@ As seen in Figure \ref{ch2:figure:nozzle}, in case where the potential energy at
     P_1+\frac{1}{2}\rho{v_1}^2 = P_5+\frac{1}{2}\rho{v_5}^2
 \end{equation}
 
-\noindent Where, \\
-$p_1\ is\ the\ pressure\ at\ elevation\ 1\ in\ Pa$ \\
-$v_1\ is\ the\ velocity\ at\ elevation\ 1\ in\ m/s$ \\
-$h_1\ is\ the\ height\ at\ elavation\ 1\ in\ m$ \\
-$P_5\ is\ the\ pressure\ at\ elavation\ 2\ in\ Pa$ \\
-$v_5\ is\ the velocity\ at\ elavation\ 2\ in\ m/s$ \\
-$h_5\ is\ the\ height\ at\ elevation\ 2\ in\ m$ \\
-$g\ is\ the\ acceleration\ due\ to\ gravity\ in\ m/s^2$ \\
-$\rho\ is\ the\ density\ of\ fuid\ in\ kg/m^3$ \\
+\begin{doublespace}
+    Where, \\
+    $p_1\ is\ the\ pressure\ at\ elevation\ 1\ in\ Pa$ \\
+    $v_1\ is\ the\ velocity\ at\ elevation\ 1\ in\ m/s$ \\
+    $h_1\ is\ the\ height\ at\ elavation\ 1\ in\ m$ \\
+    $P_5\ is\ the\ pressure\ at\ elavation\ 2\ in\ Pa$ \\
+    $v_5\ is\ the velocity\ at\ elavation\ 2\ in\ m/s$ \\
+    $h_5\ is\ the\ height\ at\ elevation\ 2\ in\ m$ \\
+    $g\ is\ the\ acceleration\ due\ to\ gravity\ in\ m/s^2$ \\
+    $\rho\ is\ the\ density\ of\ fuid\ in\ kg/m^3$ \\
+\end{doublespace}
 
 Since convergent nozzles are used to increase the outlet velocity ($v_5$  in figure \ref{ch2:figure:nozzle}) due to the conservation of mass, while critically maintaining the inlet flowrate during firefighting. Therefore, the following assumptions can be made:
 
@@ -113,10 +116,13 @@ When the areas of the inlet and outlet are known and the flow rate that must be 
     Q = VA
 \end{equation}
 
-\noindent Where,\\
-$Q\ is\ the\ flowrate\ in m^3/s$ \\
-$V\ is\ the\ velocity\ of\ foam\ solution in m/s$ \\
-$A\ is\ the\ area\ of\ the\ nozzle\ at\ a\ particular\ point\ in\ m^2$ \\
+
+\begin{doublespace}
+    Where, \\
+    $Q\ is\ the\ flowrate\ in m^3/s$ \\
+    $V\ is\ the\ velocity\ of\ foam\ solution in m/s$ \\
+    $A\ is\ the\ area\ of\ the\ nozzle\ at\ a\ particular\ point\ in\ m^2$ \\
+\end{doublespace}
 
 Over the years, researchers have been focusing on the source of these problems in order to comprehend the mathematical difficulties involved. However, engineers have been working on mathematical solution techniques in order to optimize convergent foam nozzles in aviation fire protection. Aspirated nozzle problems are noticeable during periodic trainings and uncertainty in the origination of the problem is mostly the challenge for many researchers.
 
@@ -171,11 +177,11 @@ Researchers have been working on optimizing the foaming ability, hence the stabi
 \caption{Comparison of 25\% drainage times at 7:1 expansion \cite{laundess2012suppression}.}   
 
 \centering
-\begin{tabular}{m{5em} m{5em} m{4em} m{4em} m{4em} m{5em}}
+\begin{tabularx}{\textwidth}{>{\hsize=1.1\hsize}X >{\hsize=1.1\hsize}X >{\hsize=.89\hsize}X >{\hsize=.89\hsize}X >{\hsize=.89\hsize}X >{\hsize=1.1\hsize}X}
     \hline
     & & & & 25\% Drainage time (s) \\
     \hline
-    Foam concentrate & Generation system & Mean & Max & Min & Standard Deviation \\ 
+    Foam \allowbreak concentrate & Generation system & Mean & Max & Min & Standard \allowbreak Deviation \\ 
     Tolomet 6\% & ISNF & 342 & 450 & 264 & 93 \\
     & CAF & 488 & 533 & 430 & 53 \\
     & Aspirated & 197 & N/A & N/A & N/A \\
@@ -183,7 +189,7 @@ Researchers have been working on optimizing the foaming ability, hence the stabi
     & CAF & 1060 & 1281 & 844 & 288 \\
     & Aspirated & 485 & N/A & N/A & N/A \\
     \hline
-\end{tabular}
+\end{tabularx}
 
 \label{ch2:table:times}
 \end{table}
