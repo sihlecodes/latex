@@ -1,32 +1,31 @@
 \chapter{Experimental setup and methodology}
 \section{Introduction}
-In this chapter, the aim of the experiment, the experimental procedure, the materials, the analysis of samples, and the detailed experimental methods employed are all concisely described. The analysis of the methods and the testing standards utilized are presented. These include the microstructural analysis, environmental stress cracking tests, and corrosion analysis of the three materials of interest, which are mild steel, stainless steel, and HDPE. All the parameters used are discussed and shown with the safety precautions being followed throughout the experiments. After AFFF solution has been exposed to various engineering materials, the composition and other vital performance parameters are critically analyzed.
+In this chapter, the aim of the experiment, the experimental procedure, the materials, the analyses of samples, and the detailed experimental methods employed are all concisely described. Analyses of the methods and testing standards used are provided. All the parameters used are discussed and shown, and the safety precautions are followed throughout the experiments. After the \acrshort{afff} concentrate has been reacted with various engineering materials, the functional groups, particle shape and size, particle size distribution, and elemental composition are critically analyzed.
 
 \section{Aim of the experiment}
-The experimental work aims to evaluate and assess the impact and compatibility of the storage facility (engineering materials) on the composition of AFFF, hence performance parameters. 
+The experimental work aims to evaluate and assess the impact and compatibility of the materials used to construct the storage facility with the \acrshort{afff} concentrate. The incompatibility of these materials can greatly influence the performance parameters of an \acrshort{afff} solution.
 
 \section{Methodology}
-Samples of stainless-steel, mild steel, and HDPE together with AFFF solution were carefully prepared. A guillotine machine was used to cut the material sheets into desired shapes and sizes. All the material sheets were cut to the same sizes and shapes for a fair comparison. A total of 5 samples were used during the experiments. These sample materials were exposed to natural environmental conditions, with another sample of mild steel being exposed to seawater for 60 days. All the samples were then immersed and soaked in 3\% proportion of AFFF solution for further 120 days. Fourier transform infrared spectroscopy (FTIR), Transmission electron microscopy (TEM), Dynamic Light Scattering (DLS), and Inductively Coupled Plasma (ICP) wet analysis were performed on sample materials. This was done to analyse the composition, properties and stability of AFFF solution after being exposed to these materials. 
-During the tests, clean sample materials and AFFF solution from the manufacturer were used as a benchmark and their properties were compared to the exposed material to deduce any vital changes occurred. All the findings were carefully recorded and analysed. However, it should be noted that the objective was to analyze the AFFF solution. The experimental procedure followed for all the samples is presented in the flowchart in Figure \ref{ch4:figure:procedure}. 
+Samples of stainless steel, mild steel, and \acrshort{hdpe}, together with \acrshort{afff} concentrate, were carefully prepared. A guillotine machine was used to cut the material sheets into the desired shapes and sizes. All the material sheets were cut to the same sizes and shapes for a fair comparison. A total of three samples were used during the experiments. These sample materials were exposed to natural environmental conditions for 3 months. All the samples were then immersed and soaked in a 3\% proportion of \acrshort{afff} concentrate for 5 months. \acrfull{ftir}, \acrfull{tem}, \acrfull{dls}, and \acrfull{icp} wet analysis were performed on samples of \acrshort{afff} concentrate. This was done to analyze any critical changes in parameters of \acrshort{afff} concentrate after being in reaction with these materials. All the findings were carefully recorded and analyzed. However, it should be noted that the objective was to analyze the \acrshort{afff} concentrate, not the engineering materials. The experimental procedure followed for all the samples is presented in the flowchart in Figure \ref{ch4:figure:procedure}. 
 
 \begin{figure}[H]
 \centering
 
-\begin{tikzpicture}[node distance=3cm]
+\begin{tikzpicture}[node distance=3.8cm]
     \tikzstyle{block} = [rectangle, minimum height=1.5cm, inner sep=1em, text centered, text width=5cm, draw=black]
     \tikzstyle{arrow} = [thick, ->, >=stealth]
 
-    \node (prepare) [block] {Prepared materials and AFFF solution samples};
+    \node (prepare) [block] {Prepared materials and \acrshort{afff} concentrate samples};
 
-    \node (expose) [block, below of=prepare] {Exposed material samples to natural environmental conditions 60 days};
+    \node (expose) [block, below of=prepare] {Exposed material samples to natural environmental conditions 3 months};
 
-    \node (immerse) [block, below of=expose] {Immersed and soaked material samples to AFFF solution for 5 months};
+    \node (immerse) [block, below of=expose] {Immersed and soaked material samples to \acrshort{afff} solution for 5 months};
 
-    \node (perform) [block, right of=prepare, xshift=6cm] {Performed FTIR, TEM, DLS and ICP tests on material samples};
+    \node (use) [block, right of=prepare, xshift=6cm] {Used \acrshort{ftir}, \acrshort{tem}, \acrshort{dls} and \acrshort{icp} intruments to test the \acrshort{afff} concentrate};
 
-    \node (test) [block, below of=perform] {Tested and analysed the elementary composition and performance parameters on AFFF solution};
+    \node (analyse) [block, below of=use] {Analysed the functional groups, particle sizes and shapes, particle size distribution, and elemental composition of the \acrshort{afff} concentrate};
 
-    \node (analyse) [block, below of=test] {Data analysis};
+    \node (record) [block, below of=analyse] {Data recording};
 
     \newcommand*{\connector}[4][]{
         \draw[#1] (#3) -| ($(#3) !#2! (#4)$) |- (#4);
@@ -35,9 +34,10 @@ During the tests, clean sample materials and AFFF solution from the manufacturer
     \draw [arrow] (prepare) -- (expose);
     \draw [arrow] (expose) -- (immerse);
 
-    \connector[->, black]{0.5}{immerse}{perform}
+    \connector[->, black]{0.5}{immerse}{use}
 
-    \draw [arrow] (test) -- (analyse);
+    \draw [arrow] (use) -- (analyse);
+    \draw [arrow] (analyse) -- (record);
 
 \end{tikzpicture}
 
@@ -45,79 +45,35 @@ During the tests, clean sample materials and AFFF solution from the manufacturer
 \label{ch4:figure:procedure}
 \end{figure}
 
-\section{Material description}
-On the present experiments, 3, 4 and 5mm sheets of duplex stainless steel, mild steel and HDPE respectively were selected as the materials of interest. The sample sheets were scribed to ease and ensure that the cut sizes are precise during the cutting stage. The cut samples were further cut to three small pieces for accurate testing and the average results were considered. This was also done to accommodate the percentage errors and external factors which may have occurred during the experimental setup. Glass beakers of 800ml in volume were prepared to fill the 3\% proportion of AFFF solution and immerse the material samples. 
-
 \section{Sample preparation}
-\subsection{Experimental matrix}
+\subsection{Material plates}
+The 3, 4, and 5 mm thick sheets of mild steel, stainless steel, and \acrshort{hdpe}, respectively, were prepared for the experiments. The stainless steel was provided specially by Columbus Stainless (Pty) Ltd. The sizes are based on the common thickness of the storage tanks that contain the \acrshort{afff} concentrate, as investigated by P. Marcus and E. Protopopoff \cite{protopopoff2011surface}.
 
-\begin{table}[H]
-
-\centering
-\begin{tabular}{m{.25\textwidth} m{.25\textwidth} m{.4\textwidth}}
-    \hline
-    Material & Instrument & Analyses \\
-    \hline
-    AFFF solution & FTIR & Functional groups \\
-    & TEM & Particle size and shape \\
-    & & HR imaging \\
-    & & Electron diffraction images \\
-    & DLS & Particle size distribution \\
-    & ICP & Elementary identification \\
-    \hline
-\end{tabular}
-
-\caption{Experimental matrix with AFFF solution.}
-\end{table}
-
-\subsection{Material plates} 
-The sheets of stainless steel, mild steel, and HDPE respectively were prepared for the experiments. These sheets required to be cut to the desired shapes and sizes so that they can fit in beakers filled with AFFF solution. The scriber was used to scribe the precise sizes and the shapes to be cut. This was done at the Durban University of Technology (DUT) manufacturing workshop, using a guillotine cutting machine. The prepared material samples can be seen in Figure \ref{ch4:figure:stainless_steel}, \ref{ch4:figure:mild_steel} and \ref{ch4:figure:hdpe}.
- 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.55\textwidth]{duplex_stainless_steel_sample.jpg}
-    \caption{Duplex stainless steel sample.}
-    \label{ch4:figure:stainless_steel}
-\end{figure}
- 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.55\textwidth]{mild_steel_sample.jpg}
-    \caption{Mild steel sample.}
-    \label{ch4:figure:mild_steel}
-\end{figure}
+These sheets required to be cut to the desired shapes and sizes so that they could fit in 800 ml beakers filled with \acrshort{afff} concentrate. The scriber was used to scribe the precise sizes and shapes to be cut. This was done at the Durban University of Technology (DUT) manufacturing workshop using a guillotine cutting machine. The prepared material samples can be seen in Figure \ref{ch4:figure:samples} (a-c).
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=.55\textwidth]{hdpe_sample.jpg}
-    \caption{HDPE sample}
-    \label{ch4:figure:hdpe}
+    \includegraphics[width=\textwidth]{mild_steel_stainless_steel_and_hdpe.png}
+    \caption{a) Mild steel, b) Stainless steel, and c) \acrshort{hdpe}.}
+    \label{ch4:figure:samples}
 \end{figure}
 
 \subsection{The cutting process}
-The prepared samples were cut to the sizes of 60mm x 100mm using a guillotine machine. It can be seen in Figures \ref{ch4:figure:stainless_steel}, \ref{ch4:figure:mild_steel} and \ref{ch4:figure:hdpe} that the samples were firstly scribed before being cut to ensure the precision. Stainless steel and mild steel were cut using a guillotine that can cut up to a thickness of 5mm. In contrast HDPE was cut in guillotine that can cut up to 3mm thickness, it is not hard as the two steels. Figure \ref{ch4:figure:5mm_guillotine} and \ref{ch4:figure:3mm_guillotine} shows the two guillotine machines that were used to cut the samples.
- 
+The prepared samples were cut to sizes of 60 mm by 100 mm using a guillotine machine. It can be seen in Figure \ref{ch4:figure:samples} (a-c) that the samples were first scribed before being cut to ensure precision. Mild steel and stainless steel were cut using a guillotine that can cut up to a thickness of 5 mm. In contrast, \acrshort{hdpe} was cut with a guillotine that can cut up to 3 mm of thickness, as it is not as hard as the two steels. Figure \ref{ch4:figure:guillotines} (a-b) shows the two guillotine machines that were used to cut the samples.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.4\textwidth]{5mm_guillootine_machine.jpg}
-    \caption{Guillotine machine that cuts up to 5mm thickness.}
-    \label{ch4:figure:5mm_guillotine}
-\end{figure}
- 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.55\textwidth]{3mm_guillotine_machine.jpg}
-    \caption{Guillotine machine that cuts up to 3mm thickness}
-    \label{ch4:figure:3mm_guillotine}
+    \includegraphics[width=\textwidth]{3mm_and_5mm_guillotines.png}
+    \caption{a) and b) Guillotine machines that cuts up to 5 and 3mm thickness, respectively.}
+    \label{ch4:figure:guillotines}
 \end{figure}
 
-As indicated in section 4.5.3 the samples were cut to numerous pieces and to the desired shapes and size to fit glass beakers. Figure \ref{ch4:figure:samples} shows the samples after the cutting process. 
- 
+As aforementioned, the samples were cut into numerous pieces in the desired shapes and sizes to fit in the 800 ml glass beakers. Figure \ref{ch4:figure:samples_cut} shows the samples after the cutting process.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.8\textwidth]{samples_after_being_cut.jpg}
+    \includegraphics[width=\textwidth]{samples_after_being_cut.jpg}
     \caption{Samples after being cut to the desired sizes.}
-    \label{ch4:figure:samples}
+    \label{ch4:figure:samples_cut}
 \end{figure}
 
 The samples were polished and cleaned using the rectangular file. This was done to remove the roughness and dangerous chips, to avoid any possible injuries during the experimental setup. Figure \ref{ch4:figure:file_and_vice} shows the tools used when cleaning and polishing the samples.
@@ -129,73 +85,85 @@ The samples were polished and cleaned using the rectangular file. This was done 
     \label{ch4:figure:file_and_vice}
 \end{figure}
 
-\subsection{AFFF solution samples}
-The 3\% proportion AFFF solution samples were prepared in 20 litres each and stored in room temperature at the laboratory in DUT. These were carefully stored in their original containers until the material samples were available and ready. Figure \ref{ch4:figure:mild_steel} shows the AFFF solution from the suppliers in 20 litre containers.
-Picture of AFFF 20 litres
-AFFF solution were filled in respective glass beakers to immerse various material samples. There were 10 glass beakers which were prepared in total. Only four beakers were used initially, with the first 2 glass beakers being prepared for clean HDPE that was immersed in AFFF solutions to investigate whether the solution will initiate the ESC on HDPE. The other two beakers were filled with seawater and then mild steel was immersed to increase the rate of corrosion. Figure \ref{ch4:figure:hdpe_immersed} shows the first 4 glass beakers used during the experimental work.
+\subsection{\acrshort{afff} solution samples}
+The 3\% \acrshort{afff} concentrate samples were prepared in 20-liter batches and kept at room temperature in the DUT laboratory. These were carefully stored in their original containers until the material sheet samples were available and ready. Figure \ref{ch4:figure:suplier} shows the \acrshort{afff} concentrate from the supplier in its original 20-liter container.
  
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.5\textwidth]{hdpe_immersed_in_various_afff_solutions.jpg}
-    \caption{HDPE immersed in various AFFF solutions.}
-    \label{ch4:figure:hdpe_immersed}
+    \includegraphics[width=.5\textwidth]{pure_afff_concentrate_from_supplier.jpg}
+    \caption{Pure \acrshort{afff} concentrate from the supplier.}
+    \label{ch4:figure:suplier}
 \end{figure}
- 
-\begin{figure}[H]
-\centering
-\begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=.5\textwidth]{mild_steel_immersed_in_seawater.jpg}
-\end{subfigure}
-\par\medskip
-\begin{subfigure}{\textwidth}
-    \centering
-    \includegraphics[width=.5\textwidth]{mild_steel_immersed_in_seawater.jpg}
-\end{subfigure}
 
-\caption{Mild steel immersed in seawater.}
-\label{ch4:figure:steel_immersed}
+To immerse various material samples, \acrshort{afff} concentrate was filled in respective glass beakers. Figure \ref{ch4:figure:immersed} shows the three glass beakers used to immerse the three materials of interest.
+ 
+\begin{figure}[H]
+\includegraphics{mild_stainless_steel_and_hdpe_immersed_in_afff_concentrate.png}
+\caption{a) mild steel, b) stainless steel, and c) \acrshort{hdpe} immersed in \acrshort{afff} concentrate.}
+\label{ch4:figure:immersed}
 \end{figure}
+
+\subsection{Experimental matrix}
+
+\begin{table}[H]
+\centering
+\caption{Experimental matrix with \acrshort{afff} concentrate.}
+
+\renewcommand{\arraystretch}{2.5}
+\begin{tabularx}{\textwidth}{ XXX }
+    \hline
+    Material & Instrument & Analyses \\
+    \hline
+    \acrshort{afff} concentrate & \acrshort{ftir} & Functional groups \\
+    & \acrshort{tem} & Particle size and shape \\
+    & & HR imaging \\
+    & & Electron diffraction images \\
+    & \acrshort{dls} & Particle size \\
+    & & Particle size distribution \\
+    & \acrshort{icp} & Elementary identification \\
+    \hline
+\end{tabularx}
+
+\end{table}
 
 \section{Testing} 
-The different tests that were performed after the experiments are discussed in this section. The apparatus and various materials that were utilised when conducting the tests are concisely described. 
-Fourier transform infrared spectroscopy (FTIR), Transmission electron microscopy (TEM), Dynamic Light Scattering and Inductively Coupled Plasma (ICP)
+The different tests that were performed after the experiments are discussed in this section. The apparatus and various materials used to conduct the tests are concisely described.
 
 \subsection{Fourier transform infrared spectroscopy (FTIR)}
-All the AFFF samples were analyzed using the FTIR technique. This was achieved by comparing the clean samples that were from the manufacturer with the samples that has been exposed to various materials experiments. The FTIR analysis assisted in identifying the functional groups for various exposed samples.
+All the \acrshort{afff} samples were analyzed using the \acrshort{ftir} technique. This was achieved by comparing the clean samples that were from the manufacturer with the samples that has been exposed to various materials experiments. The \acrshort{ftir} analysis assisted in identifying the functional groups for various exposed samples, and the instrument can be seen in Figure \ref{ch4:figure:ftir}.
  
 \begin{figure}[H]
-    \includegraphics[width=.6\textwidth]{ftir_instrument.jpg}
-    \caption{FTIR instrument used for functional groups.}
+    \includegraphics[width=.75\textwidth]{ftir_instrument.jpg}
+    \caption{\acrshort{ftir} instrument used to identify the functional groups.}
     \label{ch4:figure:ftir}
 \end{figure}
 
 \subsection{Transmission electron microscopy (TEM)}
-Since the FTIR does not provide conclusive information, it was essential to validate the FTIR analysis with other tests. TEM analysis were conducted to analyse large variety of particle, overall particle shape, and visual overall size and shape of the AFFF solution particles using HR imaging and electron diffraction images. It should be noted that TEM does not provide sufficient information on how the particles in the exposed AFFF solution are distributed and does not covey the precise particle sizes. 
+Since the \acrshort{ftir} does not provide conclusive information, it was essential to validate the \acrshort{ftir} analysis with other tests. \acrshort{tem} analyses were conducted to analyze the overall particle shape and the visual overall size of the \acrshort{afff} concentrate particles using HR imaging and electron diffraction images. It should be noted that \acrshort{tem} does not provide sufficient information on how the particles in the exposed \acrshort{afff} concentrate are distributed and does not convey the precise particle sizes. Consequently, the other relevant tests were necessary. The \acrshort{tem} instrument used for the tests is depicted in Figure \ref{ch4:figure:tem}.
  
 \begin{figure}[H]
-    \includegraphics[width=.6\textwidth]{tem_instrument.png}
-    \caption{TEM instrument used to analyze particles.}
+    \includegraphics[width=.75\textwidth]{tem_instrument.png}
+    \caption{\acrshort{tem} instrument used to analyze \acrshort{afff} concentrate particles.}
     \label{ch4:figure:tem}
 \end{figure}
 
 \subsection{Dynamic Light Scattering (DLS)}
-The DLS tests were conducted to deduce the particle size distribution and precise particle sizes. This was achieved by measurement of the hydrodynamic diameter (Z-average) of any present particles in units of nm. This was done to validate the findings of TEM, and it further assisted in depth understanding of the behaviour of the AFFF solution particles when exposed to various materials and how they affect its properties.  
+The \acrshort{dls} tests were conducted to deduce the particle size distribution and precise particle sizes using the instruments shown in Figure \ref{ch4:figure:dls}. This was achieved by measuring the hydrodynamic diameter (Z-average) of any present particles in units of nm. This was done to validate the findings of \acrshort{tem}, and it furthered an in-depth understanding of the behavior of the \acrshort{afff} concentrate particles when exposed to various materials and how these materials affect its performance parameters.
  
 \begin{figure}[H]
-    \includegraphics[width=.6\textwidth]{dls_instrument.png}
-    \caption{DLS instrument used to analyze particle distribution.}
+    \includegraphics[width=.75\textwidth]{dls_instrument.png}
+    \caption{\acrshort{dls} instrument used to analyze particle distribution of \acrshort{afff} concentrate.}
     \label{ch4:figure:dls}
 \end{figure}
 
-\subsection{Inductively Coupled Plasma (ICP)}
-Finally, the ICP test was conducted to identify the chemical elements or composition within the exposed AFFF solution and benchmark these with the standard qualities. The changes in chemical composition can greatly affect the properties, hence the performance of AFFF during the firefighting circumstances. Thus, it is vital to assess the impact of the various materials on the composition of the AFFF solution. 
+\subsection{Inductively Coupled Plasma Atomic Emission Spectroscopy (ICP-AES)}
+Finally, \acrshort{icp-aes} tests were performed to determine the elemental composition of the exposed \acrshort{afff} concentrate and compare it to the standard qualities. The changes in elemental composition can greatly affect the properties, hence the performance of \acrshort{afff} during firefighting circumstances. Thus, it is vital to assess the impact of the various materials on the composition of the \acrshort{afff} concentrate. Figure \ref{ch4:figure:icp-aes} shows the \acrshort{icp-aes} instrument used during the tests.
  
 \begin{figure}[H]
-    \includegraphics[width=.6\textwidth]{icp_instrument.png}
-    \caption{ICP instrument used for elementary analysis.}
-    \label{ch4:figure:icp}
+    \includegraphics[width=.75\textwidth]{icp_instrument.png}
+    \caption{\acrshort{icp-aes} instrument used for elementary analysis.}
+    \label{ch4:figure:icp-aes}
 \end{figure}
 
-\section{Summary}
-The present chapter outlined the aim of the experiment, the material description, sample preparation, the techniques employed to test the samples and as well as the equipment and testing standards used. The instruments used for analysing the AFFF solution samples were presented with thorough explanation of the purpose of each test. The experimental procedure followed in this investigation was explained. The results from the investigation are presented in chapter 5.
+\section{Conclusion}
+The present chapter outlined the aim of the experiment, the material description, sample preparation, the techniques employed to test the samples and as well as the equipment and testing standards used. The instruments used for analyzing the \acrshort{afff} concentrate samples were presented with a thorough explanation of the purpose of each test. The experimental procedure followed in this investigation was explained. The results from the investigation are presented in Chapter 5.
