@@ -15,7 +15,7 @@
 \usepackage{tocloft}
 
 \usepackage[hidelinks]{hyperref}
-\usepackage[acronym]{glossaries}
+\usepackage[acronym,nogroupskip]{glossaries}
 
 \usepackage{bookmark}
 
@@ -42,7 +42,6 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
 
-% TODO: space out tables
 % TODO: Fix declaration page
 % TODO: Fix bookmark locations (Chapter 1, 2, 3 and 4)
 
@@ -103,6 +102,7 @@
 \phantomaddcontentsline{toc}{chapter}{List of acronyms}
 \printglossary[title=List of acronyms, type=\acronymtype, nonumberlist]
 
+\clearpage
 % reset the chapter numbering
 \setcounter{chapter}{0}
 % \cleardoublepage

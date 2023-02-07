@@ -1,44 +1,59 @@
 \makeglossaries
 
-\newacronym{afff}{AFFF}{Aqueous film-forming foam}
+\newglossarystyle{mylong} {
+\setglossarystyle{long}
+
+\renewenvironment{theglossary}
+    {\begin{longtable}[l]{@{}p{\dimexpr 4cm-\tabcolsep}p{0.8\hsize}}}
+    {\end{longtable}}
+    
+\renewcommand{\glossentry}[2] {
+    \glsentryitem{##1}\glstarget{##1}{\glossentryname{##1}} &
+    \Glossentrydesc{##1}
+    \tabularnewline}
+}
+
+\setglossarystyle{mylong}
+
+\newacronym{afff}{AFFF}{aqueous film-forming foam}
 \newacronym{faa}{FAA}{Federal Aviation Administration}
 \newacronym{naa}{NAA}{National Aviation Authority}
 \newacronym{nfpa}{NFPA}{National Fire Protection Association}
-\newacronym{fp}{FP}{Fluoro protein foam}
-\newacronym{fffp}{FFFP}{Film-forming fluoro protein foam}
-\newacronym{ar-afff}{AR-AFFF}{Alcohol-resistant aqueous film-forming foam}
-\newacronym{ar-afffp}{AR-AFFFP}{Alcohol-resistant film-forming fluoro protein foams}
-\newacronym{jp}{JP-4}{Jet propellant}
-\newacronym{ph}{Ph}{Potential for hydrogen}
-\newacronym{ahj}{AHJ}{Authority having jurisdiction}
-\newacronym{caa}{CAA}{Civil aviation authorities}
-\newacronym{icao}{ICAO}{International civil aviation authority}
-\newacronym{caf}{CAF}{Compressed air form}
+\newacronym{fp}{FP}{fluoro protein foam}
+\newacronym{fffp}{FFFP}{film-forming fluoro protein foam}
+\newacronym{ar-afff}{AR-AFFF}{alcohol-resistant aqueous film-forming foam}
+\newacronym{ar-afffp}{AR-AFFFP}{alcohol-resistant film-forming fluoro protein foams}
+\newacronym{jp}{JP-4}{jet propellant}
+\newacronym{ph}{Ph}{potential for hydrogen}
+\newacronym{ahj}{AHJ}{authority having jurisdiction}
+\newacronym{caa}{CAA}{civil aviation authorities}
+\newacronym{icao}{ICAO}{international civil aviation authority}
+\newacronym{caf}{CAF}{compressed air form}
 \newacronym{nrcc}{NRCC}{National Research Centre of Canada}
-\newacronym{ndt}{NDT}{Non-destructive testing}
-\newacronym{lldpe}{LLDPE}{Linear low-density polyethylene}
-\newacronym{fcc}{FCC}{Face centred cubic}
-\newacronym{hcp}{HCP}{Hexagonal closed pack}
-\newacronym{bcc}{BCC}{Body centred cubic}
+\newacronym{ndt}{NDT}{non-destructive testing}
+\newacronym{lldpe}{LLDPE}{linear low-density polyethylene}
+\newacronym{fcc}{FCC}{face centred cubic}
+\newacronym{hcp}{HCP}{hexagonal closed pack}
+\newacronym{bcc}{BCC}{body centred cubic}
 \newacronym{osha}{OSHA}{Occupational Safety and Health Act}
 \newacronym{saiw}{SAIW}{The Southern African Institute of Welding}
-\newacronym{fea}{FEA}{Finite element analysis}
+\newacronym{fea}{FEA}{finite element analysis}
 \newacronym{acsa}{ACSA}{Airports Company South Africa}
-\newacronym{cr}{Cr}{Chromium}
-\newacronym{ni}{Ni}{Nickel}
-\newacronym{mo}{Mo}{Molybdenum}
-\newacronym{hsla}{HSLA}{High-strength low-alloy steel}
-\newacronym{he}{HE}{Hydrogen embrittlement}
-\newacronym{rh}{RH}{Relative humidity}
+\newacronym{cr}{Cr}{chromium}
+\newacronym{ni}{Ni}{nickel}
+\newacronym{mo}{Mo}{molybdenum}
+\newacronym{hsla}{HSLA}{high-strength low-alloy steel}
+\newacronym{he}{HE}{hydrogen embrittlement}
+\newacronym{rh}{RH}{relative humidity}
 \newacronym{micat}{MICAT}{The Ibero-American Map of Atmospheric Corrosiveness}
 \newacronym{osd}{OSD}{On-site Stormwater Detention}
 \newacronym{un/ece}{UN/ECE}{United Nations Economic Commission for Europe}
-\newacronym{tow}{TOW}{Time of wetness}
+\newacronym{tow}{TOW}{time of wetness}
 \newacronym{iso}{ISO}{International Standardization Organization}
 \newacronym{tem}{TEM}{Transmission Electron Microscopy}
-\newacronym{pe}{PE}{Polyethylene}
-\newacronym{ldpe}{LDPE}{Low-density polyethylene}
-\newacronym{mdpe}{MDPE}{Medium-density polyethylene}
-\newacronym{hdpe}{HDPE}{High-density polyethylene}
+\newacronym{pe}{PE}{polyethylene}
+\newacronym{ldpe}{LDPE}{low-density polyethylene}
+\newacronym{mdpe}{MDPE}{medium-density polyethylene}
+\newacronym{hdpe}{HDPE}{high-density polyethylene}
 
 \glsaddallunused
