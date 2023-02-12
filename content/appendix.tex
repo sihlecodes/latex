@@ -1,9 +1,9 @@
-\titleformat{\section}{\normalfont\large\bfseries}{\chaptertitlename\ \thechapter:}{0.5em}{}
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\chaptertitlename\ \thechapter:}{0.5em}{}
 
 \newcommand{\appendixsection}[1] {
     \addtocounter{chapter}{1}
-    \addcontentsline{toc}{section}{#1}
-    \section*{#1}
+    \addcontentsline{toc}{section}{\chaptertitlename\ \thechapter: #1}
+    \section*{\chaptertitlename\ \thechapter: #1}
 }
 
 \addcontentsline{toc}{chapter}{Appendices}
@@ -11,7 +11,7 @@
 
 \setcounter{chapter}{0}
 
-\appendixsection{Chemical composition of AFFF}
+\appendixsection{Specifications of AFFF}
 \begin{table}[H]
     \includegraphics{original_composition_of_afff_concentrate.png}
     \caption{Original composition of AFFF concentrate \cite{hinnant2020characterizing}.}
