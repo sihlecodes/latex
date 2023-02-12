@@ -71,7 +71,7 @@
 
 \include{titlepage}
 
-% \cleardoublepage
+% \clearpage
 \pagenumbering{roman}
 
 % change the chapter title format for the first section of the document.
@@ -96,16 +96,17 @@
 {\renewcommand{\numberline}[1]{Table #1:~}
 \listoftables}
 
+\clearpage
 \phantomaddcontentsline{toc}{chapter}{Nomenclature}
 \include{nomeclature}
 
 \phantomaddcontentsline{toc}{chapter}{List of acronyms}
 \printglossary[title=List of acronyms, type=\acronymtype, nonumberlist]
-
 \clearpage
+
 % reset the chapter numbering
 \setcounter{chapter}{0}
-% \cleardoublepage
+% \clearpage
 \pagenumbering{arabic}
 
 % change the chapter title format for the entire document.
