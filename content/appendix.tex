@@ -1,13 +1,13 @@
-% \titleformat{\chapter}{\normalfont\Large\bfseries}{}{0em}{}
 \titleformat{\section}{\normalfont\large\bfseries}{\chaptertitlename\ \thechapter:}{0.5em}{}
 
 \newcommand{\appendixsection}[1] {
     \addtocounter{chapter}{1}
-    \section{#1}
+    \addcontentsline{toc}{section}{#1}
+    \section*{#1}
 }
 
-\chapter*{Appendices}
 \addcontentsline{toc}{chapter}{Appendices}
+\chapter*{Appendices}
 
 \setcounter{chapter}{0}
 
