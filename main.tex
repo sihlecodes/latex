@@ -60,11 +60,19 @@
     \chapter*{#1}
 }
 
+\newcommand{\setchapleaders}[1]{
+    \addtocontents{toc}{
+        \protect\renewcommand{\protect\cftchapdotsep}{#1}
+    }
+}
+
 \setlength{\cftchapnumwidth}{2.5cm}
 \renewcommand{\cftchappresnum}{\chaptername\ }
 \renewcommand{\cftchapaftersnum}{:}
 
 \begin{document}
+\setchapleaders{\cftdotsep}
+
 % change the margins around chapter title for the entire document.
 \titlespacing*{\chapter}{0pt}{-25pt}{20pt}
 
