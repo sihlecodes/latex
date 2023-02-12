@@ -18,7 +18,6 @@
 \usepackage[acronym,nogroupskip]{glossaries}
 
 \usepackage{bookmark}
-
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows,calc}
 
@@ -35,15 +34,11 @@
 \makeatother
 
 \input{acronyms}
-
 \setcounter{secnumdepth}{4}
 
 % configure paragraph spacing options
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1em}
-
-% TODO: Fix declaration page
-% TODO: Fix bookmark locations (Chapter 1, 2, 3 and 4)
 
 % change the title of the table of contents
 \renewcommand*\contentsname{Table of Contents}
@@ -55,15 +50,19 @@
 \renewcommand{\arraystretch}{1.5}
 
 \newcommand{\phantomaddcontentsline}[3] {
+    \clearpage
     \phantomsection
     \addcontentsline{#1}{#2}{#3}
 }
 
-% ensures that words aren't hyphenated when the word is at the end of a line.
-% \tolerance=1
-% \emergencystretch=\maxdimen
-% \hyphenpenalty=10000
-% \hbadness=10000
+\newcommand{\phantomchapter}[1] {
+    \phantomaddcontentsline{toc}{chapter}{#1}
+    \chapter*{#1}
+}
+
+\setlength{\cftchapnumwidth}{2.5cm}
+\renewcommand{\cftchappresnum}{\chaptername\ }
+\renewcommand{\cftchapaftersnum}{:}
 
 \begin{document}
 % change the margins around chapter title for the entire document.
@@ -71,7 +70,7 @@
 
 \include{titlepage}
 
-% \clearpage
+\clearpage
 \pagenumbering{roman}
 
 % change the chapter title format for the first section of the document.
@@ -86,24 +85,21 @@
 \doublespacing
 \tableofcontents
 
-\clearpage
 \phantomaddcontentsline{toc}{chapter}{List of figures}
 {\renewcommand{\numberline}[1]{Figure #1:~}
 \listoffigures}
 
-\clearpage
 \phantomaddcontentsline{toc}{chapter}{List of tables}
 {\renewcommand{\numberline}[1]{Table #1:~}
 \listoftables}
 
-\clearpage
 \phantomaddcontentsline{toc}{chapter}{Nomenclature}
 \include{nomeclature}
 
 \phantomaddcontentsline{toc}{chapter}{List of acronyms}
 \printglossary[title=List of acronyms, type=\acronymtype, nonumberlist]
-\clearpage
 
+\clearpage
 % reset the chapter numbering
 \setcounter{chapter}{0}
 % \clearpage
@@ -126,5 +122,8 @@
 
 \appendix
 
+{
 \input{appendix}
+}
+
 \end{document}
