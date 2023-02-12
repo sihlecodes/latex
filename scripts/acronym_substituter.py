@@ -80,13 +80,13 @@ def acrshort_sub(m):
 acrshort_pattern = re.compile(r"\b(?P<acronym>[A-Z][A-Z0-9\-]+)\b")
 ignored_patterns = [
     # comments
-    re.compile("^%"),
+    re.compile(r"^\s*%"),
 
     # section commands
-    re.compile(r"^\\(sub){,2}(section|chapter|paragraph)"),
+    re.compile(r"^\s*\\(sub){,2}(section|chapter|paragraph)"),
     
     # captions
-    re.compile(r"^\\caption"),
+    re.compile(r"^\s*\\caption"),
 ]
 
 for file in args.files:
