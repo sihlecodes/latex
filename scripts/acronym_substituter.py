@@ -23,9 +23,6 @@ def load_acronyms(file):
 
     return acronyms
 
-
-acronyms = load_acronyms("content/acronyms.tex")
-
 def generate_acrfull_patterns():
     acrfull_patterns = []
     
@@ -35,9 +32,6 @@ def generate_acrfull_patterns():
         acrfull_patterns.append(re.compile(pattern, flags=re.IGNORECASE))
     
     return acrfull_patterns
-
-
-acrfull_patterns = generate_acrfull_patterns()
 
 def acrfull_sub(m):
     command = "\\acrfull"
@@ -77,13 +71,16 @@ def acrshort_sub(m):
 
     return command
 
+acronyms = load_acronyms("content/acronyms.tex")
+acrfull_patterns = generate_acrfull_patterns()
+
 acrshort_pattern = re.compile(r"\b(?P<acronym>[A-Z][A-Z0-9\-]+)\b")
 ignored_patterns = [
     # comments
     re.compile(r"^\s*%"),
 
     # section commands
-    re.compile(r"^\s*\\(sub){,2}(section|chapter|paragraph)"),
+    re.compile(r"^\s*\\(sub){0,2}(section|chapter|paragraph)"),
     
     # captions
     re.compile(r"^\s*\\caption"),
@@ -108,9 +105,9 @@ for file in args.files:
             new_line = line
             
             inside_environment = open_environments > 0
-            any_ignored = any(map(lambda p: p.match(line), ignored_patterns))
+            any_ignored = any(map(lambda p: p.search(line), ignored_patterns))
                         
-            if not (any_ignored and inside_environment):
+            if not (any_ignored or inside_environment):
                 for pat in acrfull_patterns:
                     if pat.search(new_line):
                         new_line = pat.sub(acrfull_sub, new_line)
@@ -118,7 +115,6 @@ for file in args.files:
                 new_line = acrshort_pattern.sub(acrshort_sub, new_line)
                 
                 if not made_changes and line != new_line:
-                    print(f"made changes '{line}' != '{new_line}'")
                     made_changes = True
             
             new_lines.append(new_line)

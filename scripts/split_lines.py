@@ -41,7 +41,7 @@ for file in args.files:
             new_lines.append(current_line)
         
         # add the final line of the file
-        new_lines.append(lines[lnum])
+        new_lines.append(lines[lnum+1])
     
     if made_changes:
         if args.dry:
