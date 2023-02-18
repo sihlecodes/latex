@@ -1,23 +1,15 @@
-\titleformat{\section}{\normalfont\normalsize\bfseries}{\chaptertitlename\ \thechapter:}{0.5em}{}
 
-\newcommand{\appendixsection}[1] {
-    \addtocounter{chapter}{1}
-    \addcontentsline{toc}{section}{\chaptertitlename\ \thechapter: #1}
-    \section*{\chaptertitlename\ \thechapter: #1}
-}
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{\bf Appendices}
 
-\phantomchapter{Appendices}
-
-\setcounter{chapter}{0}
-
-\appendixsection{Specifications of AFFF}
+\section*{Specifications of AFFF}
 \begin{figure}[H]
-    \includegraphics{original_composition_of_afff_concentrate.png}
-    \caption{Original composition of AFFF concentrate \cite{hinnant2020characterizing}.}
+    \includegraphics[scale=0.9]{original_composition_of_afff_concentrate.png}
+    \caption{Original composition of AFFF concentrate (\cite{hinnant2020characterizing}).}
     \label{appendix:specifications}
 \end{figure}
 
-\appendixsection{Properties and specifications of steels}
+\section*{Properties and specifications of steels}
 \begin{figure}[H]
     \includegraphics{mechanical_and_physical_properties_of_mild_steel.jpg}
     \caption{Mechanical and physical properties of mild steel (AISI 1020) \cite{kabir2020critical}}
@@ -36,7 +28,7 @@
     \label{appendix:stainless_steel_properties}
 \end{figure}
 
-\appendixsection{Role of microstructural constituents}
+\section*{Role of microstructural constituents}
 
 \begin{figure}[H]
 \fontsize{10}{12}\selectfont
@@ -59,18 +51,18 @@ Annealing twins & Stacking fault energy; characteristic of face-cenntered cubic 
 Precipitates/\newline dispersoids & Alloy system, composition, heat treatment, processing; the interface between particle and matrix can be coherent, semicoherent, or incoherent & Increase in strength by the interaction of moving dislocation; dislocations can loop, cut through or cross-slip the particles at ambient temperatures; at elevated temperatures the dislocations can surmount the particles by climb processes\\
 \end{tabularx}
 
-\caption{Role of microstructural constituents on metallic materials \cite{suryanarayana2017microstructure}.}
+\caption{Role of microstructural constituents on metallic materials (\cite{suryanarayana2017microstructure}).}
 \label{appendix:role}
 \end{figure}
 
-\appendixsection{Full annealing temperature cycle}
+\section*{Full annealing temperature cycle}
 \begin{figure}[H]
     \includegraphics{full_annealing_temperature_cycle.jpg}
     \caption{Full annealing temperature cycle of popular steel and hardness range [66].}
     \label{appendix:range}
 \end{figure}
 
-\appendixsection{Effect of changing various substances in PE}
+\section*{Effect of changing various substances in PE}
 \begin{figure}[H]
     \includegraphics{effect_of_changes_on_properties_of_pe.jpg}
     \caption{The effect of changes in density, melt index, and molecular weight distribution on the properties of PE \cite{gabriel1998history}}
@@ -78,11 +70,11 @@ Precipitates/\newline dispersoids & Alloy system, composition, heat treatment, p
 
 \begin{figure}[H]
     \includegraphics{cell_classifications_for_pe.jpg}
-    \caption{Cell classifications for PE \cite{peacock2000handbook}.}
+    \caption{Cell classifications for PE (\cite{peacock2000handbook}).}
     \label{appendix:classifications}
 \end{figure}
 
-\appendixsection{Chemical elements report.}
+\section*{Chemical elements report.}
 \begin{figure}[H]
     \includegraphics{chemical_elements_of_samples_1-3.png}
     \caption{Chemical elements of samples 1-3}
